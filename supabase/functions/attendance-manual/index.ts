@@ -22,7 +22,7 @@ Deno.serve(async (req: Request) => {
     const { data: session } = await db.from("sessions").select("*").eq("id", body.sessionId).maybeSingle();
     if (!session) return withCors({ error: "Session not found." }, 404);
 
-    const { data: student } = await db.from("students").select("*").eq("roll_number", roll).maybeSingle();
+    const { data: student } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
     if (!student) return withCors({ error: "No student found with that roll number." }, 404);
 
     const { data: record, error } = await db

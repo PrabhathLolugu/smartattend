@@ -35,7 +35,7 @@ Deno.serve(async (req: Request) => {
     const { data: existing, error: lookupErr } = await db
       .from("students")
       .select("*")
-      .eq("roll_number", roll)
+      .ilike("roll_number", roll)
       .maybeSingle();
     if (lookupErr) return withCors({ error: "Lookup failed. Please try again." }, 500);
 
