@@ -43,12 +43,28 @@ export function StudentsPage({ staff, courseName }: Props) {
   const loadSummaries = useCallback(async () => {
     const { data: summaryRows } = await supabase.rpc('student_attendance_summary', { p_course_name: courseName });
     const map: Record<string, StudentAttendanceSummary> = {};
-    (summaryRows ?? []).forEach((s: StudentAttendanceSummary) => {
+    (summaryRows ?? []).forEach((r: any) => {
+      const s: StudentAttendanceSummary = {
+        ...r,
+        present_count: Number(r.present_count ?? 0),
+        excused_count: Number(r.excused_count ?? 0),
+        manual_count: Number(r.manual_count ?? 0),
+        override_count: Number(r.override_count ?? 0),
+        total_sessions: Number(r.total_sessions ?? 0),
+        attendance_percentage: Number(r.attendance_percentage ?? 0),
+        theory_present_count: Number(r.theory_present_count ?? 0),
+        theory_total_sessions: Number(r.theory_total_sessions ?? 0),
+        theory_percentage: Number(r.theory_percentage ?? 0),
+        practical_present_count: Number(r.practical_present_count ?? 0),
+        practical_total_sessions: Number(r.practical_total_sessions ?? 0),
+        practical_percentage: Number(r.practical_percentage ?? 0),
+      };
       map[s.roll_number] = s;
       map[s.roll_number.toUpperCase()] = s;
     });
     setSummaries(map);
   }, [courseName]);
+
 
 
   const pctFilterActive = minPct !== '' || maxPct !== '';
@@ -68,13 +84,32 @@ export function StudentsPage({ staff, courseName }: Props) {
       if (pctFilterActive) {
         const { data: summaryRows } = await supabase.rpc('student_attendance_summary', { p_course_name: courseName });
         pctSummaryMap = {};
-        (summaryRows as StudentAttendanceSummary[] ?? []).forEach((s) => { pctSummaryMap![s.roll_number] = s; });
+        (summaryRows ?? []).forEach((r: any) => {
+          const s: StudentAttendanceSummary = {
+            ...r,
+            present_count: Number(r.present_count ?? 0),
+            excused_count: Number(r.excused_count ?? 0),
+            manual_count: Number(r.manual_count ?? 0),
+            override_count: Number(r.override_count ?? 0),
+            total_sessions: Number(r.total_sessions ?? 0),
+            attendance_percentage: Number(r.attendance_percentage ?? 0),
+            theory_present_count: Number(r.theory_present_count ?? 0),
+            theory_total_sessions: Number(r.theory_total_sessions ?? 0),
+            theory_percentage: Number(r.theory_percentage ?? 0),
+            practical_present_count: Number(r.practical_present_count ?? 0),
+            practical_total_sessions: Number(r.practical_total_sessions ?? 0),
+            practical_percentage: Number(r.practical_percentage ?? 0),
+          };
+          pctSummaryMap![s.roll_number] = s;
+          pctSummaryMap![s.roll_number.toUpperCase()] = s;
+        });
         const min = minPct === '' ? -Infinity : Number(minPct);
         const max = maxPct === '' ? Infinity : Number(maxPct);
         const qualifying = Object.values(pctSummaryMap)
           .filter((s) => s.attendance_percentage >= min && s.attendance_percentage <= max)
           .map((s) => s.roll_number);
         query = query.in('roll_number', qualifying.length > 0 ? qualifying : ['__none__']);
+
       }
 
       const { data, count } = await query.range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);

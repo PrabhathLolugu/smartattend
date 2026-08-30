@@ -62,8 +62,24 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
 
       const sessions = sessionRows ?? [];
       setAllCourseSessions(sessions);
-      setSummaries((summaryRows as StudentAttendanceSummary[]) ?? []);
+      const parsedSummaries: StudentAttendanceSummary[] = (summaryRows ?? []).map((r: any) => ({
+        ...r,
+        present_count: Number(r.present_count ?? 0),
+        excused_count: Number(r.excused_count ?? 0),
+        manual_count: Number(r.manual_count ?? 0),
+        override_count: Number(r.override_count ?? 0),
+        total_sessions: Number(r.total_sessions ?? 0),
+        attendance_percentage: Number(r.attendance_percentage ?? 0),
+        theory_present_count: Number(r.theory_present_count ?? 0),
+        theory_total_sessions: Number(r.theory_total_sessions ?? 0),
+        theory_percentage: Number(r.theory_percentage ?? 0),
+        practical_present_count: Number(r.practical_present_count ?? 0),
+        practical_total_sessions: Number(r.practical_total_sessions ?? 0),
+        practical_percentage: Number(r.practical_percentage ?? 0),
+      }));
+      setSummaries(parsedSummaries);
       setTotalStudents(roster?.length ?? 0);
+
 
       // Today's sessions = sessions scheduled for today OR sessions currently active
       const todayList = sessions.filter((s) => s.session_date === today || s.status === 'active');
