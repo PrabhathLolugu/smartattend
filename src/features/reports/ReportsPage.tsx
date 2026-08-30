@@ -89,16 +89,10 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
         supabase.from('students').select('*').eq('status', 'active').order('roll_number'),
       ]);
 
-      const loadedSessions = (sessionRows ?? []).map((s) => {
-        const countData = s.attendance_records as unknown as [{ count: number }] | undefined;
-        const presentCount = countData?.[0]?.count ?? 0;
-        return { ...s, presentCount };
-      });
-      setSessions(loadedSessions);
-      setStudents(studentRows ?? []);
+      const loadedSessions = sessionRows ?? [];
+      const sessionIds = loadedSessions.map((s) => s.id);
 
       // Fetch attendance records specifically for these sessions to avoid cross-course truncation
-      const sessionIds = loadedSessions.map((s) => s.id);
       const { data: recordsData } = sessionIds.length > 0
         ? await supabase
             .from('attendance_records')
@@ -106,6 +100,18 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
             .in('session_id', sessionIds)
             .limit(50000)
         : { data: [] };
+
+      // Exact attendee count per session directly from attendance_records
+      const sessionCountMap = new Map<string, number>();
+      (recordsData ?? []).forEach((r) => {
+        if (r.status !== 'excused') {
+          sessionCountMap.set(r.session_id, (sessionCountMap.get(r.session_id) ?? 0) + 1);
+        }
+      });
+      const sessionsWithCounts = loadedSessions.map((s) => ({
+        ...s,
+        presentCount: sessionCountMap.get(s.id) ?? 0,
+      }));
 
       // Index records by student_id AND upper-case roll_number
       const recordsByStudentKey = new Map<string, typeof recordsData>();
@@ -240,11 +246,14 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
         };
       });
 
+      // Batch all state updates together so React does exactly 1 render pass
+      setSessions(sessionsWithCounts);
+      setStudents(studentRows ?? []);
       setSummaries(enriched);
     } catch (err) {
       console.error('[ReportsPage] Error loading reports:', err);
     } finally {
-      setLoading(false);
+      if (isInitial) setLoading(false);
     }
   }, [courseName]);
 
@@ -280,7 +289,7 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
 
     const interval = setInterval(() => {
       load(false);
-    }, 8000);
+    }, 15000);
 
     return () => {
       supabase.removeChannel(channel);

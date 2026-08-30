@@ -28,10 +28,26 @@ const METHOD_LABEL: Record<string, string> = {
   manual: 'Manual Entry',
 };
 
+interface SessionStatsRow {
+  session_id: string;
+  course_name: string;
+  session_date: string;
+  session_type: string;
+  group_filter: string | null;
+  status: string;
+  created_at: string;
+  present_count: number;
+  excused_count: number;
+  manual_count: number;
+  override_count: number;
+  gps_clean_count: number;
+  gps_flagged_count: number;
+}
+
 export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: Props) {
   const [todaySessions, setTodaySessions] = useState<Session[]>([]);
   const [allCourseSessions, setAllCourseSessions] = useState<Session[]>([]);
-  const [allRecords, setAllRecords] = useState<{ session_id: string; status: string; method: string }[]>([]);
+  const [sessionStats, setSessionStats] = useState<SessionStatsRow[]>([]);
   const [totalStudents, setTotalStudents] = useState(0);
   const [summaries, setSummaries] = useState<StudentAttendanceSummary[]>([]);
   const [demographics, setDemographics] = useState<{ department: string; count: number }[]>([]);
@@ -47,6 +63,7 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
         { data: sessionRows },
         { data: roster },
         { data: summaryRows },
+        { data: statsRows },
       ] = await Promise.all([
         supabase
           .from('sessions')
@@ -59,6 +76,8 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
           .eq('status', 'active'),
         supabase
           .rpc('student_attendance_summary', { p_course_name: courseName }),
+        supabase
+          .rpc('get_course_session_stats', { p_course_name: courseName }),
       ]);
 
       const sessions = sessionRows ?? [];
@@ -81,6 +100,17 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
       setSummaries(parsedSummaries);
       setTotalStudents(roster?.length ?? 0);
 
+      const parsedStats: SessionStatsRow[] = (statsRows ?? []).map((r: any) => ({
+        ...r,
+        present_count: Number(r.present_count ?? 0),
+        excused_count: Number(r.excused_count ?? 0),
+        manual_count: Number(r.manual_count ?? 0),
+        override_count: Number(r.override_count ?? 0),
+        gps_clean_count: Number(r.gps_clean_count ?? 0),
+        gps_flagged_count: Number(r.gps_flagged_count ?? 0),
+      }));
+      setSessionStats(parsedStats);
+
       // Today's sessions = sessions scheduled for today OR sessions currently active
       const todayList = sessions.filter((s) => s.session_date === today || s.status === 'active');
       setTodaySessions(todayList);
@@ -97,18 +127,6 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
           .sort((a, b) => b.count - a.count)
       );
 
-      // Fetch attendance records for all sessions in this course
-      const allIds = sessions.map((s) => s.id);
-      if (allIds.length > 0) {
-        const { data: records } = await supabase
-          .from('attendance_records')
-          .select('session_id, status, method')
-          .in('session_id', allIds)
-          .limit(30000);
-        setAllRecords(records ?? []);
-      } else {
-        setAllRecords([]);
-      }
       setLastSynced(new Date());
     } catch (err) {
       console.error('[DashboardPage] Error loading dashboard stats:', err);
@@ -148,37 +166,18 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
     [allCourseSessions]
   );
 
-  const todayRecords = useMemo(() => {
-    const todayIds = new Set(todaySessions.map((s) => s.id));
-    return allRecords.filter((r) => todayIds.has(r.session_id));
-  }, [todaySessions, allRecords]);
-
-  const methodTally = useMemo(() => {
-    const method: Record<string, number> = {};
-    allRecords.forEach((r) => {
-      const key = r.method || 'unknown';
-      method[key] = (method[key] ?? 0) + 1;
-    });
-    return method;
-  }, [allRecords]);
-
   const overrideTotal = useMemo(() => {
-    return allRecords.filter(
-      (r) =>
-        r.status === 'override' ||
-        r.method === 'override_code' ||
-        r.method === 'instructor_approved' ||
-        r.method === 'gps_flagged'
-    ).length;
-  }, [allRecords]);
+    return sessionStats.reduce((sum, s) => sum + s.override_count, 0);
+  }, [sessionStats]);
 
   const manualTotal = useMemo(() => {
-    return allRecords.filter((r) => r.status === 'manual' || r.method === 'manual').length;
-  }, [allRecords]);
+    return sessionStats.reduce((sum, s) => sum + s.manual_count, 0);
+  }, [sessionStats]);
 
   const excusedTotal = useMemo(() => {
-    return allRecords.filter((r) => r.status === 'excused').length;
-  }, [allRecords]);
+    return sessionStats.reduce((sum, s) => sum + s.excused_count, 0);
+  }, [sessionStats]);
+
 
   const overallPct = useMemo(() => {
     const totalPresent = summaries.reduce((sum, s) => sum + s.present_count, 0);
@@ -186,14 +185,15 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
     if (totalSlots > 0) {
       return Math.round((totalPresent / totalSlots) * 1000) / 10;
     }
-    // Fallback: If sessions are held or active, calculate from records / (totalStudents * totalSessions)
+    // Fallback: If sessions are held or active, calculate from sessionStats / (totalStudents * totalSessions)
     if (totalStudents > 0 && allCourseSessions.length > 0) {
-      const presentRecords = allRecords.filter((r) => r.status !== 'excused').length;
+      const presentRecords = sessionStats.reduce((sum, s) => sum + s.present_count, 0);
       const expectedTotal = totalStudents * allCourseSessions.length;
       return Math.min(100, Math.round((presentRecords / expectedTotal) * 1000) / 10);
     }
     return 0;
-  }, [summaries, totalStudents, allCourseSessions.length, allRecords]);
+  }, [summaries, totalStudents, allCourseSessions.length, sessionStats]);
+
 
   const [trendCategory, setTrendCategory] = useState<'theory' | 'practical' | 'all'>('theory');
   const [selectedGroup, setSelectedGroup] = useState<string>('all');
@@ -269,51 +269,50 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
 
   // Full-data chronological session attendance trend
   const sessionTrendData = useMemo(() => {
-    const perSessionPresent: Record<string, number> = {};
-    allRecords.forEach((r) => {
-      if (r.status !== 'excused') {
-        perSessionPresent[r.session_id] = (perSessionPresent[r.session_id] ?? 0) + 1;
-      }
-    });
-
     const isPracticalType = (type: string) => {
       const t = (type || '').toLowerCase();
-      return t.includes('yoga') || t.includes('yiga') || t.includes('practical') || t.includes('pract') || t.includes('lab') || t.includes('activity') || t.includes('meditation');
+      return (
+        t.includes('yoga') ||
+        t.includes('yiga') ||
+        t.includes('practical') ||
+        t.includes('pract') ||
+        t.includes('lab') ||
+        t.includes('activity') ||
+        t.includes('meditation')
+      );
     };
 
-    let filtered = allCourseSessions;
+    let filtered = sessionStats;
     if (trendCategory === 'theory') {
-      filtered = allCourseSessions.filter((s) => !isPracticalType(s.session_type));
+      filtered = sessionStats.filter((s) => !isPracticalType(s.session_type));
     } else if (trendCategory === 'practical') {
-      filtered = allCourseSessions.filter((s) => isPracticalType(s.session_type));
+      filtered = sessionStats.filter((s) => isPracticalType(s.session_type));
       if (selectedGroup !== 'all') {
         filtered = filtered.filter((s) => !s.group_filter || s.group_filter === selectedGroup);
       }
     }
 
-    return filtered
-      .map((s) => {
-        const isPract = isPracticalType(s.session_type);
-        const targetRoster = s.group_filter ? (groupRosterCounts[s.group_filter] || 45) : (totalStudents || 388);
-        const present = perSessionPresent[s.id] ?? 0;
-        const pct = targetRoster > 0 ? Math.min(100, Math.round((present / targetRoster) * 1000) / 10) : 0;
-        const dateStr = new Date(s.session_date).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' });
-        const label = s.group_filter ? `${dateStr} (Grp ${s.group_filter})` : dateStr;
+    return filtered.map((s) => {
+      const isPract = isPracticalType(s.session_type);
+      const targetRoster = s.group_filter ? (groupRosterCounts[s.group_filter] || 45) : (totalStudents || 388);
+      const present = s.present_count;
+      const pct = targetRoster > 0 ? Math.min(100, Math.round((present / targetRoster) * 1000) / 10) : 0;
+      const dateStr = new Date(s.session_date).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' });
+      const label = s.group_filter ? `${dateStr} (Grp ${s.group_filter})` : dateStr;
 
-        return {
-          id: s.id,
-          date: dateStr,
-          label,
-          type: s.session_type,
-          group: s.group_filter || 'All',
-          isPractical: isPract,
-          present,
-          targetRoster,
-          pct,
-        };
-      })
-      .reverse(); // Chronological order
-  }, [allCourseSessions, allRecords, trendCategory, selectedGroup, groupRosterCounts, totalStudents]);
+      return {
+        id: s.session_id,
+        date: dateStr,
+        label,
+        type: s.session_type,
+        group: s.group_filter || 'All Students',
+        isPractical: isPract,
+        present,
+        targetRoster,
+        pct,
+      };
+    });
+  }, [sessionStats, trendCategory, selectedGroup, groupRosterCounts, totalStudents]);
 
   const groupChart = useMemo(() => {
     return categoryStats.groupPracticalList.map((g) => ({
@@ -325,11 +324,19 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
   }, [categoryStats.groupPracticalList]);
 
   const methodChart = useMemo(() => {
-    return Object.entries(methodTally).map(([method, value]) => ({
-      name: METHOD_LABEL[method] ?? method.replace('_', ' '),
-      value,
-    }));
-  }, [methodTally]);
+    const clean = sessionStats.reduce((sum, s) => sum + s.gps_clean_count, 0);
+    const flagged = sessionStats.reduce((sum, s) => sum + s.gps_flagged_count, 0);
+    const override = sessionStats.reduce((sum, s) => sum + s.override_count, 0);
+    const manual = sessionStats.reduce((sum, s) => sum + s.manual_count, 0);
+
+    const res = [];
+    if (clean > 0) res.push({ name: 'QR Scan (Verified)', value: clean });
+    if (flagged > 0) res.push({ name: 'QR Scan (Flagged)', value: flagged });
+    if (override > 0) res.push({ name: 'Override Code / Approved', value: override });
+    if (manual > 0) res.push({ name: 'Manual Entry', value: manual });
+    return res;
+  }, [sessionStats]);
+
 
   const deptChart = useMemo(() => {
     if (demographics.length <= 8) return demographics;
@@ -641,9 +648,10 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
         ) : (
           <div className="divide-y divide-slate-50 dark:divide-[#21262d]">
             {todaySessions.map((s) => {
-              const count = todayRecords.filter((r) => r.session_id === s.id).length;
+              const count = sessionStats.find((st) => st.session_id === s.id)?.present_count ?? 0;
               return (
                 <button
+
                   key={s.id}
                   onClick={() => onOpenSession(s.id)}
                   className="w-full flex items-center justify-between px-5 py-3.5 hover:bg-slate-50 dark:hover:bg-[#161b22]/60 transition-colors text-left"

@@ -190,7 +190,7 @@ export default function App() {
       case 'dashboard': return <DashboardPage staff={staff} onNavigate={setActiveTab} onOpenSession={openSession} courseName={currentCourse} />;
       case 'live_session': return <LiveSessionPage staff={staff} courseName={currentCourse} onCourseChange={setCurrentCourse} />;
       case 'students': return <StudentsPage staff={staff} courseName={currentCourse} />;
-      case 'reports': return <ReportsPage staff={staff} courseName={currentCourse} focusSessionId={focusSessionId} onFocusHandled={() => setFocusSessionId(null)} />;
+      case 'reports': return <ReportsPage staff={staff} courseName={currentCourse} focusSessionId={focusSessionId} onFocusHandled={handleFocusHandled} />;
       case 'admin': return <AdminPage staff={staff} />;
       case 'audit': return <AuditPage />;
       case 'settings': return <SettingsPage />;
