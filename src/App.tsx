@@ -85,7 +85,14 @@ export default function App() {
       .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => { refreshLiveCount(); loadKnownCourses(); })
       .subscribe();
 
-    return () => { supabase.removeChannel(channel); };
+    const interval = setInterval(() => {
+      refreshLiveCount();
+    }, 5000);
+
+    return () => {
+      supabase.removeChannel(channel);
+      clearInterval(interval);
+    };
   }, [staff, currentCourse, loadKnownCourses]);
 
   async function handleLogout() {

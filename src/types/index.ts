@@ -36,15 +36,20 @@ export interface CourseSettings {
   qr_token_validity_seconds: number;
 }
 
+export type SessionCategory = 'theory_lecture' | 'yoga_practical';
+
 export const SESSION_TYPE_PRESETS = [
+  'Theory',
   'Lecture',
+  'Practical',
+  'Yoga',
   'Lab',
-  'Colloquium',
-  'Special Session',
-  'Workshop',
-  'Seminar',
   'Tutorial',
+  'Colloquium',
+  'Seminar',
+  'Workshop',
   'Exam',
+  'Special Session',
 ] as const;
 export type SessionStatus = 'active' | 'ended';
 
@@ -133,6 +138,13 @@ export interface StudentAttendanceSummary {
   override_count: number;
   total_sessions: number;
   attendance_percentage: number;
+  // Category specific stats
+  theory_present_count?: number;
+  theory_total_sessions?: number;
+  theory_percentage?: number;
+  practical_present_count?: number;
+  practical_total_sessions?: number;
+  practical_percentage?: number;
 }
 
 export interface ActivityRound {
@@ -140,3 +152,4 @@ export interface ActivityRound {
   name: string;
   created_at: string;
 }
+

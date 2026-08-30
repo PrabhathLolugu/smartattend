@@ -97,3 +97,22 @@ export function pctColor(pct: number): string {
 export function rand(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export function getSessionCategory(sessionType: string | null | undefined): 'theory_lecture' | 'yoga_practical' {
+  const t = (sessionType || '').toLowerCase();
+  if (t.includes('yoga') || t.includes('practical') || t.includes('lab') || t.includes('activity')) {
+    return 'yoga_practical';
+  }
+  return 'theory_lecture';
+}
+
+export function getSessionCategoryLabel(category: 'theory_lecture' | 'yoga_practical'): string {
+  return category === 'yoga_practical' ? 'Yoga & Practical' : 'Theory & Lecture';
+}
+
+export function getCategoryBadgeClass(category: 'theory_lecture' | 'yoga_practical'): string {
+  return category === 'yoga_practical'
+    ? 'bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-200/60 dark:border-purple-500/20'
+    : 'bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200/60 dark:border-blue-500/20';
+}
+

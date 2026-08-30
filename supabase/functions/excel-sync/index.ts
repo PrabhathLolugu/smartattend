@@ -27,6 +27,11 @@ Deno.serve(async (req: Request) => {
     const { data: summaries } = await db.rpc("student_attendance_summary", { p_course_name: courseName });
     const pctByRoll = new Map((summaries ?? []).map((s: { roll_number: string; attendance_percentage: number }) => [s.roll_number, s.attendance_percentage]));
 
+    const isPractical = (type: string) => {
+      const t = (type || "").toLowerCase();
+      return t.includes("yoga") || t.includes("practical") || t.includes("lab") || t.includes("activity");
+    };
+
     let sessionQuery = db.from("sessions").select("id, session_date, session_type, course_name, group_filter, round_id").eq("status", "ended").eq("course_name", courseName).order("session_date");
     if (fromDate) sessionQuery = sessionQuery.gte("session_date", fromDate);
     if (toDate) sessionQuery = sessionQuery.lte("session_date", toDate);
@@ -50,12 +55,17 @@ Deno.serve(async (req: Request) => {
       { header: "School / Centre", key: "dept", width: 30 },
       { header: "Program", key: "prog", width: 16 },
       { header: "Group", key: "group", width: 10 },
-      ...(sessions ?? []).map((s) => ({
-        header: `${s.session_date} · ${s.course_name} (${s.session_type})${s.round_id ? " ↻" : ""}`,
-        key: s.id,
-        width: 16,
-      })),
-      { header: "Present %", key: "pct", width: 12 },
+      ...(sessions ?? []).map((s) => {
+        const tag = isPractical(s.session_type) ? "[Practical]" : "[Theory]";
+        return {
+          header: `${s.session_date} · ${tag} ${s.course_name} (${s.session_type})${s.round_id ? " ↻" : ""}`,
+          key: s.id,
+          width: 20,
+        };
+      }),
+      { header: "Theory %", key: "theory_pct", width: 14 },
+      { header: "Yoga/Pract. %", key: "practical_pct", width: 16 },
+      { header: "Overall %", key: "pct", width: 14 },
     ];
     sheet.getRow(1).font = { bold: true };
 
@@ -70,18 +80,43 @@ Deno.serve(async (req: Request) => {
         prog: student.program ?? "",
         group: student.group_label ?? "",
       };
+
+      let theoryTot = 0;
+      let theoryPres = 0;
+      let practicalTot = 0;
+      let practicalPres = 0;
+
       for (const s of sessions ?? []) {
         const applicable = !s.group_filter || s.group_filter === student.group_label;
-        if (!applicable) {
+        const status = byStudentSession.get(`${student.roll_number}|${s.id}`);
+        const attended = status && status !== "excused";
+        const practical = isPractical(s.session_type);
+
+        if (!applicable && !attended) {
           row[s.id] = "-";
           continue;
         }
-        const status = byStudentSession.get(`${student.roll_number}|${s.id}`);
+
+        if (practical) {
+          practicalTot += 1;
+          if (attended) practicalPres += 1;
+        } else {
+          theoryTot += 1;
+          if (attended) theoryPres += 1;
+        }
+
         row[s.id] = status ? (LABELS[status] ?? "P") : "A";
       }
-      row.pct = pctByRoll.get(student.roll_number) ?? 0;
+
+      const totalHeld = theoryTot + practicalTot;
+      const totalPres = theoryPres + practicalPres;
+
+      row.theory_pct = theoryTot === 0 ? (theoryPres > 0 ? "100%" : "0%") : `${Math.round((theoryPres / theoryTot) * 1000) / 10}%`;
+      row.practical_pct = practicalTot === 0 ? (practicalPres > 0 ? "100%" : "0%") : `${Math.round((practicalPres / practicalTot) * 1000) / 10}%`;
+      row.pct = totalHeld === 0 ? (totalPres > 0 ? "100%" : "0%") : `${Math.round((totalPres / totalHeld) * 1000) / 10}%`;
       sheet.addRow(row);
     }
+
 
     const buffer = await workbook.xlsx.writeBuffer();
 

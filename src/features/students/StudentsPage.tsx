@@ -50,47 +50,61 @@ export function StudentsPage({ staff, courseName }: Props) {
   const pctFilterActive = minPct !== '' || maxPct !== '';
 
   const load = useCallback(async () => {
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    let pctSummaryMap: Record<string, StudentAttendanceSummary> | null = null;
-    let query = supabase.from('students').select('*', { count: 'exact' }).order('roll_number');
-    if (statusFilter !== 'all') query = query.eq('status', statusFilter);
-    if (roleFilter !== 'all') query = query.eq('role_type', roleFilter);
-    if (search.trim()) query = query.or(`roll_number.ilike.%${search}%,name.ilike.%${search}%`);
-    if (groupFilter === UNASSIGNED) query = query.is('group_label', null);
-    else if (groupFilter) query = query.eq('group_label', groupFilter);
-    if (deptFilter) query = query.eq('department', deptFilter);
-    if (pctFilterActive) {
-      const { data: summaryRows } = await supabase.rpc('student_attendance_summary', { p_course_name: courseName });
-      pctSummaryMap = {};
-      (summaryRows as StudentAttendanceSummary[] ?? []).forEach((s) => { pctSummaryMap![s.roll_number] = s; });
-      const min = minPct === '' ? -Infinity : Number(minPct);
-      const max = maxPct === '' ? Infinity : Number(maxPct);
-      const qualifying = Object.values(pctSummaryMap)
-        .filter((s) => s.attendance_percentage >= min && s.attendance_percentage <= max)
-        .map((s) => s.roll_number);
-      query = query.in('roll_number', qualifying.length > 0 ? qualifying : ['__none__']);
+      let pctSummaryMap: Record<string, StudentAttendanceSummary> | null = null;
+      let query = supabase.from('students').select('*', { count: 'exact' }).order('roll_number');
+      if (statusFilter !== 'all') query = query.eq('status', statusFilter);
+      if (roleFilter !== 'all') query = query.eq('role_type', roleFilter);
+      if (search.trim()) query = query.or(`roll_number.ilike.%${search}%,name.ilike.%${search}%`);
+      if (groupFilter === UNASSIGNED) query = query.is('group_label', null);
+      else if (groupFilter) query = query.eq('group_label', groupFilter);
+      if (deptFilter) query = query.eq('department', deptFilter);
+      if (pctFilterActive) {
+        const { data: summaryRows } = await supabase.rpc('student_attendance_summary', { p_course_name: courseName });
+        pctSummaryMap = {};
+        (summaryRows as StudentAttendanceSummary[] ?? []).forEach((s) => { pctSummaryMap![s.roll_number] = s; });
+        const min = minPct === '' ? -Infinity : Number(minPct);
+        const max = maxPct === '' ? Infinity : Number(maxPct);
+        const qualifying = Object.values(pctSummaryMap)
+          .filter((s) => s.attendance_percentage >= min && s.attendance_percentage <= max)
+          .map((s) => s.roll_number);
+        query = query.in('roll_number', qualifying.length > 0 ? qualifying : ['__none__']);
+      }
+
+      const { data, count } = await query.range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);
+      setStudents(data ?? []);
+      setTotal(count ?? 0);
+      setSelected(new Set());
+      if (pctSummaryMap) setSummaries(pctSummaryMap);
+      else await loadSummaries();
+    } catch (err) {
+      console.error('[StudentsPage] Error loading participants:', err);
+    } finally {
+      setLoading(false);
     }
-
-    const { data, count } = await query.range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);
-    setStudents(data ?? []);
-    setTotal(count ?? 0);
-    setSelected(new Set());
-    if (pctSummaryMap) setSummaries(pctSummaryMap);
-    else await loadSummaries();
-    setLoading(false);
   }, [search, statusFilter, roleFilter, groupFilter, deptFilter, pctFilterActive, minPct, maxPct, page, courseName, loadSummaries]);
 
   useEffect(() => { load(); }, [load]);
 
   useEffect(() => {
+    const channelId = `students_summary_watch_${courseName.replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`;
     const channel = supabase
-      .channel('students_summary_watch')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance_records' }, loadSummaries)
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, loadSummaries)
+      .channel(channelId)
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance_records' }, () => loadSummaries())
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => loadSummaries())
       .subscribe();
-    return () => { supabase.removeChannel(channel); };
-  }, [loadSummaries]);
+
+    const interval = setInterval(() => {
+      loadSummaries();
+    }, 6000);
+
+    return () => {
+      supabase.removeChannel(channel);
+      clearInterval(interval);
+    };
+  }, [loadSummaries, courseName]);
 
   async function handleSoftDelete(student: Student) {
     if (!window.confirm(`Remove ${student.name} (${student.roll_number})? This can be restored later.`)) return;
@@ -292,14 +306,37 @@ function StudentDetailModal({
   return (
     <Modal open={open} onClose={onClose} title={student.name} subtitle={`${student.roll_number} · ${courseName}`} size="sm">
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 flex-wrap">
           <span className={student.role_type === 'faculty' ? 'badge-blue' : 'badge-slate'}>
             {student.role_type === 'faculty' ? 'Faculty / Staff' : 'Student'}
           </span>
           {student.group_label ? <span className="badge-blue">Group {student.group_label}</span> : <span className="badge-slate">Unassigned group</span>}
           <span className="badge-slate">{student.status}</span>
-          {summary && <span className={`font-semibold text-sm ${pctColor(summary.attendance_percentage)}`}>{summary.attendance_percentage}% attendance</span>}
         </div>
+
+        {summary && (
+          <div className="grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-slate-50 dark:bg-[#161b22] border border-slate-200/60 dark:border-[#30363d] text-center">
+            <div>
+              <p className="text-[10px] text-blue-600 dark:text-blue-400 font-semibold uppercase">Theory %</p>
+              <p className={`text-base font-bold font-tabular ${pctColor(summary.theory_percentage ?? summary.attendance_percentage)}`}>
+                {summary.theory_percentage ?? summary.attendance_percentage}%
+              </p>
+            </div>
+            <div>
+              <p className="text-[10px] text-purple-600 dark:text-purple-400 font-semibold uppercase">Yoga/Pract. %</p>
+              <p className={`text-base font-bold font-tabular ${pctColor(summary.practical_percentage ?? summary.attendance_percentage)}`}>
+                {summary.practical_percentage ?? summary.attendance_percentage}%
+              </p>
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-500 font-semibold uppercase">Overall %</p>
+              <p className={`text-base font-bold font-tabular ${pctColor(summary.attendance_percentage)}`}>
+                {summary.attendance_percentage}%
+              </p>
+            </div>
+          </div>
+        )}
+
         <div className="grid grid-cols-2 gap-x-4 gap-y-3">
           <DetailField label={student.role_type === 'faculty' ? 'Employee ID' : 'Roll Number'} value={student.roll_number} />
           <DetailField label="Name" value={student.name} />
