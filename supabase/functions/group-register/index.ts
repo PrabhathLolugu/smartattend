@@ -97,7 +97,8 @@ Deno.serve(async (req: Request) => {
     });
 
     return withCors({ student, group: code });
-  } catch {
-    return withCors({ error: "Invalid request." }, 400);
+  } catch (err) {
+    console.error("[group-register] error:", err);
+    return withCors({ error: err instanceof Error ? err.message : "Invalid request." }, 400);
   }
 });

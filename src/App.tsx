@@ -114,7 +114,7 @@ export default function App() {
   useEffect(() => {
     if (!staff) return;
 
-    supabase.from('course_settings').select('course_name').single().then(({ data }) => {
+    supabase.from('course_settings').select('course_name').maybeSingle().then(({ data }) => {
       if (data?.course_name) {
         setDefaultCourseName(data.course_name);
         const stored = localStorage.getItem('sa_current_course');

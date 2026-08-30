@@ -63,7 +63,8 @@ export function StudentJoinGroupFlow({ onBack }: Props) {
         }
       }
     } catch (err) {
-      toast('error', err instanceof Error ? err.message : 'Lookup failed. Please try again.');
+      console.error('[StudentJoinGroupFlow] lookup error:', err);
+      toast('error', 'Unable to check student directory. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }

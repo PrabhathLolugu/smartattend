@@ -20,7 +20,7 @@ Deno.serve(async (req: Request) => {
       .maybeSingle();
     if (!session) return withCors({ error: "Session is not active." }, 404);
 
-    const { data: settings } = await db.from("course_settings").select("qr_rotation_seconds, qr_token_validity_seconds").single();
+    const { data: settings } = await db.from("course_settings").select("qr_rotation_seconds, qr_token_validity_seconds").maybeSingle();
     const rotationSeconds = settings?.qr_rotation_seconds || 300;
     const tokenValiditySeconds = settings?.qr_token_validity_seconds || 600;
     const rotationId = crypto.randomUUID();
@@ -32,13 +32,19 @@ Deno.serve(async (req: Request) => {
       .update({ rotation_id: rotationId, rotation_expires_at: rotationExpiresAt.toISOString() })
       .eq("id", sessionId);
 
+    const qrSigningSecret = Deno.env.get("QR_SIGNING_SECRET");
+    if (!qrSigningSecret) {
+      return withCors({ error: "Server configuration error: QR_SIGNING_SECRET missing." }, 500);
+    }
+
     const qrToken = await signQrToken(
       { sid: session.id, rot: rotationId, exp: tokenExpiresAt.getTime() },
-      Deno.env.get("QR_SIGNING_SECRET")!,
+      qrSigningSecret,
     );
 
     return withCors({ qrToken, expiresAt: rotationExpiresAt.toISOString() });
-  } catch {
-    return withCors({ error: "Invalid request." }, 400);
+  } catch (err) {
+    console.error("[session-qr-rotate] error:", err);
+    return withCors({ error: err instanceof Error ? err.message : "Invalid request." }, 400);
   }
 });

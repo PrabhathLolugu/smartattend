@@ -96,7 +96,7 @@ export function LiveSessionPage({ staff, courseName, onCourseChange }: Props) {
   }, [courseName]);
 
   useEffect(() => {
-    supabase.from('course_settings').select('*').single().then(({ data }) => setSettings(data));
+    supabase.from('course_settings').select('*').maybeSingle().then(({ data }) => setSettings(data));
     loadSessions();
     loadPickerData();
 

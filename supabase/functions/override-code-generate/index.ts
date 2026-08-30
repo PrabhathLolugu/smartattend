@@ -24,7 +24,7 @@ Deno.serve(async (req: Request) => {
       .maybeSingle();
     if (!session) return withCors({ error: "Session is not active." }, 404);
 
-    const { data: settings } = await db.from("course_settings").select("override_code_ttl_seconds").single();
+    const { data: settings } = await db.from("course_settings").select("override_code_ttl_seconds").maybeSingle();
     const ttl = settings?.override_code_ttl_seconds || 120;
     const code = sixDigitCode();
     const expiresAt = new Date(Date.now() + ttl * 1000);
@@ -43,7 +43,8 @@ Deno.serve(async (req: Request) => {
     });
 
     return withCors({ code, expiresAt: expiresAt.toISOString() });
-  } catch {
-    return withCors({ error: "Invalid request." }, 400);
+  } catch (err) {
+    console.error("[override-code-generate] error:", err);
+    return withCors({ error: err instanceof Error ? err.message : "Invalid request." }, 400);
   }
 });

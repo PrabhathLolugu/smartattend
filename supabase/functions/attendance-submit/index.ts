@@ -10,7 +10,11 @@ Deno.serve(async (req: Request) => {
 
   try {
     const body = await req.json();
-    const qrCheck = await verifyQrToken(String(body.qrToken ?? ""), Deno.env.get("QR_SIGNING_SECRET")!);
+    const qrSigningSecret = Deno.env.get("QR_SIGNING_SECRET");
+    if (!qrSigningSecret) {
+      return withCors({ error: "Server configuration error. Please contact support." }, 500);
+    }
+    const qrCheck = await verifyQrToken(String(body.qrToken ?? ""), qrSigningSecret);
     if (!qrCheck.valid) return withCors({ error: qrCheck.error }, 400);
 
     const roll = String(body.rollNumber ?? "").trim().toUpperCase();
@@ -32,15 +36,19 @@ Deno.serve(async (req: Request) => {
     // If student doesn't exist (or was deleted), auto-register them so attendance is never blocked.
     // They can fill in full details later via the enroll flow — for now just the roll number is enough.
     if (!student || student.status === "deleted") {
-      const { data: created } = await db
+      const { data: created, error: autoInsertErr } = await db
         .from("students")
         .insert({ roll_number: roll, name: roll, role_type: "student" })
         .select()
         .single();
-      // If even auto-create fails (e.g. race with concurrent enroll), fetch again
+
       if (!created) {
+        // Insert failed — either a race-condition duplicate (23505) or an unknown error.
+        // In both cases, try to re-fetch the existing row before giving up.
         const { data: refetched } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
         if (!refetched) {
+          // Log the real error for server-side visibility, return a friendly message to the student.
+          console.error("[attendance-submit] auto-register failed:", autoInsertErr);
           return withCors({ error: "Could not register student. Please try again." }, 500);
         }
         student = refetched;
@@ -65,14 +73,21 @@ Deno.serve(async (req: Request) => {
     const lng = Number(body.lng);
     const hasPosition = Number.isFinite(lat) && Number.isFinite(lng);
 
+    // Guard: anchor coordinates must both be valid numbers for distance to be meaningful.
+    // If session has no anchor (e.g. created without GPS), skip radius check entirely.
+    const hasAnchor = Number.isFinite(Number(session.anchor_lat)) && Number.isFinite(Number(session.anchor_lng));
+
     let gpsFlag: string | null = null;      // null = clean GPS, otherwise flagged for instructor
     let distanceMeters: number | null = null;
 
     if (!hasPosition) {
       // GPS unavailable or denied — student is still allowed through
       gpsFlag = body.gpsDenied ? "gps_denied" : "gps_unavailable";
+    } else if (!hasAnchor) {
+      // Session has no anchor point — skip radius check, treat as clean GPS
+      gpsFlag = null;
     } else {
-      const distance = haversineMeters(lat, lng, session.anchor_lat, session.anchor_lng);
+      const distance = haversineMeters(lat, lng, Number(session.anchor_lat), Number(session.anchor_lng));
       distanceMeters = distance;
       const accuracy = Number.isFinite(Number(body.accuracy)) ? Number(body.accuracy) : 0;
       // Account for mobile GPS accuracy variance (up to 100m indoor buffer)
@@ -113,19 +128,27 @@ Deno.serve(async (req: Request) => {
 
     // ── Log GPS override request for instructor visibility (non-blocking) ─────
     if (gpsFlag) {
-      await db
-        .from("gps_override_requests")
-        .upsert(
-          {
+      try {
+        const { data: existingReq } = await db
+          .from("gps_override_requests")
+          .select("id")
+          .eq("session_id", session.id)
+          .eq("student_id", student.id)
+          .maybeSingle();
+
+        if (!existingReq) {
+          await db.from("gps_override_requests").insert({
             session_id: session.id,
             student_id: student.id,
             roll_number: student.roll_number,
             distance_meters: distanceMeters,
             reason: gpsFlag,
             status: "auto_allowed",   // not 'pending' — student already has attendance
-          },
-          { onConflict: "session_id,student_id", ignoreDuplicates: true },
-        );
+          });
+        }
+      } catch (logErr) {
+        console.error("[attendance-submit] non-critical override request log error:", logErr);
+      }
     }
 
     await logAudit({

@@ -111,9 +111,9 @@ Deno.serve(async (req: Request) => {
       const totalHeld = theoryTot + practicalTot;
       const totalPres = theoryPres + practicalPres;
 
-      row.theory_pct = theoryTot === 0 ? (theoryPres > 0 ? "100%" : "0%") : `${Math.round((theoryPres / theoryTot) * 1000) / 10}%`;
-      row.practical_pct = practicalTot === 0 ? (practicalPres > 0 ? "100%" : "0%") : `${Math.round((practicalPres / practicalTot) * 1000) / 10}%`;
-      row.pct = totalHeld === 0 ? (totalPres > 0 ? "100%" : "0%") : `${Math.round((totalPres / totalHeld) * 1000) / 10}%`;
+      row.theory_pct = theoryTot === 0 ? "N/A" : `${Math.round((theoryPres / theoryTot) * 1000) / 10}%`;
+      row.practical_pct = practicalTot === 0 ? "N/A" : `${Math.round((practicalPres / practicalTot) * 1000) / 10}%`;
+      row.pct = totalHeld === 0 ? "N/A" : `${Math.round((totalPres / totalHeld) * 1000) / 10}%`;
       sheet.addRow(row);
     }
 
@@ -135,7 +135,8 @@ Deno.serve(async (req: Request) => {
     if (signErr || !signed) return withCors({ error: "File saved, but could not generate a download link." }, 500);
 
     return withCors({ url: signed.signedUrl });
-  } catch {
-    return withCors({ error: "Excel export failed." }, 500);
+  } catch (err) {
+    console.error("[excel-sync] error:", err);
+    return withCors({ error: err instanceof Error ? err.message : "Excel export failed." }, 500);
   }
 });

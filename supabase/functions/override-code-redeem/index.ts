@@ -9,7 +9,11 @@ Deno.serve(async (req: Request) => {
 
   try {
     const body = await req.json();
-    const qrCheck = await verifyQrToken(String(body.qrToken ?? ""), Deno.env.get("QR_SIGNING_SECRET")!);
+    const qrSigningSecret = Deno.env.get("QR_SIGNING_SECRET");
+    if (!qrSigningSecret) {
+      return withCors({ error: "Server configuration error. Please contact support." }, 500);
+    }
+    const qrCheck = await verifyQrToken(String(body.qrToken ?? ""), qrSigningSecret);
     if (!qrCheck.valid) return withCors({ error: qrCheck.error }, 400);
 
     const roll = String(body.rollNumber ?? "").trim().toUpperCase();
@@ -27,8 +31,30 @@ Deno.serve(async (req: Request) => {
       return withCors({ error: "This code has expired. Ask your instructor to generate a new one." }, 400);
     }
 
-    const { data: student } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
-    if (!student) return withCors({ error: "No student found with that roll number." }, 404);
+    let student = await (async () => {
+      const { data } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
+      return data;
+    })();
+
+    // Auto-register student if first-time
+    if (!student || student.status === "deleted") {
+      const { data: created, error: autoInsertErr } = await db
+        .from("students")
+        .insert({ roll_number: roll, name: roll, role_type: "student" })
+        .select()
+        .single();
+
+      if (!created) {
+        const { data: refetched } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
+        if (!refetched) {
+          console.error("[override-code-redeem] auto-register failed:", autoInsertErr);
+          return withCors({ error: "Could not register student. Please try again." }, 500);
+        }
+        student = refetched;
+      } else {
+        student = created;
+      }
+    }
 
     // Check if already marked
     const { data: existing } = await db

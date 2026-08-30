@@ -3,14 +3,22 @@ import { supabase } from '../../services/supabase';
 import { toast } from '../../components/ui/Toast';
 import type { CourseSettings } from '../../types';
 
+const DEFAULT_SETTINGS: CourseSettings = {
+  course_name: 'IC181',
+  gps_radius_meters: 100,
+  override_code_ttl_seconds: 180,
+  qr_rotation_seconds: 25,
+  qr_token_validity_seconds: 1800,
+};
+
 export function SettingsPage() {
   const [form, setForm] = useState<CourseSettings | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    supabase.from('course_settings').select('*').single().then(({ data }) => {
-      setForm(data);
+    supabase.from('course_settings').select('*').maybeSingle().then(({ data }) => {
+      setForm(data || DEFAULT_SETTINGS);
       setLoading(false);
     });
   }, []);
@@ -20,14 +28,14 @@ export function SettingsPage() {
     setSaving(true);
     const { error } = await supabase
       .from('course_settings')
-      .update({
+      .upsert({
+        id: true,
         course_name: form.course_name,
         gps_radius_meters: form.gps_radius_meters,
         override_code_ttl_seconds: form.override_code_ttl_seconds,
         qr_rotation_seconds: form.qr_rotation_seconds,
         qr_token_validity_seconds: form.qr_token_validity_seconds,
-      })
-      .eq('id', true);
+      });
     setSaving(false);
     if (error) { toast('error', 'Could not save settings.'); return; }
     toast('success', 'Settings saved.');

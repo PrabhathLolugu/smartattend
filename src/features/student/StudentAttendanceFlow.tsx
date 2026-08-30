@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { callFunction } from '../../lib/api';
+import { callFunction, type ApiError } from '../../lib/api';
 import { CameraScanner } from '../../components/shared/CameraScanner';
 import type { Student, Session, AttendanceRecord, ParticipantType } from '../../types';
 
@@ -230,7 +230,8 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
       }
     } catch (e) {
       const message = e instanceof Error ? e.message : 'Registration failed.';
-      if (message.includes('already registered')) {
+      const code = (e as ApiError)?.code;
+      if (code === 'already_registered' || message.toLowerCase().includes('already registered')) {
         try {
           const check = await callFunction<{ exists: boolean; student?: Student }>('student-check', { rollNumber: roll });
           if (check.exists && check.student) {

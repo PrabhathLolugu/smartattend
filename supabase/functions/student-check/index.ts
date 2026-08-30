@@ -25,29 +25,33 @@ Deno.serve(async (req: Request) => {
 
     // If QR token is present, check if this specific student has already marked for this session
     if (body.qrToken) {
-      const qrCheck = await verifyQrToken(String(body.qrToken), Deno.env.get("QR_SIGNING_SECRET")!);
-      if (qrCheck.valid) {
-        const { data: record } = await db
-          .from("attendance_records")
-          .select("marked_at, status")
-          .eq("session_id", qrCheck.payload.sid)
-          .eq("student_id", student.id)
-          .maybeSingle();
+      const qrSigningSecret = Deno.env.get("QR_SIGNING_SECRET");
+      if (qrSigningSecret) {
+        const qrCheck = await verifyQrToken(String(body.qrToken), qrSigningSecret);
+        if (qrCheck.valid) {
+          const { data: record } = await db
+            .from("attendance_records")
+            .select("marked_at, status")
+            .eq("session_id", qrCheck.payload.sid)
+            .eq("student_id", student.id)
+            .maybeSingle();
 
-        if (record) {
-          return withCors({
-            exists: true,
-            student,
-            alreadyMarked: true,
-            markedAt: record.marked_at,
-            status: record.status,
-          });
+          if (record) {
+            return withCors({
+              exists: true,
+              student,
+              alreadyMarked: true,
+              markedAt: record.marked_at,
+              status: record.status,
+            });
+          }
         }
       }
     }
 
     return withCors({ exists: true, student });
-  } catch {
-    return withCors({ error: "Invalid request." }, 400);
+  } catch (err) {
+    console.error("[student-check] error:", err);
+    return withCors({ error: err instanceof Error ? err.message : "Invalid request." }, 400);
   }
 });
