@@ -24,17 +24,40 @@ const MOBILE_NAV = [
   { id: 'groups', label: 'Join Group', icon: '🔗' },
 ];
 
+const VALID_TABS = ['dashboard', 'live_session', 'students', 'reports', 'groups', 'admin', 'audit', 'settings'];
+
+
+function getInitialTab(): string {
+  try {
+    const hash = window.location.hash.replace(/^#\/?/, '').trim();
+    if (VALID_TABS.includes(hash)) return hash;
+    const stored = sessionStorage.getItem('sa_active_tab');
+    if (stored && VALID_TABS.includes(stored)) return stored;
+  } catch {}
+  return 'dashboard';
+}
+
 export default function App() {
   const { loading, staff, session } = useAuth();
   const [studentMode, setStudentMode] = useState(false);
   const [joinGroupMode, setJoinGroupMode] = useState(false);
   const [attendToken, setAttendToken] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTabState] = useState<string>(getInitialTab);
   const [defaultCourseName, setDefaultCourseName] = useState('IC181');
   const [currentCourse, setCurrentCourseState] = useState(() => localStorage.getItem('sa_current_course') || 'IC181');
   const [knownCourses, setKnownCourses] = useState<string[]>([]);
   const [liveSessionCount, setLiveSessionCount] = useState(0);
   const [focusSessionId, setFocusSessionId] = useState<string | null>(null);
+
+  const setActiveTab = React.useCallback((tab: string) => {
+    setActiveTabState(tab);
+    try {
+      sessionStorage.setItem('sa_active_tab', tab);
+      if (window.location.hash !== `#/${tab}`) {
+        window.history.replaceState(null, '', `#/${tab}`);
+      }
+    } catch {}
+  }, []);
 
   function openSession(sessionId: string) {
     setFocusSessionId(sessionId);
@@ -49,6 +72,21 @@ export default function App() {
   const handleFocusHandled = React.useCallback(() => {
     setFocusSessionId(null);
   }, []);
+
+  useEffect(() => {
+    function onHashChange() {
+      const hash = window.location.hash.replace(/^#\/?/, '').trim();
+      if (VALID_TABS.includes(hash)) {
+        setActiveTabState(hash);
+        try {
+          sessionStorage.setItem('sa_active_tab', hash);
+        } catch {}
+      }
+    }
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
 
   const loadKnownCourses = React.useCallback(async () => {
     const { data } = await supabase.from('sessions').select('course_name');
