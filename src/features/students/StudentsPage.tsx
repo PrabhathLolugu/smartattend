@@ -216,24 +216,27 @@ export function StudentsPage({ staff, courseName }: Props) {
       )}
 
       <div className="card overflow-x-auto">
-        <table className="data-table min-w-[760px]">
+        <table className="data-table min-w-[920px]">
           <thead>
             <tr>
               <th><input type="checkbox" checked={selected.size > 0 && selected.size === students.length} onChange={toggleSelectAll} /></th>
-              <th>Roll / Emp ID</th><th>Name</th><th>Role</th><th>School / Centre</th><th>Program</th><th>Group</th><th>Attendance %</th><th>Status</th>
+              <th>Roll / Emp ID</th><th>Name</th><th>Role</th><th>School / Centre</th><th>Program</th><th>Group</th>
+              <th className="text-blue-600 dark:text-blue-400">Theory %</th>
+              <th className="text-purple-600 dark:text-purple-400">Yoga/Pract. %</th>
+              <th>Overall %</th>
+              <th>Status</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {loading ? (
-              <tr><td colSpan={9} className="text-center py-10 text-slate-400 text-sm">Loading…</td></tr>
+              <tr><td colSpan={11} className="text-center py-10 text-slate-400 text-sm">Loading…</td></tr>
             ) : students.length === 0 ? (
-              <tr><td colSpan={9} className="text-center py-10 text-slate-400 text-sm">No participants found.</td></tr>
+              <tr><td colSpan={11} className="text-center py-10 text-slate-400 text-sm">No participants found.</td></tr>
             ) : (
               students.map((s) => {
                 const summary = summaries[s.roll_number] || summaries[s.roll_number.toUpperCase()];
                 return (
-
                   <tr key={s.id} onClick={() => setViewing(s)} className="cursor-pointer">
                     <td onClick={(e) => e.stopPropagation()}><input type="checkbox" checked={selected.has(s.id)} onChange={() => toggleSelect(s.id)} /></td>
                     <td className="font-mono font-medium">{s.roll_number}</td>
@@ -248,7 +251,21 @@ export function StudentsPage({ staff, courseName }: Props) {
                     <td>{s.group_label ? <span className="badge-blue">{s.group_label}</span> : <span className="text-slate-300 dark:text-slate-600 text-xs">Unassigned</span>}</td>
                     <td>
                       {summary ? (
-                        <span className={`font-semibold ${pctColor(summary.attendance_percentage)}`}>{summary.attendance_percentage}%</span>
+                        <span className={`font-semibold font-tabular ${pctColor(summary.theory_percentage ?? summary.attendance_percentage)}`}>
+                          {summary.theory_percentage ?? summary.attendance_percentage}%
+                        </span>
+                      ) : '—'}
+                    </td>
+                    <td>
+                      {summary ? (
+                        <span className={`font-semibold font-tabular ${pctColor(summary.practical_percentage ?? summary.attendance_percentage)}`}>
+                          {summary.practical_percentage ?? summary.attendance_percentage}%
+                        </span>
+                      ) : '—'}
+                    </td>
+                    <td>
+                      {summary ? (
+                        <span className={`font-bold font-tabular ${pctColor(summary.attendance_percentage)}`}>{summary.attendance_percentage}%</span>
                       ) : '—'}
                     </td>
                     <td><span className="badge-slate">{s.status}</span></td>
@@ -269,6 +286,7 @@ export function StudentsPage({ staff, courseName }: Props) {
           </tbody>
         </table>
       </div>
+
 
       {total > PAGE_SIZE && (
         <div className="flex items-center justify-between">

@@ -179,6 +179,33 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
     return 0;
   }, [summaries, totalStudents, allCourseSessions.length, allRecords]);
 
+  const categoryStats = useMemo(() => {
+
+    const theorySessions = allCourseSessions.filter((s) => {
+      const t = (s.session_type || '').toLowerCase();
+      return !(t.includes('yoga') || t.includes('yiga') || t.includes('practical') || t.includes('pract') || t.includes('lab') || t.includes('activity') || t.includes('meditation'));
+    });
+    const practicalSessions = allCourseSessions.filter((s) => {
+      const t = (s.session_type || '').toLowerCase();
+      return (t.includes('yoga') || t.includes('yiga') || t.includes('practical') || t.includes('pract') || t.includes('lab') || t.includes('activity') || t.includes('meditation'));
+    });
+
+    const totalStudentsCount = summaries.length || 1;
+    const avgTheoryPct = Math.round(
+      summaries.reduce((sum, s) => sum + (s.theory_percentage ?? 0), 0) / totalStudentsCount * 10
+    ) / 10;
+    const avgPracticalPct = Math.round(
+      summaries.reduce((sum, s) => sum + (s.practical_percentage ?? 0), 0) / totalStudentsCount * 10
+    ) / 10;
+
+    return {
+      theorySessionsCount: theorySessions.length,
+      practicalSessionsCount: practicalSessions.length,
+      avgTheoryPct,
+      avgPracticalPct,
+    };
+  }, [allCourseSessions, summaries]);
+
   const groupChart = useMemo(() => {
     const byGroup: Record<string, { sum: number; n: number }> = {};
     summaries.forEach((s) => {
@@ -263,24 +290,36 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
 
       <div>
         <div className="flex items-center justify-between mb-3">
-          <p className="section-title">Overall Stats — {courseName}</p>
+          <p className="section-title">Class Performance & Attendance Breakdown</p>
           <span className="text-[11px] text-slate-400 font-mono">
             Synced {lastSynced.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
           </span>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <StatCard label="Total Participants" value={totalStudents} color="text-slate-900 dark:text-slate-100" />
           <StatCard
-            label="Sessions Held"
-            value={activeSessions.length > 0 ? `${sessionsHeldCount} (${activeSessions.length} live)` : sessionsHeldCount}
-            color="text-slate-900 dark:text-slate-100"
+            label="📖 Theory & Lecture"
+            value={`${categoryStats.avgTheoryPct}%`}
+            subtitle={`${categoryStats.theorySessionsCount} sessions`}
+            color="text-blue-600 dark:text-blue-400"
           />
-          <StatCard label="Overall Attendance %" value={`${overallPct}%`} color="text-emerald-600 dark:text-emerald-400" />
-          <StatCard label="Excused" value={excusedTotal} color="text-amber-600 dark:text-amber-400" />
+          <StatCard
+            label="🧘 Yoga & Practical"
+            value={`${categoryStats.avgPracticalPct}%`}
+            subtitle={`${categoryStats.practicalSessionsCount} sessions`}
+            color="text-purple-600 dark:text-purple-400"
+          />
+          <StatCard
+            label="📊 Overall Attendance"
+            value={`${overallPct}%`}
+            subtitle={`${allCourseSessions.length} sessions held`}
+            color="text-emerald-600 dark:text-emerald-400"
+          />
+          <StatCard label="Total Participants" value={totalStudents} color="text-slate-900 dark:text-slate-100" />
           <StatCard label="Override Entries" value={overrideTotal} color="text-blue-600 dark:text-blue-400" />
           <StatCard label="Manual Entries" value={manualTotal} color="text-purple-600 dark:text-purple-400" />
         </div>
       </div>
+
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <ChartCard title="Attendance Trend" subtitle="Day-wise attendance %, general sessions">
@@ -445,12 +484,13 @@ function EmptyChart({ text }: { text: string }) {
 }
 
 function StatCard({
-  label, value, color,
-}: { label: string; value: number | string; color: string }) {
+  label, value, subtitle, color,
+}: { label: string; value: number | string; subtitle?: string; color: string }) {
   return (
     <div className="stat-card text-left">
-      <p className={`text-2xl font-bold font-tabular ${color}`}>{value}</p>
-      <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">{label}</p>
+      <p className="text-[11px] text-slate-400 uppercase tracking-wide font-medium">{label}</p>
+      <p className={`text-2xl font-bold font-tabular mt-1 ${color}`}>{value}</p>
+      {subtitle && <p className="text-[11px] text-slate-400 mt-0.5">{subtitle}</p>}
     </div>
   );
 }

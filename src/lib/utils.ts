@@ -100,11 +100,20 @@ export function rand(min: number, max: number): number {
 
 export function getSessionCategory(sessionType: string | null | undefined): 'theory_lecture' | 'yoga_practical' {
   const t = (sessionType || '').toLowerCase();
-  if (t.includes('yoga') || t.includes('practical') || t.includes('lab') || t.includes('activity')) {
+  if (
+    t.includes('yoga') ||
+    t.includes('yiga') ||
+    t.includes('practical') ||
+    t.includes('pract') ||
+    t.includes('lab') ||
+    t.includes('activity') ||
+    t.includes('meditation')
+  ) {
     return 'yoga_practical';
   }
   return 'theory_lecture';
 }
+
 
 export function getSessionCategoryLabel(category: 'theory_lecture' | 'yoga_practical'): string {
   return category === 'yoga_practical' ? 'Yoga & Practical' : 'Theory & Lecture';
