@@ -46,14 +46,20 @@ export default function App() {
     localStorage.setItem('sa_current_course', course);
   }
 
+  const handleFocusHandled = React.useCallback(() => {
+    setFocusSessionId(null);
+  }, []);
+
   const loadKnownCourses = React.useCallback(async () => {
     const { data } = await supabase.from('sessions').select('course_name');
     const names = new Set((data ?? []).map((s) => s.course_name).filter(Boolean));
     names.add('IC181');
-    names.add(defaultCourseName);
-    setKnownCourses(Array.from(names).sort());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [defaultCourseName]);
+    setKnownCourses((prev) => {
+      const next = Array.from(names).sort();
+      if (prev.length === next.length && prev.every((v, i) => v === next[i])) return prev;
+      return next;
+    });
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -80,28 +86,30 @@ export default function App() {
       }
     });
 
-
     async function refreshLiveCount() {
       const { count } = await supabase.from('sessions').select('*', { count: 'exact', head: true }).eq('status', 'active');
-      setLiveSessionCount(count ?? 0);
+      setLiveSessionCount((prev) => (prev === (count ?? 0) ? prev : (count ?? 0)));
     }
     refreshLiveCount();
     loadKnownCourses();
 
     const channel = supabase
       .channel('app_sessions_watch')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => { refreshLiveCount(); loadKnownCourses(); })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => {
+        refreshLiveCount();
+        loadKnownCourses();
+      })
       .subscribe();
 
     const interval = setInterval(() => {
       refreshLiveCount();
-    }, 5000);
+    }, 15000);
 
     return () => {
       supabase.removeChannel(channel);
       clearInterval(interval);
     };
-  }, [staff, currentCourse, loadKnownCourses]);
+  }, [staff?.id, loadKnownCourses]);
 
   async function handleLogout() {
     await signOut();

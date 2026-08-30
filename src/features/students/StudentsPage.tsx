@@ -71,7 +71,7 @@ export function StudentsPage({ staff, courseName }: Props) {
 
   const load = useCallback(async () => {
     try {
-      setLoading(true);
+      if (students.length === 0) setLoading(true);
 
       let pctSummaryMap: Record<string, StudentAttendanceSummary> | null = null;
       let query = supabase.from('students').select('*', { count: 'exact' }).order('roll_number');
@@ -123,7 +123,7 @@ export function StudentsPage({ staff, courseName }: Props) {
     } finally {
       setLoading(false);
     }
-  }, [search, statusFilter, roleFilter, groupFilter, deptFilter, pctFilterActive, minPct, maxPct, page, courseName, loadSummaries]);
+  }, [search, statusFilter, roleFilter, groupFilter, deptFilter, pctFilterActive, minPct, maxPct, page, courseName, loadSummaries, students.length]);
 
   useEffect(() => { load(); }, [load]);
 
@@ -137,7 +137,7 @@ export function StudentsPage({ staff, courseName }: Props) {
 
     const interval = setInterval(() => {
       loadSummaries();
-    }, 6000);
+    }, 8000);
 
     return () => {
       supabase.removeChannel(channel);
@@ -264,7 +264,7 @@ export function StudentsPage({ staff, courseName }: Props) {
             </tr>
           </thead>
           <tbody>
-            {loading ? (
+            {loading && students.length === 0 ? (
               <tr><td colSpan={11} className="text-center py-10 text-slate-400 text-sm">Loading…</td></tr>
             ) : students.length === 0 ? (
               <tr><td colSpan={11} className="text-center py-10 text-slate-400 text-sm">No participants found.</td></tr>

@@ -38,8 +38,9 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
   const [loading, setLoading] = useState(true);
   const [lastSynced, setLastSynced] = useState<Date>(new Date());
 
-  const load = useCallback(async () => {
+  const load = useCallback(async (isInitial = false) => {
     try {
+      if (isInitial) setLoading(true);
       const today = new Date().toISOString().slice(0, 10);
 
       const [
@@ -80,7 +81,6 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
       setSummaries(parsedSummaries);
       setTotalStudents(roster?.length ?? 0);
 
-
       // Today's sessions = sessions scheduled for today OR sessions currently active
       const todayList = sessions.filter((s) => s.session_date === today || s.status === 'active');
       setTodaySessions(todayList);
@@ -113,24 +113,24 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
     } catch (err) {
       console.error('[DashboardPage] Error loading dashboard stats:', err);
     } finally {
-      setLoading(false);
+      if (isInitial) setLoading(false);
     }
   }, [courseName]);
 
   useEffect(() => {
-    load();
+    load(true);
     const channelId = `dashboard_${courseName.replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`;
     const channel = supabase
       .channel(channelId)
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => load())
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance_records' }, () => load())
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => load())
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => load(false))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance_records' }, () => load(false))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => load(false))
       .subscribe();
 
-    // Heartbeat polling fallback to guarantee real-time updates
+    // Heartbeat polling fallback to guarantee real-time updates silently
     const pollInterval = setInterval(() => {
-      load();
-    }, 4000);
+      load(false);
+    }, 8000);
 
     return () => {
       supabase.removeChannel(channel);
@@ -195,8 +195,19 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
     return 0;
   }, [summaries, totalStudents, allCourseSessions.length, allRecords]);
 
-  const categoryStats = useMemo(() => {
+  const [trendCategory, setTrendCategory] = useState<'theory' | 'practical' | 'all'>('theory');
+  const [selectedGroup, setSelectedGroup] = useState<string>('all');
 
+  const groupRosterCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    summaries.forEach((s) => {
+      const g = s.group_label || 'Unassigned';
+      counts[g] = (counts[g] ?? 0) + 1;
+    });
+    return counts;
+  }, [summaries]);
+
+  const categoryStats = useMemo(() => {
     const theorySessions = allCourseSessions.filter((s) => {
       const t = (s.session_type || '').toLowerCase();
       return !(t.includes('yoga') || t.includes('yiga') || t.includes('practical') || t.includes('pract') || t.includes('lab') || t.includes('activity') || t.includes('meditation'));
@@ -214,26 +225,104 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
       summaries.reduce((sum, s) => sum + (s.practical_percentage ?? 0), 0) / totalStudentsCount * 10
     ) / 10;
 
+    // Student distribution in Theory
+    const theoryHigh = summaries.filter((s) => (s.theory_percentage ?? 0) >= 85).length;
+    const theoryMid = summaries.filter((s) => (s.theory_percentage ?? 0) >= 75 && (s.theory_percentage ?? 0) < 85).length;
+    const theoryLow = summaries.filter((s) => (s.theory_percentage ?? 0) < 75).length;
+
+    // Group-wise Yoga & Practical stats
+    const groupPracticalStats: Record<string, { studentCount: number; sumPct: number; sessionsHeld: number }> = {};
+    summaries.forEach((s) => {
+      if (!s.group_label) return;
+      groupPracticalStats[s.group_label] ??= { studentCount: 0, sumPct: 0, sessionsHeld: 0 };
+      groupPracticalStats[s.group_label].studentCount += 1;
+      groupPracticalStats[s.group_label].sumPct += (s.practical_percentage ?? 0);
+    });
+
+    // Count sessions held per group
+    practicalSessions.forEach((s) => {
+      if (s.group_filter && groupPracticalStats[s.group_filter]) {
+        groupPracticalStats[s.group_filter].sessionsHeld += 1;
+      }
+    });
+
+    const groupPracticalList = Object.entries(groupPracticalStats)
+      .map(([group, data]) => ({
+        group,
+        studentCount: data.studentCount,
+        sessionsHeld: data.sessionsHeld,
+        avgPct: data.studentCount > 0 ? Math.round((data.sumPct / data.studentCount) * 10) / 10 : 0,
+      }))
+      .sort((a, b) => a.group.localeCompare(b.group));
+
     return {
       theorySessionsCount: theorySessions.length,
       practicalSessionsCount: practicalSessions.length,
       avgTheoryPct,
       avgPracticalPct,
+      theoryHigh,
+      theoryMid,
+      theoryLow,
+      groupPracticalList,
     };
   }, [allCourseSessions, summaries]);
 
-  const groupChart = useMemo(() => {
-    const byGroup: Record<string, { sum: number; n: number }> = {};
-    summaries.forEach((s) => {
-      if (!s.group_label) return;
-      byGroup[s.group_label] ??= { sum: 0, n: 0 };
-      byGroup[s.group_label].sum += s.attendance_percentage;
-      byGroup[s.group_label].n += 1;
+  // Full-data chronological session attendance trend
+  const sessionTrendData = useMemo(() => {
+    const perSessionPresent: Record<string, number> = {};
+    allRecords.forEach((r) => {
+      if (r.status !== 'excused') {
+        perSessionPresent[r.session_id] = (perSessionPresent[r.session_id] ?? 0) + 1;
+      }
     });
-    return Object.entries(byGroup)
-      .map(([group, { sum, n }]) => ({ group, pct: Math.round((sum / n) * 10) / 10 }))
-      .sort((a, b) => a.group.localeCompare(b.group));
-  }, [summaries]);
+
+    const isPracticalType = (type: string) => {
+      const t = (type || '').toLowerCase();
+      return t.includes('yoga') || t.includes('yiga') || t.includes('practical') || t.includes('pract') || t.includes('lab') || t.includes('activity') || t.includes('meditation');
+    };
+
+    let filtered = allCourseSessions;
+    if (trendCategory === 'theory') {
+      filtered = allCourseSessions.filter((s) => !isPracticalType(s.session_type));
+    } else if (trendCategory === 'practical') {
+      filtered = allCourseSessions.filter((s) => isPracticalType(s.session_type));
+      if (selectedGroup !== 'all') {
+        filtered = filtered.filter((s) => !s.group_filter || s.group_filter === selectedGroup);
+      }
+    }
+
+    return filtered
+      .map((s) => {
+        const isPract = isPracticalType(s.session_type);
+        const targetRoster = s.group_filter ? (groupRosterCounts[s.group_filter] || 45) : (totalStudents || 388);
+        const present = perSessionPresent[s.id] ?? 0;
+        const pct = targetRoster > 0 ? Math.min(100, Math.round((present / targetRoster) * 1000) / 10) : 0;
+        const dateStr = new Date(s.session_date).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' });
+        const label = s.group_filter ? `${dateStr} (Grp ${s.group_filter})` : dateStr;
+
+        return {
+          id: s.id,
+          date: dateStr,
+          label,
+          type: s.session_type,
+          group: s.group_filter || 'All',
+          isPractical: isPract,
+          present,
+          targetRoster,
+          pct,
+        };
+      })
+      .reverse(); // Chronological order
+  }, [allCourseSessions, allRecords, trendCategory, selectedGroup, groupRosterCounts, totalStudents]);
+
+  const groupChart = useMemo(() => {
+    return categoryStats.groupPracticalList.map((g) => ({
+      group: `Group ${g.group}`,
+      pct: g.avgPct,
+      sessions: g.sessionsHeld,
+      count: g.studentCount,
+    }));
+  }, [categoryStats.groupPracticalList]);
 
   const methodChart = useMemo(() => {
     return Object.entries(methodTally).map(([method, value]) => ({
@@ -241,25 +330,6 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
       value,
     }));
   }, [methodTally]);
-
-  const trendChart = useMemo(() => {
-    const endedOrActiveGeneral = allCourseSessions.filter((s) => !s.group_filter);
-    const perSession: Record<string, number> = {};
-    allRecords.forEach((r) => {
-      perSession[r.session_id] = (perSession[r.session_id] ?? 0) + 1;
-    });
-    const byDate: Record<string, number> = {};
-    endedOrActiveGeneral.forEach((s) => {
-      byDate[s.session_date] = (byDate[s.session_date] ?? 0) + (perSession[s.id] ?? 0);
-    });
-    return Object.entries(byDate)
-      .map(([session_date, count]) => ({
-        date: new Date(session_date).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }),
-        pct: totalStudents > 0 ? Math.min(100, Math.round((count / totalStudents) * 1000) / 10) : 0,
-      }))
-      .sort((a, b) => a.date.localeCompare(b.date))
-      .slice(-14);
-  }, [allCourseSessions, allRecords, totalStudents]);
 
   const deptChart = useMemo(() => {
     if (demographics.length <= 8) return demographics;
@@ -269,20 +339,21 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
   }, [demographics]);
 
   return (
-    <main className="page">
+    <main className="page space-y-6">
+      {/* Header */}
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
               {getGreeting()}, {staff.name.split(' ')[0]}.
             </h1>
-            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-500/20">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               Live Sync
             </span>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-            {courseName} · {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' })}
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Course <span className="font-semibold text-slate-700 dark:text-slate-200">{courseName}</span> · {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
         </div>
         <div className="flex gap-2 items-center">
@@ -300,65 +371,209 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
             )}
           </button>
           <button onClick={() => onNavigate('students')} className="btn-secondary btn-sm">Participants</button>
-          <button onClick={() => onNavigate('reports')} className="btn-secondary btn-sm">Reports</button>
+          <button onClick={() => onNavigate('reports')} className="btn-secondary btn-sm">Full Reports</button>
         </div>
       </div>
 
+      {/* ── TOP HERO SECTION: THEORY & LECTURE CLASSES (MAIN FOCUS) ── */}
+      <div className="card p-5 border-2 border-blue-200/80 dark:border-blue-500/30 bg-gradient-to-br from-blue-50/50 via-white to-blue-50/20 dark:from-blue-950/20 dark:via-[#161b22] dark:to-transparent shadow-sm">
+        <div className="flex items-center justify-between gap-4 flex-wrap pb-4 border-b border-blue-100 dark:border-blue-900/30">
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white text-lg shadow-sm">
+              📖
+            </div>
+            <div>
+              <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">Theory & Lecture Classes (Main Attendance)</h2>
+              <p className="text-xs text-slate-500">Core lecture attendance benchmarks across all {totalStudents} enrolled students</p>
+            </div>
+          </div>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200">
+            Primary Academic Metric
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+          <div className="bg-white/80 dark:bg-[#1c2128] p-3.5 rounded-xl border border-blue-100 dark:border-[#30363d]">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Class Average</p>
+            <p className="text-3xl font-extrabold text-blue-700 dark:text-blue-300 font-tabular mt-1">{categoryStats.avgTheoryPct}%</p>
+            <p className="text-[11px] text-slate-400 mt-0.5">Average across all students</p>
+          </div>
+
+          <div className="bg-white/80 dark:bg-[#1c2128] p-3.5 rounded-xl border border-blue-100 dark:border-[#30363d]">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Theory Sessions Held</p>
+            <p className="text-3xl font-extrabold text-slate-800 dark:text-slate-100 font-tabular mt-1">{categoryStats.theorySessionsCount}</p>
+            <p className="text-[11px] text-slate-400 mt-0.5">Full cohort theory lectures</p>
+          </div>
+
+          <div className="bg-white/80 dark:bg-[#1c2128] p-3.5 rounded-xl border border-blue-100 dark:border-[#30363d]">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Good Standing (≥85%)</p>
+            <p className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-tabular mt-1">{categoryStats.theoryHigh}</p>
+            <p className="text-[11px] text-slate-400 mt-0.5">Students with ≥ 85% Theory attendance</p>
+          </div>
+
+          <div className="bg-white/80 dark:bg-[#1c2128] p-3.5 rounded-xl border border-blue-100 dark:border-[#30363d]">
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">Needs Attention (&lt;75%)</p>
+            <p className="text-3xl font-extrabold text-amber-600 dark:text-amber-400 font-tabular mt-1">{categoryStats.theoryLow}</p>
+            <p className="text-[11px] text-slate-400 mt-0.5">Students below 75% threshold</p>
+          </div>
+        </div>
+      </div>
+
+      {/* ── SECOND SECTION: GROUP-WISE YOGA & PRACTICAL BREAKDOWN ── */}
+      <div className="card p-5 border border-purple-200/70 dark:border-purple-500/20 bg-gradient-to-br from-purple-50/30 via-white to-transparent dark:from-purple-950/10 dark:via-[#161b22]">
+        <div className="flex items-center justify-between gap-4 flex-wrap mb-4">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-purple-600 flex items-center justify-center text-white text-base shadow-sm">
+              🧘
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">Yoga & Practical Classes (Group-Wise Breakdown)</h2>
+                <span className="badge-purple font-semibold text-xs">{categoryStats.avgPracticalPct}% Avg</span>
+              </div>
+              <p className="text-xs text-slate-500">{categoryStats.practicalSessionsCount} practical & yoga sessions conducted across sections</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Group-wise Cards Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
+          {categoryStats.groupPracticalList.map((g) => (
+            <div
+              key={g.group}
+              className="p-3 rounded-xl bg-white dark:bg-[#1c2128] border border-purple-100 dark:border-[#30363d] text-center hover:border-purple-300 transition-all shadow-xs"
+            >
+              <span className="inline-block px-2 py-0.5 rounded-md text-[11px] font-bold bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">
+                Group {g.group}
+              </span>
+              <p className="text-xl font-bold font-tabular text-slate-800 dark:text-slate-100 mt-1.5">
+                {g.avgPct}%
+              </p>
+              <p className="text-[10px] text-slate-400 mt-0.5">{g.sessionsHeld} sess · {g.studentCount} stu</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ── OVERALL OVERVIEW SUMMARY ROW ── */}
       <div>
-        <div className="flex items-center justify-between mb-3">
-          <p className="section-title">Class Performance & Attendance Breakdown</p>
+        <div className="flex items-center justify-between mb-2">
+          <p className="section-title">Course Total & Log Metrics</p>
           <span className="text-[11px] text-slate-400 font-mono">
             Synced {lastSynced.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
           </span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <StatCard
-            label="📖 Theory & Lecture"
-            value={`${categoryStats.avgTheoryPct}%`}
-            subtitle={`${categoryStats.theorySessionsCount} sessions`}
-            color="text-blue-600 dark:text-blue-400"
-          />
-          <StatCard
-            label="🧘 Yoga & Practical"
-            value={`${categoryStats.avgPracticalPct}%`}
-            subtitle={`${categoryStats.practicalSessionsCount} sessions`}
-            color="text-purple-600 dark:text-purple-400"
-          />
-          <StatCard
-            label="📊 Overall Attendance"
-            value={`${overallPct}%`}
-            subtitle={`${allCourseSessions.length} sessions held`}
-            color="text-emerald-600 dark:text-emerald-400"
-          />
-          <StatCard label="Total Participants" value={totalStudents} color="text-slate-900 dark:text-slate-100" />
-          <StatCard label="Override Entries" value={overrideTotal} color="text-blue-600 dark:text-blue-400" />
-          <StatCard label="Manual Entries" value={manualTotal} color="text-purple-600 dark:text-purple-400" />
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <StatCard label="Total Participants" value={totalStudents} subtitle="Enrolled in roster" color="text-slate-900 dark:text-slate-100" />
+          <StatCard label="Total Course Sessions" value={allCourseSessions.length} subtitle={`${categoryStats.theorySessionsCount} theory · ${categoryStats.practicalSessionsCount} practical`} color="text-slate-900 dark:text-slate-100" />
+          <StatCard label="Combined Attendance %" value={`${overallPct}%`} subtitle="Full aggregate attendance" color="text-emerald-600 dark:text-emerald-400" />
+          <StatCard label="Override / Manual Records" value={overrideTotal + manualTotal} subtitle={`${overrideTotal} overrides · ${manualTotal} manual`} color="text-blue-600 dark:text-blue-400" />
         </div>
       </div>
 
-
+      {/* ── PLOTS & CHARTS WITH COMPLETE DATA ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <ChartCard title="Attendance Trend" subtitle="Day-wise attendance %, general sessions">
-          {trendChart.length === 0 ? (
-            <EmptyChart text="No sessions recorded yet." />
+        {/* Full-data Chronological Attendance Trend Chart */}
+        <ChartCard
+          title="Session-by-Session Attendance Trend"
+          subtitle="Accurate attendance % calculated per session's target audience"
+        >
+          <div className="flex items-center justify-between gap-2 mb-3 flex-wrap">
+            <div className="flex bg-slate-100 dark:bg-[#161b22] p-1 rounded-xl border border-slate-200 dark:border-[#30363d]">
+              <button
+                onClick={() => { setTrendCategory('theory'); setSelectedGroup('all'); }}
+                className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
+                  trendCategory === 'theory' ? 'bg-blue-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:text-blue-600'
+                }`}
+              >
+                📖 Theory Classes ({categoryStats.theorySessionsCount})
+              </button>
+              <button
+                onClick={() => setTrendCategory('practical')}
+                className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
+                  trendCategory === 'practical' ? 'bg-purple-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:text-purple-600'
+                }`}
+              >
+                🧘 Yoga/Practical ({categoryStats.practicalSessionsCount})
+              </button>
+              <button
+                onClick={() => { setTrendCategory('all'); setSelectedGroup('all'); }}
+                className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
+                  trendCategory === 'all' ? 'bg-slate-800 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400'
+                }`}
+              >
+                All ({allCourseSessions.length})
+              </button>
+            </div>
+
+            {trendCategory === 'practical' && (
+              <select
+                value={selectedGroup}
+                onChange={(e) => setSelectedGroup(e.target.value)}
+                className="input-base text-xs py-1 w-auto"
+              >
+                <option value="all">All Groups</option>
+                {categoryStats.groupPracticalList.map((g) => (
+                  <option key={g.group} value={g.group}>Group {g.group}</option>
+                ))}
+              </select>
+            )}
+          </div>
+
+          {sessionTrendData.length === 0 ? (
+            <EmptyChart text="No sessions found for this category." />
           ) : (
             <ResponsiveContainer width="100%" height={260}>
-              <BarChart data={trendChart} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
+              <BarChart data={sessionTrendData} margin={{ top: 8, right: 12, left: -12, bottom: 20 }}>
                 <CartesianGrid vertical={false} stroke={GRID} />
-                <XAxis dataKey="date" tick={{ fontSize: 11, fill: AXIS_INK }} axisLine={{ stroke: GRID }} tickLine={false} />
+                <XAxis dataKey="label" tick={{ fontSize: 10, fill: AXIS_INK }} angle={-25} textAnchor="end" height={40} axisLine={{ stroke: GRID }} tickLine={false} />
                 <YAxis tick={{ fontSize: 11, fill: AXIS_INK }} axisLine={false} tickLine={false} width={36} domain={[0, 100]} />
                 <Tooltip
                   cursor={{ fill: 'rgba(148,163,184,0.08)' }}
                   contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', fontSize: 12 }}
-                  formatter={(v: number) => [`${v}%`, 'Attendance']}
+                  formatter={(v: number, _name: string, item: any) => [
+                    `${v}% (${item.payload.present}/${item.payload.targetRoster} students)`,
+                    `${item.payload.type} (Audience: ${item.payload.group})`,
+                  ]}
                 />
-                <Bar dataKey="pct" fill={CAT[0]} radius={[4, 4, 0, 0]} maxBarSize={24} />
+                <Bar
+                  dataKey="pct"
+                  fill={trendCategory === 'theory' ? '#2563eb' : trendCategory === 'practical' ? '#9333ea' : '#0284c7'}
+                  radius={[4, 4, 0, 0]}
+                  maxBarSize={28}
+                  isAnimationActive={false}
+                />
               </BarChart>
             </ResponsiveContainer>
           )}
         </ChartCard>
 
-        <ChartCard title="How Attendance Was Marked" subtitle="Across every session this course, to date">
+        {/* Group-Wise Yoga & Practical Comparison Chart */}
+        <ChartCard title="Yoga & Practical Attendance by Group" subtitle="Average attendance % achieved per assigned group">
+          {groupChart.length === 0 ? (
+            <EmptyChart text="No groups recorded yet." />
+          ) : (
+            <ResponsiveContainer width="100%" height={260}>
+              <BarChart data={groupChart} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
+                <CartesianGrid vertical={false} stroke={GRID} />
+                <XAxis dataKey="group" tick={{ fontSize: 11, fill: AXIS_INK }} axisLine={{ stroke: GRID }} tickLine={false} />
+                <YAxis tick={{ fontSize: 11, fill: AXIS_INK }} axisLine={false} tickLine={false} width={36} domain={[0, 100]} />
+                <Tooltip
+                  cursor={{ fill: 'rgba(148,163,184,0.08)' }}
+                  contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', fontSize: 12 }}
+                  formatter={(v: number, _name: string, item: any) => [
+                    `${v}% avg (${item.payload.sessions} sessions held)`,
+                    'Yoga/Practical Attendance',
+                  ]}
+                />
+                <Bar dataKey="pct" fill="#9333ea" radius={[4, 4, 0, 0]} maxBarSize={24} isAnimationActive={false} />
+              </BarChart>
+            </ResponsiveContainer>
+          )}
+        </ChartCard>
+
+        {/* Attendance Verification Method Distribution */}
+        <ChartCard title="How Attendance Was Marked" subtitle="Across every session in this course to date">
           {methodChart.length === 0 ? (
             <EmptyChart text="No attendance recorded yet." />
           ) : (
@@ -373,6 +588,7 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
                   paddingAngle={2}
                   stroke="#fff"
                   strokeWidth={2}
+                  isAnimationActive={false}
                 >
                   {methodChart.map((_, i) => (
                     <Cell key={i} fill={CAT[i % CAT.length]} />
@@ -385,28 +601,8 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
           )}
         </ChartCard>
 
-        <ChartCard title="Attendance by Group" subtitle="Average % per assigned group">
-          {groupChart.length === 0 ? (
-            <EmptyChart text="No participants have been assigned a group yet." />
-          ) : (
-            <ResponsiveContainer width="100%" height={260}>
-              <BarChart data={groupChart} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
-                <CartesianGrid vertical={false} stroke={GRID} />
-                <XAxis dataKey="group" tick={{ fontSize: 11, fill: AXIS_INK }} axisLine={{ stroke: GRID }} tickLine={false} />
-                <YAxis tick={{ fontSize: 11, fill: AXIS_INK }} axisLine={false} tickLine={false} width={36} domain={[0, 100]} />
-                <Tooltip
-                  cursor={{ fill: 'rgba(148,163,184,0.08)' }}
-                  contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', fontSize: 12 }}
-                  formatter={(v: number) => [`${v}%`, 'Avg. Attendance']}
-                  labelFormatter={(l) => `Group ${l}`}
-                />
-                <Bar dataKey="pct" fill={CAT[0]} radius={[4, 4, 0, 0]} maxBarSize={24} />
-              </BarChart>
-            </ResponsiveContainer>
-          )}
-        </ChartCard>
-
-        <ChartCard title="Roster by School / Centre" subtitle="Active participants, all courses">
+        {/* Demographics by School / Centre */}
+        <ChartCard title="Roster by School / Centre" subtitle="Active participants across departments">
           {deptChart.length === 0 ? (
             <EmptyChart text="No students enrolled yet." />
           ) : (
@@ -420,12 +616,13 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
                   contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', fontSize: 12 }}
                   formatter={(v: number) => [v, 'Students']}
                 />
-                <Bar dataKey="count" fill={CAT[0]} radius={[0, 4, 4, 0]} maxBarSize={20} />
+                <Bar dataKey="count" fill={CAT[0]} radius={[0, 4, 4, 0]} maxBarSize={20} isAnimationActive={false} />
               </BarChart>
             </ResponsiveContainer>
           )}
         </ChartCard>
       </div>
+
 
       <div className="card">
         <div className="px-5 py-4 border-b border-slate-100 dark:border-[#21262d] flex items-center justify-between">
@@ -437,7 +634,7 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
           </div>
           <p className="text-[11px] text-slate-400">Click a session to view real-time attendee records</p>
         </div>
-        {loading ? (
+        {loading && todaySessions.length === 0 ? (
           <div className="px-5 py-10 text-center text-sm text-slate-400">Loading sessions…</div>
         ) : todaySessions.length === 0 ? (
           <div className="px-5 py-10 text-center text-sm text-slate-400">No sessions recorded for today yet.</div>

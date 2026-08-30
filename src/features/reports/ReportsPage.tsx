@@ -74,9 +74,9 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
     setSessionSort((s) => (s.key === key ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: 'asc' }));
   }
 
-  const load = useCallback(async () => {
+  const load = useCallback(async (isInitial = false) => {
     try {
-      setLoading(true);
+      if (isInitial) setLoading(true);
       const [{ data: summaryRows }, { data: sessionRows }, { data: studentRows }] = await Promise.all([
         supabase.rpc('student_attendance_summary', { p_course_name: courseName }),
         supabase
@@ -248,8 +248,9 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
     }
   }, [courseName]);
 
-
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => {
+    load(true);
+  }, [load]);
 
   useEffect(() => {
     if (!focusSessionId) return;
@@ -272,14 +273,14 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
     const channelId = `reports_watch_${courseName.replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`;
     const channel = supabase
       .channel(channelId)
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => load())
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance_records' }, () => load())
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => load())
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, () => load(false))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance_records' }, () => load(false))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => load(false))
       .subscribe();
 
     const interval = setInterval(() => {
-      load();
-    }, 5000);
+      load(false);
+    }, 8000);
 
     return () => {
       supabase.removeChannel(channel);
@@ -318,14 +319,39 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
       summaries.reduce((sum, s) => sum + (s.attendance_percentage ?? 0), 0) / totalStudentsCount * 10
     ) / 10;
 
+    const groupPracticalStats: Record<string, { studentCount: number; sumPct: number; sessionsHeld: number }> = {};
+    summaries.forEach((s) => {
+      if (!s.group_label) return;
+      groupPracticalStats[s.group_label] ??= { studentCount: 0, sumPct: 0, sessionsHeld: 0 };
+      groupPracticalStats[s.group_label].studentCount += 1;
+      groupPracticalStats[s.group_label].sumPct += (s.practical_percentage ?? 0);
+    });
+
+    practicalSessions.forEach((s) => {
+      if (s.group_filter && groupPracticalStats[s.group_filter]) {
+        groupPracticalStats[s.group_filter].sessionsHeld += 1;
+      }
+    });
+
+    const groupPracticalList = Object.entries(groupPracticalStats)
+      .map(([group, data]) => ({
+        group,
+        studentCount: data.studentCount,
+        sessionsHeld: data.sessionsHeld,
+        avgPct: data.studentCount > 0 ? Math.round((data.sumPct / data.studentCount) * 10) / 10 : 0,
+      }))
+      .sort((a, b) => a.group.localeCompare(b.group));
+
     return {
       theorySessionsCount: theorySessions.length,
       practicalSessionsCount: practicalSessions.length,
       avgTheoryPct,
       avgPracticalPct,
       avgOverallPct,
+      groupPracticalList,
     };
   }, [sessions, summaries]);
+
 
   async function handleExcelExport() {
     setExporting(true);
@@ -450,7 +476,7 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
         ))}
       </div>
 
-      {loading ? (
+      {loading && sessions.length === 0 ? (
         <div className="card p-10 text-center text-sm text-slate-400">Loading reports data…</div>
       ) : tab === 'students' ? (
         <>
@@ -495,7 +521,23 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
             </div>
           </div>
 
+          {categoryView === 'practical' && categoryStats.groupPracticalList.length > 0 && (
+            <div className="card p-3.5 bg-gradient-to-r from-purple-50/50 via-white to-transparent dark:from-purple-950/20 dark:via-[#161b22] border border-purple-200/60 dark:border-purple-500/20">
+              <p className="text-xs font-semibold text-purple-900 dark:text-purple-300 mb-2">Yoga & Practical — Group-Wise Averages</p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
+                {categoryStats.groupPracticalList.map((g) => (
+                  <div key={g.group} className="bg-white dark:bg-[#1c2128] p-2 rounded-lg border border-purple-100 dark:border-[#30363d] text-center">
+                    <span className="text-[10px] font-bold text-purple-700 dark:text-purple-300">Group {g.group}</span>
+                    <p className="text-base font-bold text-slate-800 dark:text-slate-100 font-tabular">{g.avgPct}%</p>
+                    <p className="text-[9px] text-slate-400">{g.sessionsHeld} sess · {g.studentCount} stu</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="card overflow-x-auto">
+
             <table className="data-table min-w-[880px]">
               <thead>
                 <tr>
@@ -780,7 +822,7 @@ function SessionDetailModal({
         </>
       }
     >
-      {loading ? (
+      {loading && records.length === 0 ? (
         <div className="py-10 text-center text-sm text-slate-400">Loading attendee records…</div>
       ) : (
         <AttendanceTable
@@ -1148,7 +1190,7 @@ function StudentDetailModal({
         </button>
       </div>
 
-      {loading ? (
+      {loading && rows.length === 0 ? (
         <div className="py-10 text-center text-sm text-slate-400">Loading student attendance log…</div>
       ) : filteredRows.length === 0 ? (
         <div className="py-10 text-center text-sm text-slate-400">No sessions match this category filter for this student.</div>
@@ -1285,7 +1327,7 @@ function DayAttendanceView({ date, students, courseName }: { date: string; stude
     return students.filter((s) => s.roll_number.toLowerCase().includes(q) || s.name.toLowerCase().includes(q));
   }, [students, search]);
 
-  if (loading) return <div className="card p-10 text-center text-sm text-slate-400">Loading date attendance…</div>;
+  if (loading && sessions.length === 0) return <div className="card p-10 text-center text-sm text-slate-400">Loading date attendance…</div>;
   if (sessions.length === 0) return <div className="card p-10 text-center text-sm text-slate-400">No sessions found on this date for {courseName}.</div>;
 
   return (
