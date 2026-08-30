@@ -77,185 +77,56 @@ export function ReportsPage({ staff, courseName, focusSessionId, onFocusHandled 
   const load = useCallback(async (isInitial = false) => {
     try {
       if (isInitial) setLoading(true);
-      const [{ data: summaryRows }, { data: sessionRows }, { data: studentRows }] = await Promise.all([
+      const [
+        { data: summaryRows },
+        { data: sessionStatsRows },
+        { data: studentRows },
+      ] = await Promise.all([
         supabase.rpc('student_attendance_summary', { p_course_name: courseName }),
-        supabase
-          .from('sessions')
-          .select('*, attendance_records(count)')
-          .ilike('course_name', courseName)
-          .order('session_date', { ascending: false })
-          .order('created_at', { ascending: false })
-          .limit(500),
+        supabase.rpc('get_course_session_stats', { p_course_name: courseName }),
         supabase.from('students').select('*').eq('status', 'active').order('roll_number'),
       ]);
 
-      const loadedSessions = sessionRows ?? [];
-      const sessionIds = loadedSessions.map((s) => s.id);
-
-      // Fetch attendance records specifically for these sessions to avoid cross-course truncation
-      const { data: recordsData } = sessionIds.length > 0
-        ? await supabase
-            .from('attendance_records')
-            .select('session_id, student_id, roll_number, status, method')
-            .in('session_id', sessionIds)
-            .limit(50000)
-        : { data: [] };
-
-      // Exact attendee count per session directly from attendance_records
-      const sessionCountMap = new Map<string, number>();
-      (recordsData ?? []).forEach((r) => {
-        if (r.status !== 'excused') {
-          sessionCountMap.set(r.session_id, (sessionCountMap.get(r.session_id) ?? 0) + 1);
-        }
-      });
-      const sessionsWithCounts = loadedSessions.map((s) => ({
-        ...s,
-        presentCount: sessionCountMap.get(s.id) ?? 0,
+      const parsedSummaries: StudentAttendanceSummary[] = (summaryRows ?? []).map((r: any) => ({
+        ...r,
+        present_count: Number(r.present_count ?? 0),
+        excused_count: Number(r.excused_count ?? 0),
+        manual_count: Number(r.manual_count ?? 0),
+        override_count: Number(r.override_count ?? 0),
+        total_sessions: Number(r.total_sessions ?? 0),
+        attendance_percentage: Number(r.attendance_percentage ?? 0),
+        theory_present_count: Number(r.theory_present_count ?? 0),
+        theory_total_sessions: Number(r.theory_total_sessions ?? 0),
+        theory_percentage: Number(r.theory_percentage ?? 0),
+        practical_present_count: Number(r.practical_present_count ?? 0),
+        practical_total_sessions: Number(r.practical_total_sessions ?? 0),
+        practical_percentage: Number(r.practical_percentage ?? 0),
       }));
 
-      // Index records by student_id AND upper-case roll_number
-      const recordsByStudentKey = new Map<string, typeof recordsData>();
-      (recordsData ?? []).forEach((r) => {
-        if (r.student_id) {
-          const list = recordsByStudentKey.get(r.student_id) || [];
-          list.push(r);
-          recordsByStudentKey.set(r.student_id, list);
-        }
-        if (r.roll_number) {
-          const rollKey = `roll:${r.roll_number.trim().toUpperCase()}`;
-          const list = recordsByStudentKey.get(rollKey) || [];
-          list.push(r);
-          recordsByStudentKey.set(rollKey, list);
-        }
-      });
+      const sessionsWithCounts = (sessionStatsRows ?? []).map((s: any) => ({
+        id: s.session_id,
+        course_name: s.course_name,
+        session_date: s.session_date,
+        session_type: s.session_type,
+        group_filter: s.group_filter,
+        status: s.status,
+        created_at: s.created_at,
+        presentCount: Number(s.present_count ?? 0),
+        manualCount: Number(s.manual_count ?? 0),
+        overrideCount: Number(s.override_count ?? 0),
+        excusedCount: Number(s.excused_count ?? 0),
+      }));
 
-      // Group sessions into standalone vs activity rounds to handle parallel session rounds
-      const standaloneSessions: typeof loadedSessions = [];
-      const roundMap = new Map<string, typeof loadedSessions>();
-      loadedSessions.forEach((s) => {
-        if (s.round_id) {
-          const list = roundMap.get(s.round_id) || [];
-          list.push(s);
-          roundMap.set(s.round_id, list);
-        } else {
-          standaloneSessions.push(s);
-        }
-      });
-
-      const rawSummaries = (summaryRows as StudentAttendanceSummary[]) ?? [];
-      const enriched: StudentAttendanceSummary[] = (studentRows ?? []).map((st) => {
-        const raw = rawSummaries.find((r) => r.student_id === st.id || r.roll_number.toUpperCase() === st.roll_number.toUpperCase());
-
-        // Get unique attendance records for this student across both ID and Roll matching
-        const recsFromId = recordsByStudentKey.get(st.id) || [];
-        const recsFromRoll = recordsByStudentKey.get(`roll:${st.roll_number.trim().toUpperCase()}`) || [];
-        const studentRecsMap = new Map<string, NonNullable<typeof recordsData>[number]>();
-        [...recsFromId, ...recsFromRoll].forEach((r) => {
-          if (r) studentRecsMap.set(r.session_id, r);
-        });
-
-        let tTotal = 0;
-        let tPres = 0;
-        let pTotal = 0;
-        let pPres = 0;
-        let excusedCount = 0;
-        let manualCount = 0;
-        let overrideCount = 0;
-
-        // 1. Standalone Sessions (accounting for group filters and parallel sessions)
-        standaloneSessions.forEach((s) => {
-          const applicable = !s.group_filter || s.group_filter === st.group_label;
-          const rec = studentRecsMap.get(s.id);
-          const attended = rec && ['present', 'manual', 'override'].includes(rec.status);
-          const isExcused = rec && rec.status === 'excused';
-          const cat = getSessionCategory(s.session_type);
-
-          if (isExcused) excusedCount += 1;
-
-          if (!applicable && !attended) return;
-
-          if (cat === 'theory_lecture') {
-            tTotal += 1;
-            if (attended) {
-              tPres += 1;
-              if (rec.method === 'manual' || rec.status === 'manual') manualCount += 1;
-              if (['override_code', 'instructor_approved', 'gps_flagged'].includes(rec.method) || rec.status === 'override') overrideCount += 1;
-            }
-          } else {
-            pTotal += 1;
-            if (attended) {
-              pPres += 1;
-              if (rec.method === 'manual' || rec.status === 'manual') manualCount += 1;
-              if (['override_code', 'instructor_approved', 'gps_flagged'].includes(rec.method) || rec.status === 'override') overrideCount += 1;
-            }
-          }
-        });
-
-        // 2. Activity Rounds (parallel sessions in same round count as 1 slot)
-        roundMap.forEach((roundSessions) => {
-          const cat = getSessionCategory(roundSessions[0]?.session_type);
-          const appliesToStudent = roundSessions.some((s) => !s.group_filter || s.group_filter === st.group_label);
-          const attendedAny = roundSessions.some((s) => {
-            const rec = studentRecsMap.get(s.id);
-            return rec && ['present', 'manual', 'override'].includes(rec.status);
-          });
-          const excusedAny = roundSessions.some((s) => {
-            const rec = studentRecsMap.get(s.id);
-            return rec && rec.status === 'excused';
-          });
-
-          if (excusedAny && !attendedAny) excusedCount += 1;
-          if (!appliesToStudent && !attendedAny) return;
-
-          if (cat === 'theory_lecture') {
-            tTotal += 1;
-            if (attendedAny) tPres += 1;
-          } else {
-            pTotal += 1;
-            if (attendedAny) pPres += 1;
-          }
-        });
-
-        const totalHeld = tTotal + pTotal;
-        const totalPres = tPres + pPres;
-
-        const theoryPct = tTotal === 0 ? (tPres > 0 ? 100 : 0) : Math.round((tPres / tTotal) * 1000) / 10;
-        const practicalPct = pTotal === 0 ? (pPres > 0 ? 100 : 0) : Math.round((pPres / pTotal) * 1000) / 10;
-        const overallPct = totalHeld === 0 ? (totalPres > 0 ? 100 : 0) : Math.round((totalPres / totalHeld) * 1000) / 10;
-
-        return {
-          student_id: st.id,
-          roll_number: st.roll_number,
-          name: st.name,
-          role_type: st.role_type,
-          department: st.department,
-          program: st.program,
-          group_label: st.group_label,
-          present_count: totalPres,
-          excused_count: raw?.excused_count ?? excusedCount,
-          manual_count: raw?.manual_count ?? manualCount,
-          override_count: raw?.override_count ?? overrideCount,
-          total_sessions: totalHeld,
-          attendance_percentage: overallPct,
-          theory_present_count: tPres,
-          theory_total_sessions: tTotal,
-          theory_percentage: theoryPct,
-          practical_present_count: pPres,
-          practical_total_sessions: pTotal,
-          practical_percentage: practicalPct,
-        };
-      });
-
-      // Batch all state updates together so React does exactly 1 render pass
       setSessions(sessionsWithCounts);
       setStudents(studentRows ?? []);
-      setSummaries(enriched);
+      setSummaries(parsedSummaries);
     } catch (err) {
       console.error('[ReportsPage] Error loading reports:', err);
     } finally {
       if (isInitial) setLoading(false);
     }
   }, [courseName]);
+
 
   useEffect(() => {
     load(true);
