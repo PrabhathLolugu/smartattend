@@ -4,12 +4,13 @@ Production QR + GPS attendance system. React + TypeScript + Vite + Tailwind, bac
 
 ## Git
 
-- Remote: `origin` → https://github.com/PrabhathLolugu/smartattend.git, branch `main`.
+- Remote: `origin` → https://github.com/PrabhathLolugu/IC181_Attendance.git, branch `main`.
 - Auth: Push using the token stored in `.env.deploy` (gitignored, never commit it):
   ```bash
-  git push https://$(grep GITHUB_TOKEN .env.deploy | cut -d= -f2)@github.com/PrabhathLolugu/smartattend.git main
+  git push https://$(grep GITHUB_TOKEN .env.deploy | cut -d= -f2)@github.com/PrabhathLolugu/IC181_Attendance.git main
   ```
   Never write the raw token into a tracked file or commit message — only read it from `.env.deploy` at push time.
+
 
 ## Deploys
 
