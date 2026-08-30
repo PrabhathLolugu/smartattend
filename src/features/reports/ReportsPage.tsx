@@ -991,7 +991,7 @@ function StudentDetailModal({
         supabase
           .from('attendance_records')
           .select('*')
-          .or(`student_id.eq.${summary.student_id},roll_number.eq.${summary.roll_number}`),
+          .or(`student_id.eq.${summary.student_id},roll_number.ilike.${summary.roll_number.trim()}`),
         supabase
           .from('students')
           .select('*')
@@ -1000,9 +1000,10 @@ function StudentDetailModal({
       ]);
 
       const recordBySession = new Map((myRecords ?? []).map((r) => [r.session_id, r]));
-      const applicable = (allSessions ?? []).filter((s) => !s.group_filter || s.group_filter === summary.group_label);
+      const applicable = (allSessions ?? []).filter((s) => !s.group_filter || s.group_filter === summary.group_label || recordBySession.has(s.id));
       setRows(applicable.map((s) => ({ session: s, record: recordBySession.get(s.id) ?? null })));
       setProfile(studentRow ?? null);
+
     } catch (err) {
       console.error('[StudentDetailModal] Error loading student records:', err);
     } finally {

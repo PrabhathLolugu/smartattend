@@ -30,8 +30,8 @@ export default function App() {
   const [joinGroupMode, setJoinGroupMode] = useState(false);
   const [attendToken, setAttendToken] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [defaultCourseName, setDefaultCourseName] = useState('General Class');
-  const [currentCourse, setCurrentCourseState] = useState(() => localStorage.getItem('sa_current_course') || 'General Class');
+  const [defaultCourseName, setDefaultCourseName] = useState('IC181');
+  const [currentCourse, setCurrentCourseState] = useState(() => localStorage.getItem('sa_current_course') || 'IC181');
   const [knownCourses, setKnownCourses] = useState<string[]>([]);
   const [liveSessionCount, setLiveSessionCount] = useState(0);
   const [focusSessionId, setFocusSessionId] = useState<string | null>(null);
@@ -48,7 +48,8 @@ export default function App() {
 
   const loadKnownCourses = React.useCallback(async () => {
     const { data } = await supabase.from('sessions').select('course_name');
-    const names = new Set((data ?? []).map((s) => s.course_name));
+    const names = new Set((data ?? []).map((s) => s.course_name).filter(Boolean));
+    names.add('IC181');
     names.add(defaultCourseName);
     setKnownCourses(Array.from(names).sort());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -70,8 +71,15 @@ export default function App() {
     if (!staff) return;
 
     supabase.from('course_settings').select('course_name').single().then(({ data }) => {
-      if (data?.course_name) setDefaultCourseName(data.course_name);
+      if (data?.course_name) {
+        setDefaultCourseName(data.course_name);
+        const stored = localStorage.getItem('sa_current_course');
+        if (!stored || stored === 'General Class') {
+          setCurrentCourse(data.course_name);
+        }
+      }
     });
+
 
     async function refreshLiveCount() {
       const { count } = await supabase.from('sessions').select('*', { count: 'exact', head: true }).eq('status', 'active');

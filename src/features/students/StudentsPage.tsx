@@ -43,9 +43,13 @@ export function StudentsPage({ staff, courseName }: Props) {
   const loadSummaries = useCallback(async () => {
     const { data: summaryRows } = await supabase.rpc('student_attendance_summary', { p_course_name: courseName });
     const map: Record<string, StudentAttendanceSummary> = {};
-    (summaryRows ?? []).forEach((s: StudentAttendanceSummary) => { map[s.roll_number] = s; });
+    (summaryRows ?? []).forEach((s: StudentAttendanceSummary) => {
+      map[s.roll_number] = s;
+      map[s.roll_number.toUpperCase()] = s;
+    });
     setSummaries(map);
   }, [courseName]);
+
 
   const pctFilterActive = minPct !== '' || maxPct !== '';
 
@@ -227,8 +231,9 @@ export function StudentsPage({ staff, courseName }: Props) {
               <tr><td colSpan={9} className="text-center py-10 text-slate-400 text-sm">No participants found.</td></tr>
             ) : (
               students.map((s) => {
-                const summary = summaries[s.roll_number];
+                const summary = summaries[s.roll_number] || summaries[s.roll_number.toUpperCase()];
                 return (
+
                   <tr key={s.id} onClick={() => setViewing(s)} className="cursor-pointer">
                     <td onClick={(e) => e.stopPropagation()}><input type="checkbox" checked={selected.has(s.id)} onChange={() => toggleSelect(s.id)} /></td>
                     <td className="font-mono font-medium">{s.roll_number}</td>
