@@ -350,19 +350,14 @@ export function DashboardPage({ staff, onNavigate, onOpenSession, courseName }: 
       {/* Header */}
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-              {getGreeting()}, {staff.name.split(' ')[0]}.
-            </h1>
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-500/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Live Sync
-            </span>
-          </div>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+            {getGreeting()}, {staff.name.split(' ')[0]}.
+          </h1>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
             Course <span className="font-semibold text-slate-700 dark:text-slate-200">{courseName}</span> · {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
         </div>
+
         <div className="flex gap-2 items-center">
           <button onClick={() => onNavigate('live_session')} className="btn-primary btn-sm flex items-center gap-1.5">
             {activeSessions.length > 0 ? (
