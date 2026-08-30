@@ -32,7 +32,7 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    // ── Student duplicate check ───────────────────────────────────────────────
+    // ── Duplicate check ───────────────────────────────────────────────────────
     const { data: existing } = await db
       .from("attendance_records")
       .select("marked_at, status")
@@ -43,55 +43,33 @@ Deno.serve(async (req: Request) => {
       return withCors({ duplicate: true, markedAt: existing.marked_at, status: existing.status });
     }
 
+    // ── GPS analysis (NEVER blocks the student) ───────────────────────────────
     const lat = Number(body.lat);
     const lng = Number(body.lng);
     const hasPosition = Number.isFinite(lat) && Number.isFinite(lng);
 
-    async function requestOverride(reason: "gps_denied" | "outside_radius" | "gps_unavailable", distance: number | null) {
-      await db
-        .from("gps_override_requests")
-        .upsert(
-          {
-            session_id: session.id,
-            student_id: student.id,
-            roll_number: student.roll_number,
-            distance_meters: distance,
-            reason,
-            status: "pending",
-          },
-          { onConflict: "session_id,student_id", ignoreDuplicates: true },
-        );
-      await logAudit({
-        actorLabel: `student:${roll}`,
-        action: "gps_override_requested",
-        entityType: "session",
-        entityId: session.id,
-        after: { reason, distance },
-      });
-      return withCors({ overridePending: true, reason });
-    }
+    let gpsFlag: string | null = null;      // null = clean GPS, otherwise flagged for instructor
+    let distanceMeters: number | null = null;
 
     if (!hasPosition) {
-      if (!session.allow_gps_override) {
-        return withCors({ error: "Location is required for this session. Please enable GPS and try again." }, 400);
+      // GPS unavailable or denied — student is still allowed through
+      gpsFlag = body.gpsDenied ? "gps_denied" : "gps_unavailable";
+    } else {
+      const distance = haversineMeters(lat, lng, session.anchor_lat, session.anchor_lng);
+      distanceMeters = distance;
+      const accuracy = Number.isFinite(Number(body.accuracy)) ? Number(body.accuracy) : 0;
+      // Account for mobile GPS accuracy variance (up to 100m indoor buffer)
+      const effectiveDistance = Math.max(0, distance - Math.min(accuracy, 100));
+      const sessionRadius = session.radius_meters || 150;
+      const withinRadius = effectiveDistance <= sessionRadius;
+
+      if (!withinRadius) {
+        // Outside radius — still allowed, just flagged for instructor review
+        gpsFlag = "outside_radius";
       }
-      return await requestOverride(body.gpsDenied ? "gps_denied" : "gps_unavailable", null);
     }
 
-    const distance = haversineMeters(lat, lng, session.anchor_lat, session.anchor_lng);
-    const accuracy = Number.isFinite(Number(body.accuracy)) ? Number(body.accuracy) : 0;
-    // Account for mobile GPS accuracy variance in university lecture halls / indoor buildings (up to 100m indoor buffer)
-    const effectiveDistance = Math.max(0, distance - Math.min(accuracy, 100));
-    const sessionRadius = session.radius_meters || 150;
-    const withinRadius = effectiveDistance <= sessionRadius;
-
-    if (!withinRadius) {
-      if (!session.allow_gps_override) {
-        return withCors({ error: `You appear to be ${Math.round(distance)}m away from class (allowed: ${sessionRadius}m). Ask your instructor for the Override Code.` }, 400);
-      }
-      return await requestOverride("outside_radius", distance);
-    }
-
+    // ── Always record attendance ──────────────────────────────────────────────
     const { data: record, error: insertErr } = await db
       .from("attendance_records")
       .insert({
@@ -99,11 +77,12 @@ Deno.serve(async (req: Request) => {
         student_id: student.id,
         roll_number: student.roll_number,
         status: "present",
-        method: "gps",
-        distance_meters: distance,
-        gps_lat: lat,
-        gps_lng: lng,
-        gps_accuracy: Number.isFinite(Number(body.accuracy)) ? Number(body.accuracy) : null,
+        method: gpsFlag ? "gps_flagged" : "gps",
+        distance_meters: distanceMeters,
+        gps_lat: hasPosition ? lat : null,
+        gps_lng: hasPosition ? lng : null,
+        gps_accuracy: hasPosition && Number.isFinite(Number(body.accuracy)) ? Number(body.accuracy) : null,
+        gps_flag: gpsFlag,
       })
       .select()
       .single();
@@ -115,12 +94,29 @@ Deno.serve(async (req: Request) => {
       return withCors({ error: "Could not record attendance. Please try again." }, 500);
     }
 
+    // ── Log GPS override request for instructor visibility (non-blocking) ─────
+    if (gpsFlag) {
+      await db
+        .from("gps_override_requests")
+        .upsert(
+          {
+            session_id: session.id,
+            student_id: student.id,
+            roll_number: student.roll_number,
+            distance_meters: distanceMeters,
+            reason: gpsFlag,
+            status: "auto_allowed",   // not 'pending' — student already has attendance
+          },
+          { onConflict: "session_id,student_id", ignoreDuplicates: true },
+        );
+    }
+
     await logAudit({
       actorLabel: `student:${roll}`,
       action: "attendance_submitted",
       entityType: "attendance_record",
       entityId: record.id,
-      after: record,
+      after: { ...record, gpsFlag },
     });
 
     return withCors({ record, student, session });

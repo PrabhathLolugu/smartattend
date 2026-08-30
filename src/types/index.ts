@@ -71,7 +71,7 @@ export interface Session {
 }
 
 export type AttendanceStatus = 'present' | 'manual' | 'override' | 'excused';
-export type AttendanceMethod = 'gps' | 'override_code' | 'manual' | 'instructor_approved';
+export type AttendanceMethod = 'gps' | 'gps_flagged' | 'override_code' | 'manual' | 'instructor_approved';
 
 export interface AttendanceRecord {
   id: string;
@@ -84,13 +84,15 @@ export interface AttendanceRecord {
   gps_lat?: number | null;
   gps_lng?: number | null;
   gps_accuracy?: number | null;
+  gps_flag?: string | null;  // 'no_gps' | 'gps_denied' | 'gps_unavailable' | 'outside_radius' | null
   marked_at: string;
   recorded_by?: string | null;
   notes?: string | null;
 }
 
 export type OverrideReason = 'gps_denied' | 'outside_radius' | 'gps_unavailable';
-export type OverrideStatus = 'pending' | 'approved' | 'rejected';
+// 'auto_allowed' = student was let through without blocking (new default behaviour)
+export type OverrideStatus = 'pending' | 'approved' | 'rejected' | 'auto_allowed';
 
 export interface GpsOverrideRequest {
   id: string;

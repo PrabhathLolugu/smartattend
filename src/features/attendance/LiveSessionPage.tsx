@@ -74,7 +74,8 @@ export function LiveSessionPage({ staff, courseName, onCourseChange }: Props) {
   const loadSessionDetail = useCallback(async (sessionId: string) => {
     const [{ data: r }, { data: o }] = await Promise.all([
       supabase.from('attendance_records').select('*').eq('session_id', sessionId).order('marked_at', { ascending: false }),
-      supabase.from('gps_override_requests').select('*').eq('session_id', sessionId).eq('status', 'pending').order('requested_at', { ascending: false }),
+      // Fetch all GPS flagged entries (pending = old flow, auto_allowed = new always-through flow) so instructors can review
+      supabase.from('gps_override_requests').select('*').eq('session_id', sessionId).in('status', ['pending', 'auto_allowed']).order('requested_at', { ascending: false }),
     ]);
     setRecords(r ?? []);
     setOverrides(o ?? []);
@@ -115,7 +116,7 @@ export function LiveSessionPage({ staff, courseName, onCourseChange }: Props) {
       }
     }
     rotate();
-    const seconds = settings?.qr_rotation_seconds || 25;
+    const seconds = settings?.qr_rotation_seconds || 300;
     const interval = setInterval(rotate, seconds * 1000);
     return () => { cancelled = true; clearInterval(interval); };
   }, [selected?.id, settings?.qr_rotation_seconds]);
@@ -268,7 +269,8 @@ export function LiveSessionPage({ staff, courseName, onCourseChange }: Props) {
               {overrides.length > 0 && (
                 <div className="card border-amber-200 dark:border-amber-500/30 bg-amber-50/50 dark:bg-amber-500/5">
                   <div className="px-5 py-3 border-b border-amber-200/60 dark:border-amber-500/20 font-semibold text-amber-900 dark:text-amber-400 text-sm">
-                    Pending GPS Approvals ({overrides.length})
+                    GPS Flagged Entries ({overrides.length})
+                    <span className="ml-2 font-normal text-amber-700 dark:text-amber-500 text-xs">— attendance was recorded; review only</span>
                   </div>
                   <div className="divide-y divide-amber-100 dark:divide-amber-500/10">
                     {overrides.map((o) => (
@@ -276,13 +278,23 @@ export function LiveSessionPage({ staff, courseName, onCourseChange }: Props) {
                         <div>
                           <p className="font-semibold text-slate-900 dark:text-slate-100 text-sm">{o.roll_number}</p>
                           <p className="text-xs text-slate-500 dark:text-slate-400">
-                            {o.reason === 'outside_radius' ? `${o.distance_meters}m away` : o.reason === 'gps_denied' ? 'Location denied' : 'Location unavailable'} · {timeAgo(o.requested_at)}
+                            {o.reason === 'outside_radius'
+                              ? `${o.distance_meters != null ? `${Math.round(o.distance_meters)}m away` : 'Outside radius'}`
+                              : o.reason === 'gps_denied'
+                              ? 'Location permission denied'
+                              : 'Location unavailable'}
+                            {' '}·{' '}
+                            <span className={`font-medium ${o.status === 'auto_allowed' ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'}`}>
+                              {o.status === 'auto_allowed' ? 'Auto-allowed ✓' : 'Pending approval'}
+                            </span>
                           </p>
                         </div>
-                        <div className="flex gap-2">
-                          <button onClick={() => handleResolveOverride(o, 'approve')} className="btn-success btn-sm">Approve</button>
-                          <button onClick={() => handleResolveOverride(o, 'reject')} className="btn-danger btn-sm">Reject</button>
-                        </div>
+                        {o.status === 'pending' && (
+                          <div className="flex gap-2">
+                            <button onClick={() => handleResolveOverride(o, 'approve')} className="btn-success btn-sm">Approve</button>
+                            <button onClick={() => handleResolveOverride(o, 'reject')} className="btn-danger btn-sm">Reject</button>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>

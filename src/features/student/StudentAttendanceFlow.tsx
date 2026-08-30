@@ -12,9 +12,6 @@ type Step =
   | 'submitting'
   | 'success'
   | 'duplicate'
-  | 'device_blocked'
-  | 'override_pending'
-  | 'override_code'
   | 'error';
 
 interface Props {
@@ -59,6 +56,9 @@ const emptyEnrollForm: EnrollForm = {
   name: '', roleType: 'student', department: SCHOOL_PRESETS[0], program: 'B.Tech',
 };
 
+// How long to wait for GPS before proceeding anyway (ms)
+const GPS_TIMEOUT_MS = 8000;
+
 export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
   const [step, setStep] = useState<Step>(initialToken ? 'gps' : 'need_token');
   const [showScanner, setShowScanner] = useState(false);
@@ -76,13 +76,9 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
   const [customDept, setCustomDept] = useState('');
   const [customProg, setCustomProg] = useState('');
 
-  const [overrideCode, setOverrideCode] = useState('');
-  const [overrideReason, setOverrideReason] = useState<string>('');
-
   const [error, setError] = useState('');
   const [result, setResult] = useState<{ record?: AttendanceRecord; session?: Session } | null>(null);
   const [duplicateInfo, setDuplicateInfo] = useState<{ markedAt?: string; status?: string } | null>(null);
-  const [deviceBlockedRoll, setDeviceBlockedRoll] = useState<string | null>(null);
 
   const rollRef = useRef<HTMLInputElement>(null);
 
@@ -93,6 +89,14 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
 
   useEffect(() => {
     if (step === 'roll') rollRef.current?.focus();
+  }, [step]);
+
+  // Auto-start GPS when we land on the gps step
+  useEffect(() => {
+    if (step === 'gps') {
+      requestGps();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
   function extractToken(scanned: string): string {
@@ -112,30 +116,45 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
     setStep('gps');
   }
 
+  function proceedToRoll() {
+    setGpsLoading(false);
+    setStep('roll');
+  }
+
   function requestGps() {
     setGpsLoading(true);
     setError('');
+
     if (!navigator.geolocation) {
+      // GPS API not available — proceed silently
       setPosition(null);
-      setGpsDenied(true);
-      setGpsLoading(false);
-      setStep('roll');
+      setGpsDenied(false);
+      proceedToRoll();
       return;
     }
+
+    // Timeout fallback — if GPS takes too long, proceed without it
+    const timeoutId = setTimeout(() => {
+      setPosition(null);
+      setGpsDenied(false);
+      proceedToRoll();
+    }, GPS_TIMEOUT_MS);
+
     navigator.geolocation.getCurrentPosition(
       (pos) => {
+        clearTimeout(timeoutId);
         setPosition({ lat: pos.coords.latitude, lng: pos.coords.longitude, accuracy: pos.coords.accuracy });
         setGpsDenied(false);
-        setGpsLoading(false);
-        setStep('roll');
+        proceedToRoll();
       },
       (err) => {
+        clearTimeout(timeoutId);
         setPosition(null);
         setGpsDenied(err.code === err.PERMISSION_DENIED);
-        setGpsLoading(false);
-        setStep('roll');
+        // GPS denied or unavailable — still proceed to roll number entry
+        proceedToRoll();
       },
-      { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 },
+      { enableHighAccuracy: true, timeout: GPS_TIMEOUT_MS - 500, maximumAge: 0 },
     );
   }
 
@@ -206,8 +225,8 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
         program: enrollForm.roleType === 'student' ? prog : undefined,
       });
       if (res.student) {
-        setStudent(res.student);
-        await submitAttendance();
+        // Use the enrolled student directly (don't rely on stale state)
+        await submitAttendanceForStudent(res.student);
       }
     } catch (e) {
       const message = e instanceof Error ? e.message : 'Registration failed.';
@@ -230,6 +249,10 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
   }
 
   async function submitAttendance() {
+    return submitAttendanceForStudent(student);
+  }
+
+  async function submitAttendanceForStudent(resolvedStudent: Student | null) {
     if (!token) return;
     setStep('submitting');
     setError('');
@@ -240,8 +263,6 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
         duplicate?: boolean;
         markedAt?: string;
         status?: string;
-        overridePending?: boolean;
-        reason?: string;
       }>('attendance-submit', {
         qrToken: token,
         rollNumber: roll,
@@ -254,11 +275,9 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
       if (res.duplicate) {
         setDuplicateInfo({ markedAt: res.markedAt, status: res.status });
         setStep('duplicate');
-      } else if (res.overridePending) {
-        setOverrideReason(res.reason ?? '');
-        setStep('override_pending');
       } else if (res.record) {
         localStorage.setItem('sa_student_roll', roll);
+        if (resolvedStudent) setStudent(resolvedStudent);
         setResult({ record: res.record, session: res.session });
         setStep('success');
       } else {
@@ -277,42 +296,13 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
     setRollLoading(false);
   }
 
-  async function handleOverrideCodeSubmit() {
-    if (!token || !overrideCode.trim()) { setError('Please enter the code your instructor gave you.'); return; }
-    setRollLoading(true);
-    setError('');
-    try {
-      const res = await callFunction<{
-        record?: AttendanceRecord;
-        duplicate?: boolean;
-      }>('override-code-redeem', {
-        qrToken: token,
-        rollNumber: roll,
-        code: overrideCode.trim(),
-      });
-      if (res.duplicate) {
-        setStep('duplicate');
-      } else if (res.record) {
-        localStorage.setItem('sa_student_roll', roll);
-        setResult({ record: res.record });
-        setStep('success');
-      }
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Incorrect or expired code.');
-    } finally {
-      setRollLoading(false);
-    }
-  }
-
   function reset() {
     setRoll('');
     setStudent(null);
     setEnrollForm(emptyEnrollForm);
-    setOverrideCode('');
     setError('');
     setResult(null);
     setDuplicateInfo(null);
-    setDeviceBlockedRoll(null);
     setStep('roll');
   }
 
@@ -344,19 +334,10 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
         )}
 
         {step === 'gps' && (
-          <div className="animate-slide-up">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">Enable Location</h2>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
-              We use your location once to verify physical presence.
-            </p>
-            <div className="mt-6 flex flex-col gap-3">
-              <button onClick={requestGps} disabled={gpsLoading} className="btn-primary w-full h-12">
-                {gpsLoading ? 'Getting your location…' : 'Allow Location & Continue'}
-              </button>
-              <button onClick={() => { setGpsDenied(true); setPosition(null); setStep('roll'); }} className="btn-ghost w-full text-xs">
-                Continue without location
-              </button>
-            </div>
+          <div className="flex flex-col items-center gap-4 py-16 animate-fade-in">
+            <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">Getting your location…</p>
+            <p className="text-slate-400 dark:text-slate-500 text-xs">This only takes a moment.</p>
           </div>
         )}
 
@@ -495,7 +476,7 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
         {step === 'submitting' && (
           <div className="flex flex-col items-center gap-4 py-16 animate-fade-in">
             <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
-            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">Verifying your attendance…</p>
+            <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">Marking your attendance…</p>
           </div>
         )}
 
@@ -528,76 +509,6 @@ export function StudentAttendanceFlow({ initialToken, onBack }: Props) {
               )}
             </div>
             <button onClick={reset} className="btn-secondary w-full">Close</button>
-          </div>
-        )}
-
-        {step === 'device_blocked' && (
-          <div className="flex flex-col items-center gap-4 py-8 text-center animate-scale-in">
-            <div className="w-16 h-16 rounded-full bg-red-50 dark:bg-red-500/10 flex items-center justify-center">
-              <svg className="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m0 0v2m0-2h2m-2 0H10M9 7H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V9a2 2 0 00-2-2h-2M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M9 7h6" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-xl font-bold text-slate-900 dark:text-slate-100">Device Already Used</p>
-              <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">
-                This device has already been used to mark attendance
-                {deviceBlockedRoll ? (
-                  <> for <span className="font-mono font-semibold text-slate-700 dark:text-slate-300">{deviceBlockedRoll}</span></>
-                ) : null}{' '}
-                in this session.
-              </p>
-              <p className="text-slate-400 dark:text-slate-500 text-xs mt-2">
-                Only one attendance per device is allowed per session.<br />
-                If you genuinely need to mark attendance, please ask your instructor to add you manually.
-              </p>
-            </div>
-            <button onClick={reset} className="btn-secondary w-full">Close</button>
-          </div>
-        )}
-
-        {step === 'override_pending' && (
-          <div className="flex flex-col items-center gap-4 py-8 text-center animate-scale-in">
-            <div className="w-16 h-16 rounded-full bg-amber-50 dark:bg-amber-500/10 flex items-center justify-center">
-              <svg className="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </div>
-            <div>
-              <p className="text-xl font-bold text-slate-900 dark:text-slate-100">We Couldn't Verify Your Location</p>
-              <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
-                {overrideReason === 'outside_radius'
-                  ? 'You appear to be outside the classroom.'
-                  : 'This can happen indoors or with weak GPS signal.'}
-                {' '}Your instructor has been notified and can approve you — or give you a code.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 w-full">
-              <button onClick={() => setStep('override_code')} className="btn-primary w-full">Enter Instructor Code</button>
-              <button onClick={requestGps} className="btn-outline w-full">Retry Location</button>
-              <button onClick={reset} className="btn-ghost w-full text-xs">Close</button>
-            </div>
-          </div>
-        )}
-
-        {step === 'override_code' && (
-          <div className="animate-slide-up">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">Enter Instructor Code</h2>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Ask your instructor or TA for the 6-digit code.</p>
-            <div className="mt-6 flex flex-col gap-4">
-              <input
-                className="input-base text-2xl tracking-[0.4em] text-center h-14 font-mono font-bold"
-                placeholder="000000"
-                inputMode="numeric"
-                maxLength={6}
-                value={overrideCode}
-                onChange={(e) => setOverrideCode(e.target.value.replace(/\D/g, ''))}
-                onKeyDown={(e) => e.key === 'Enter' && handleOverrideCodeSubmit()}
-                autoFocus
-              />
-              {error && <ErrorBox message={error} />}
-              <button onClick={handleOverrideCodeSubmit} disabled={rollLoading} className="btn-primary w-full h-12">
-                {rollLoading ? 'Checking…' : 'Submit Code'}
-              </button>
-            </div>
           </div>
         )}
 

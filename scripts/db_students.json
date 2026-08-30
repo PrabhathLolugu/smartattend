@@ -1,0 +1,3186 @@
+[
+  {
+    "id": "c40dd6ea-b5c7-4b5a-8d02-3cd02c6c6a83",
+    "roll_number": "194876",
+    "name": "Rushil Panchal",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "4155005b-51e2-4fc7-91d3-ccdcb8212332",
+    "roll_number": "26030",
+    "name": "Yogha Duraisamy Sankar",
+    "email": "im26030@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "20d5c6e4-5794-4f4a-98c7-57f6c3782c24",
+    "roll_number": "26155",
+    "name": "Shreyashri Bindai",
+    "email": "b26155@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "1931b656-dc1d-49bf-95dc-36e577e37d93",
+    "roll_number": "26268",
+    "name": "Bhavya Bansal",
+    "email": "b26268@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "deleted"
+  },
+  {
+    "id": "668f8199-1394-47b4-a279-0d12985c4d84",
+    "roll_number": "344571",
+    "name": "Rathod Balaji",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "75343b6f-829b-4823-9283-2f4997aac4d9",
+    "roll_number": "640655",
+    "name": "Rastiv Raj",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "dd1ecbd3-9d74-4873-8206-387eba432d5e",
+    "roll_number": "861129",
+    "name": "Rastiv Raj",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "26b27032-6dae-4508-8552-8bd39d242d3d",
+    "roll_number": "898927",
+    "name": "Guddu Kumar Gupta",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "e9f64f4b-0160-4a4f-b9e8-e05aaa449036",
+    "roll_number": "B23434",
+    "name": "Deepak",
+    "email": "b23434@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "6dab37b8-c06c-4b52-9bdc-a308600644d9",
+    "roll_number": "B23445",
+    "name": "Kartavya",
+    "email": "B23445@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "f24a6940-f6f8-46bc-ba60-c9594d6b9c68",
+    "roll_number": "B26001",
+    "name": "Aarti",
+    "email": "b26001@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "a64f9bc5-0cc9-45e6-a0c9-7872bf283d13",
+    "roll_number": "B26005",
+    "name": "Ajaybir Singh Brar",
+    "email": "b26005@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "c208d167-c745-4447-9132-6634307bcc17",
+    "roll_number": "B26007",
+    "name": "ANKIT KUMAR",
+    "email": "b26007@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "ab104840-0577-4675-b898-759e86b2da04",
+    "roll_number": "B26008",
+    "name": "CHAUDHARY PRASHIL HARMESH",
+    "email": "b26008@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "3e58c6b0-fafe-492b-8428-a3bd6731e071",
+    "roll_number": "B26010",
+    "name": "Deepak Kumar",
+    "email": "b26010@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "4c3e7c30-5a23-403b-a919-e2ece4113098",
+    "roll_number": "B26011",
+    "name": "Divyansh Makkar",
+    "email": "b26011@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "beddb9e9-cec0-422c-8d9d-a09746996dda",
+    "roll_number": "B26013",
+    "name": "Harshita",
+    "email": "b26013@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "675c486b-b9ec-427a-bf7e-2015472927a3",
+    "roll_number": "B26014",
+    "name": "Kodepaka Sreyash",
+    "email": "b26014@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "b520c482-8589-4198-a138-478264f5d8de",
+    "roll_number": "B26018",
+    "name": "Nishant Khichar",
+    "email": "nishantkhichar2008@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "8a920b29-6add-4140-9805-574d5ef01a56",
+    "roll_number": "B26019",
+    "name": "Nityam Parihar",
+    "email": "nityamparihar259@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "39ae8014-3931-4017-a48a-1479fdc715ce",
+    "roll_number": "B26020",
+    "name": "Prabhat Bansal",
+    "email": "b26020@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c6e93f5b-3dc1-45c0-b712-6b22182f4e07",
+    "roll_number": "B26021",
+    "name": "Prahlad sharma",
+    "email": "b26021@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "16f8e90e-4114-494f-b93a-c953ea943edc",
+    "roll_number": "B26022",
+    "name": "Prince Raj",
+    "email": "b26022@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "a9f6453a-0b88-4cb4-b444-9961dc573202",
+    "roll_number": "B26025",
+    "name": "Suyash Kumar",
+    "email": "suyash.subhash@gmail.com",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "aad9170e-07c2-4fde-8672-1e37a69f7cd0",
+    "roll_number": "B26026",
+    "name": "Tisna singla",
+    "email": "b26026@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "b473e4cb-fd54-4e79-8307-5a4603cd1e05",
+    "roll_number": "B26028",
+    "name": "VAIBHAV DONERIYA",
+    "email": "b26028@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "4daf5977-dd66-4f79-ac17-06afad40f030",
+    "roll_number": "B26029",
+    "name": "Yashica Singla",
+    "email": "b26029@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "9e63c4d1-ef74-4296-b042-e71d62b72e28",
+    "roll_number": "B26030",
+    "name": "Aakarsh Kumar",
+    "email": "b26030@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "f0e91edc-cf5a-4c9d-bee9-a9e213028881",
+    "roll_number": "B26032",
+    "name": "Arjun Jangir",
+    "email": "b26032@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "85aadd7f-d947-476c-ba9c-59877bd5a78f",
+    "roll_number": "B26033",
+    "name": "BORELLI DILEEP KUMAR",
+    "email": "b26033@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "61d69a67-2429-48f8-837f-72b0c2240e37",
+    "roll_number": "B26038",
+    "name": "Krishna Soni",
+    "email": "kingkriss2510@gmail.com",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "b4f9f417-7db2-4ebf-86e0-3f068b56903f",
+    "roll_number": "B26044",
+    "name": "Mummana Greshma Sri",
+    "email": "b26044@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "16358cd8-cb75-4651-a473-26296903e369",
+    "roll_number": "B26046",
+    "name": "Obili raja Kanishk Reddy",
+    "email": "b26046@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "8e726922-9629-4f0c-9a07-c7d97bd7d6e2",
+    "roll_number": "B26048",
+    "name": "Rahul Kumar",
+    "email": "b26048@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "b6a75684-53c1-44c1-867f-8576fe3a2430",
+    "roll_number": "B26050",
+    "name": "Satyam rahangdale",
+    "email": "b26050@student.iitmandi.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "fb2fb1bb-dc84-4311-a076-26f1b018a014",
+    "roll_number": "B26052",
+    "name": "Shaurya Singh Bhawani",
+    "email": "b26052@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "ed103d32-bf9f-4085-83d2-5591315af39c",
+    "roll_number": "B26053",
+    "name": "Shivansh Pandey",
+    "email": "b26053@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "5e998e3f-3e38-48d2-8865-44613e8bd30c",
+    "roll_number": "B26054",
+    "name": "Shresth Rai",
+    "email": "b26054@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "6647a295-a3fc-4a1e-a33f-15ab655f229f",
+    "roll_number": "B26056",
+    "name": "Vishesh",
+    "email": "b26056@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "ced8cae0-cc44-4c8a-8d36-9e2743109f2a",
+    "roll_number": "B26057",
+    "name": "Vishist Tulsyan",
+    "email": "b26057@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "0aa0ca75-df94-4ddd-b7e3-214db69f3f65",
+    "roll_number": "B26058",
+    "name": "Yashu",
+    "email": "b26058@students.iitmandi.ac.un",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "8b300e76-fd07-4023-9388-60318f1ddc76",
+    "roll_number": "B26059",
+    "name": "Abhinav Kumar",
+    "email": "b26059@iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "7b4f776b-7aa9-4014-b6aa-e313e3447465",
+    "roll_number": "B26060",
+    "name": "Abhiraj Narasing Kale",
+    "email": "b26060@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "ea385d6e-56f9-4225-bc57-d5d3f5c8d2e6",
+    "roll_number": "B26063",
+    "name": "Atharv Shrivastava",
+    "email": "atharv.shrivastava15@gmail.com",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "4b935056-e59a-4971-ab49-9698231644ae",
+    "roll_number": "B26064",
+    "name": "Ayanangsh Guha Raja",
+    "email": "b26064@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "138ecfa3-d2b8-4574-b3bd-90cd1d263cbf",
+    "roll_number": "B26065",
+    "name": "BHAVESH SAINI",
+    "email": "b26065@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "3bb77383-c419-425e-b2f5-99d2c3218409",
+    "roll_number": "B26066",
+    "name": "Boddu praveen",
+    "email": "b26066@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "d5271771-056d-4ce1-a4bc-ed2bfb953e20",
+    "roll_number": "B26067",
+    "name": "Omkar Rajkumar Boyane",
+    "email": "b26067@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "f69fa45b-250f-46c3-bc6a-322df0f5222d",
+    "roll_number": "B26068",
+    "name": "DAKSH",
+    "email": "b26068@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "f5d7e576-65f0-4177-bd59-82d174ea68c6",
+    "roll_number": "B26070",
+    "name": "Sujal Gupta",
+    "email": "b26070@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "a860de3b-0ad5-4d9a-8c1c-6dfb5f9f67e8",
+    "roll_number": "B26071",
+    "name": "Harshvardhan Khilery",
+    "email": "b26071@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "26eebd06-2a30-42eb-a838-616803bf42fa",
+    "roll_number": "B26072",
+    "name": "ISHAN CHAUDHARY",
+    "email": "b26072@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "3cc5366f-e5f9-4662-9e19-bde5a1629a9d",
+    "roll_number": "B26078",
+    "name": "Nivedith.K.S",
+    "email": "b26078@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "3c35ae43-f5a7-4c7e-a013-501906008893",
+    "roll_number": "B26080",
+    "name": "PRASHANT VERMA",
+    "email": "b26080@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "1617f2a8-5e6a-4e34-a932-9a4869b752b2",
+    "roll_number": "B26081",
+    "name": "Prem kumar",
+    "email": "premkumar935477@gmail.com",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "1de945ac-8d4c-4068-8257-97d06fb68da5",
+    "roll_number": "B26083",
+    "name": "Rudra sharma",
+    "email": "b26083@students.iimandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "e0330656-61ad-48ed-a70c-d19b77858266",
+    "roll_number": "B26084",
+    "name": "Sanskar Dutt",
+    "email": "b26084@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "e8e04692-a2a3-4de5-b6b6-1dbcf2aa0d7b",
+    "roll_number": "B26085",
+    "name": "Suhani Kumari",
+    "email": "b26085@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c01fa751-81ec-48f3-9b93-b680afe776c7",
+    "roll_number": "B26086",
+    "name": "Sumi Das",
+    "email": "sumiidas364@gmail.com",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "d3cc7159-0982-4d38-99e0-ca544c9059c0",
+    "roll_number": "B26088",
+    "name": "Tej Prakash Korada",
+    "email": "b26088@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "9f259333-47d1-4d10-90eb-87d0aba49a4e",
+    "roll_number": "B26089",
+    "name": "Aman Sharma",
+    "email": "amansharma0123455@gmail.com",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "5aa3d117-6673-4c14-bcf4-3ad879552803",
+    "roll_number": "B26094",
+    "name": "Sujith paul Darla",
+    "email": "sujithpauldarla@gmail.com",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "8b298b11-a977-46af-b73a-b5e12ab159a0",
+    "roll_number": "B26095",
+    "name": "HAMSINI GAJAM",
+    "email": "b26095@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "97f6d726-1671-4aa2-8c23-85fbea2c23e8",
+    "roll_number": "B26096",
+    "name": "Harijana parusuram",
+    "email": "b26096@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "c16daad4-8318-4ec8-89a5-7ab2c4539e6b",
+    "roll_number": "B26099",
+    "name": "Kunjam Aravind Kumar Dora",
+    "email": "b2609@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "865b46aa-c1ac-455c-950a-a94cdfe68e75",
+    "roll_number": "B26100",
+    "name": "Riddhi Lalwani",
+    "email": "b26100@iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "f4277adb-d6c0-475f-8170-6c65815e4477",
+    "roll_number": "B26101",
+    "name": "Manish Mehra",
+    "email": "b26101@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "30ff8732-2b70-4c6e-8f25-14f058b5182a",
+    "roll_number": "B26103",
+    "name": "Mudit Jain",
+    "email": "b26103@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "26dd2872-e02d-469a-9c46-8001aa46de18",
+    "roll_number": "B26104",
+    "name": "PETLA MANOJ",
+    "email": "b26104@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "498c5f62-1704-4b26-a604-aaf57e71ce5b",
+    "roll_number": "B26105",
+    "name": "PURTI JAIN",
+    "email": "b26105@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "6e0cd388-853e-4ea7-a155-900d6ee6bfc2",
+    "roll_number": "B26106",
+    "name": "RATHLAVATH Srinivas",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "40cd467a-1904-4fba-b431-2539ac5b1ef1",
+    "roll_number": "B26107",
+    "name": "RISHAB PATIL",
+    "email": "b26107@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "a94a38f1-1417-4d60-a0c9-4df376f8975b",
+    "roll_number": "B26108",
+    "name": "Ritu",
+    "email": "b26108@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "ace294c5-a76f-4d1f-a30b-da1bf736af01",
+    "roll_number": "B26111",
+    "name": "Vaibhav Chhattani",
+    "email": "bharatchhattani81@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "96061723-8d0a-4e16-bbf0-031573700474",
+    "roll_number": "B26112",
+    "name": "Varchashva Dixit",
+    "email": "b26112@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "08a8fbcf-b41b-45aa-8c86-de7f268b801c",
+    "roll_number": "B26113",
+    "name": "VedanshGupta",
+    "email": "b26113@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "fb6625a0-3864-40e1-b071-9520212e762c",
+    "roll_number": "B26114",
+    "name": "Vidya Bharti",
+    "email": "b26114@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "4ed36258-9073-4989-845e-915318cc5c0b",
+    "roll_number": "B26116",
+    "name": "Abhishek Mahantesh Channagond",
+    "email": "b26116@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "201345bb-0e54-4a4c-b4ab-f6c266d18606",
+    "roll_number": "B26117",
+    "name": "Aditya sharma",
+    "email": "b26117@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "2c94ebb6-bced-471a-a6b3-022fd0634752",
+    "roll_number": "B26118",
+    "name": "Akrati Shivhare",
+    "email": "b26118@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "59e0e3f4-606e-4f28-b243-ff6d2b7810a7",
+    "roll_number": "B26119",
+    "name": "Ananya Patel",
+    "email": "b26119@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "b6984fea-b3e7-4145-bc6b-4d22685aa8dc",
+    "roll_number": "B26121",
+    "name": "Anuj kumar",
+    "email": "anujasalwas123@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "55cd07e2-e1ff-47f3-bce4-b22e5cb4cf84",
+    "roll_number": "B26122",
+    "name": "Ayush Mishra",
+    "email": "b26122@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "3ff5a8d2-33bc-4243-aebf-695b27bfda55",
+    "roll_number": "B26126",
+    "name": "Darshiya Sharma",
+    "email": "darshiya.sharma@gmail.com",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "578ec637-78b3-4173-9c9f-ec2d64f66f17",
+    "roll_number": "B26128",
+    "name": "Divya",
+    "email": "b26128@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "200c0b65-7553-42cb-b6c1-cdde17be57da",
+    "roll_number": "B26130",
+    "name": "HIMANSHU NEEMROTH",
+    "email": "b26130@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "83149ea4-12aa-419c-a498-767f99f3831d",
+    "roll_number": "B26133",
+    "name": "Kaviyarasan.K",
+    "email": "b26133@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "b4af7e3f-8757-40fa-bec5-39dbc0888754",
+    "roll_number": "B26134",
+    "name": "Kislay Mishra",
+    "email": "b26134@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "c1fa2738-8bd3-4120-9f0a-7d365b973cac",
+    "roll_number": "B26135",
+    "name": "KUNAL",
+    "email": "b26135@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "d2bcc787-88a2-457a-8fd0-c4832860e833",
+    "roll_number": "B26136",
+    "name": "Dhanishka",
+    "email": "b26136@stydents.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "fe33a9e9-16d7-4a30-bde2-9a0970fdcd6c",
+    "roll_number": "B26137",
+    "name": "Lakshay Garg",
+    "email": "b26137@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "d87946ff-e5c0-4061-841a-9413409255b1",
+    "roll_number": "B26139",
+    "name": "Manya Gupta",
+    "email": "b26139@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "953949ff-3c0e-4b0e-842b-04529adc4915",
+    "roll_number": "B26140",
+    "name": "Manyata Gupta",
+    "email": "b26140@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "8940ab63-dcc6-48b7-82b9-3aa9e001fcc8",
+    "roll_number": "B26143",
+    "name": "Nitin Gurjar",
+    "email": "b26143@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "2f945115-1a02-4926-a2db-6fb98adf9d01",
+    "roll_number": "B26146",
+    "name": "Peeyush Singh",
+    "email": "b26146@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "3e01050c-4280-4e0f-9242-440ff06a2d00",
+    "roll_number": "B26147",
+    "name": "Pilla.Akhil",
+    "email": "b26147@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "79b62855-03d9-4b92-a119-f055f64f8137",
+    "roll_number": "B26151",
+    "name": "Ritika Meena",
+    "email": "b26151@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "deleted"
+  },
+  {
+    "id": "49d27295-1f37-42d8-97ce-bb1be7490cde",
+    "roll_number": "B26153",
+    "name": "Shailesh",
+    "email": "b26153@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "cb681e84-772e-43dd-bf87-f17b968a6858",
+    "roll_number": "B26155",
+    "name": "SHREYASHRI BINDAI",
+    "email": "b26155@students.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "1d625711-1ea8-495b-81f4-3338a3163fd7",
+    "roll_number": "B26156",
+    "name": "Sumit Naurawat",
+    "email": "sumitnaurawat@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "29db30a7-6149-430a-b4db-a4daf521b203",
+    "roll_number": "B26158",
+    "name": "Tanishk",
+    "email": "b26158@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "1bebf066-3a14-460f-bdc7-bc2faef21344",
+    "roll_number": "B26160",
+    "name": "Uttam Rawal",
+    "email": "b26160@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "07b076ad-50c3-41a0-9821-1075b8b2704e",
+    "roll_number": "B26161",
+    "name": "Hardik bhikhabhai vaniya",
+    "email": "b26161@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "b9ec9f3d-7332-4d43-82f9-78c712b1c4f3",
+    "roll_number": "B26162",
+    "name": "Vishal Poonia",
+    "email": "b26162@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "ff70d760-5316-4494-a6d2-bb287b4c459f",
+    "roll_number": "B26163",
+    "name": "Vishesh Kumar Meena",
+    "email": "b26163@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "83a5876d-c28c-4059-affb-385b1443dee8",
+    "roll_number": "B26164",
+    "name": "Aarush Saini",
+    "email": "b26164@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "8381e04c-5da0-49f5-a80c-7a32905e27ce",
+    "roll_number": "B26165",
+    "name": "Abalesh Baghel",
+    "email": "abalesh.lko21@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "4eabf748-514a-4409-8c47-6de7572bd894",
+    "roll_number": "B26166",
+    "name": "Abhigyan Hazarika",
+    "email": "b26166@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "dbd628e2-ed7b-471b-8f9b-98a1d6eb32c8",
+    "roll_number": "B26168",
+    "name": "Akshat Vats",
+    "email": "b26168@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "21ede211-ecc6-4329-8177-7f7365400f16",
+    "roll_number": "B26169",
+    "name": "Akshat yadav",
+    "email": "b26169@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "2661f843-b100-45cb-9c28-34afc81ad999",
+    "roll_number": "B26171",
+    "name": "Anil Dhaker",
+    "email": "b26171@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "a5e362b6-4020-480e-a290-7bae748b9b91",
+    "roll_number": "B26172",
+    "name": "Ankit Bansal",
+    "email": "b26172@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "60855ab2-6b8f-4961-9c01-6f874af98200",
+    "roll_number": "B26173",
+    "name": "Anu Dobwal",
+    "email": "anudobwalkwd@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "a5b52c33-768b-48f5-a817-1dacb3e4feaf",
+    "roll_number": "B26175",
+    "name": "Arnav Anand",
+    "email": "b26175@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "20993c76-f0bc-4817-84dc-a748372feb26",
+    "roll_number": "B26176",
+    "name": "Arpan Dutta",
+    "email": "b26176@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "cb933990-9024-4b3f-9f58-6eae33e16296",
+    "roll_number": "B26179",
+    "name": "Aryan Sandeep Naik",
+    "email": "b26179@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "66fd6a27-14d5-4281-8c87-664591725c3f",
+    "roll_number": "B26185",
+    "name": "Deshtwar sarthak sanjay",
+    "email": "b26185@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "db58e329-8344-448f-9857-3429ecb3c59a",
+    "roll_number": "B26187",
+    "name": "Dharavath Sai Varshith",
+    "email": "varshithnayak16@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "b101f048-ab1c-4edf-b010-0df192966999",
+    "roll_number": "B26194",
+    "name": "Harsh",
+    "email": "harshbhatti3769@gmail.com",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "1a4ca261-4d7c-4d1a-b5d2-412d07c1c35c",
+    "roll_number": "B26195",
+    "name": "Himanshu",
+    "email": "b26195@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "122da6e4-8d61-4e3c-bfbc-2b020e547c8b",
+    "roll_number": "B26198",
+    "name": "Inika Agrawal",
+    "email": "agrawal.inika30@gmail.com",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "67c87cb4-41eb-44e8-87de-aae55b6ed985",
+    "roll_number": "B26200",
+    "name": "Jasmeen kaur",
+    "email": "b26200@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "308ffb5b-4a5f-47e3-bfd7-3bd1550dd449",
+    "roll_number": "B26205",
+    "name": "Kapil Hingonia",
+    "email": "b26205@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "dfae6461-c034-44bc-8085-0c7058440ba0",
+    "roll_number": "B26211",
+    "name": "Angad jaglan",
+    "email": "b26211@student.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "276e236f-cf38-4e9d-ba40-56ea6e0dde8c",
+    "roll_number": "B26212",
+    "name": "Mudit Kumar",
+    "email": "b26212@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "0f0b9b0e-4694-43f7-be38-b0f08ebb0ef3",
+    "roll_number": "B26213",
+    "name": "Nalla Sai srikar",
+    "email": "b26213@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "f52d3f19-9a5d-48f4-a319-374b79f2fb2d",
+    "roll_number": "B26214",
+    "name": "Naman",
+    "email": "b26214@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "2f0dee3f-88ae-4433-9b3f-2bd41ab2600a",
+    "roll_number": "B26215",
+    "name": "Nandini Sharma",
+    "email": "b26215@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "d76c708b-6bdc-4762-814e-708115445b6a",
+    "roll_number": "B26217",
+    "name": "Neev Bansal",
+    "email": "b26217@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "c0a660c0-4bab-401a-af0b-1d6e79133fd2",
+    "roll_number": "B26219",
+    "name": "Ojasv Jain",
+    "email": "b26219@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "7ab68337-2d12-473f-acd6-fb245180afdd",
+    "roll_number": "B26220",
+    "name": "Pinak Yadav",
+    "email": "b26220@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "e07614db-14cf-4780-9528-21222cfb225f",
+    "roll_number": "B26221",
+    "name": "Pranjal Omar",
+    "email": "b26221@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "8a94f997-4a5b-425e-9391-fd16c154ac43",
+    "roll_number": "B26222",
+    "name": "Pratishtha Panchal",
+    "email": "b26222@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "22c37714-ef84-45f6-8e6d-1b42ac2b91f4",
+    "roll_number": "B26223",
+    "name": "Preet Midha",
+    "email": "b26223@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "cd697bac-c33c-42a3-b0af-9f4e36e3a647",
+    "roll_number": "B26224",
+    "name": "Priyanshu Singh",
+    "email": "b26224@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "a140301d-d4a8-4210-a32a-84e634b1473f",
+    "roll_number": "B26225",
+    "name": "Raj lodhi",
+    "email": "b26225@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "45c98f50-96fd-4574-8862-4aad47e12be6",
+    "roll_number": "B26227",
+    "name": "RITIK",
+    "email": "b26227@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "654795d4-c615-4e8f-8cc4-935b8d4f9c18",
+    "roll_number": "B26228",
+    "name": "Rohit Gupta",
+    "email": "b26228@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "5ed869e5-60f8-4bd0-b47c-6500a168e315",
+    "roll_number": "B26229",
+    "name": "Roman M",
+    "email": "b26229@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "3f012ad3-5ad6-45f4-975b-727be1fa6d75",
+    "roll_number": "B26230",
+    "name": "Roshani Singh",
+    "email": "b26230@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "39bd81a5-bad0-4ac6-bb7f-b1cfcae8d0ad",
+    "roll_number": "B26231",
+    "name": "Saksham Dhiman",
+    "email": "b26231@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "a98f5854-0833-42e1-8eb7-17a124e5c3b2",
+    "roll_number": "B26233",
+    "name": "Shardul Gupta",
+    "email": "b26233@student.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "269df89c-d52e-41cb-8c8c-3acfff25e38c",
+    "roll_number": "B26234",
+    "name": "Shaurya Chauhan",
+    "email": "b26234@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "60da0494-d7ba-41f8-b937-34d4e146d220",
+    "roll_number": "B26236",
+    "name": "Shrinayan Saraf",
+    "email": "shrinayan57@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "b785e000-b224-4a04-ab9c-56e298bd5f64",
+    "roll_number": "B26237",
+    "name": "Shruti Agrawal",
+    "email": "b26237@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "dc12123f-08a7-4093-9054-dc95144258a7",
+    "roll_number": "B26239",
+    "name": "Sneha Kumari",
+    "email": "b26239@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "f7450bd2-c66e-407d-9300-4230f061a4c3",
+    "roll_number": "B26242",
+    "name": "Swapnil Dohitare",
+    "email": "b26242@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "97205146-6fb2-4727-bc30-3cd87a9f59b6",
+    "roll_number": "B26244",
+    "name": "Tanmay garg",
+    "email": "b26244@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "4e7adbaa-ada0-49c8-954f-1084cec33ba8",
+    "roll_number": "B26246",
+    "name": "Tanvi sharma",
+    "email": "b26246@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "84823c9d-3953-4e7d-a8f4-c65d8cca3793",
+    "roll_number": "B26247",
+    "name": "Tushar Barman",
+    "email": "b26247@iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "f8462d95-824b-4cd5-a0e5-8bcc8881b27a",
+    "roll_number": "B26248",
+    "name": "Ujjwal Goyal",
+    "email": "b26248@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "c857c347-d476-4084-83aa-5b0a52af4860",
+    "roll_number": "B26249",
+    "name": "VADTHYA ASHRETH NAIK",
+    "email": "vadthyaashreth@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "8bc3c1ee-fa31-467c-8481-aebecc602c9b",
+    "roll_number": "B26252",
+    "name": "Yogita",
+    "email": "b26252@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "83b17f0b-0e34-4f8d-818d-33a1aa8a0baf",
+    "roll_number": "B26254",
+    "name": "Abhinav Kumar",
+    "email": "b26254@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "ed3c2360-59ad-4c4f-944f-045ead723020",
+    "roll_number": "B26255",
+    "name": "Abir Shandilya",
+    "email": "b26255@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "32a389c8-06c2-4a05-9afb-17c407bd4dcb",
+    "roll_number": "B26257",
+    "name": "Akash kumar",
+    "email": "b26257@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "464928d9-93c4-4ec4-a646-118b9bcb34f6",
+    "roll_number": "B26258",
+    "name": "Akshay Kumar",
+    "email": "b26258@iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "afe587e0-3ac4-4a60-9e8a-b919a213d1e9",
+    "roll_number": "B26260",
+    "name": "Anand Shukla",
+    "email": "b26260@iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "daaa9984-941d-40ff-85d3-b080b1e3002a",
+    "roll_number": "B26261",
+    "name": "Anand Singh",
+    "email": "b26261@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "31a6b0e7-42d4-4fd0-aeef-57ea1bd7aeaa",
+    "roll_number": "B26263",
+    "name": "Aradhy Dwivedi",
+    "email": "b26263@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "04c7aba0-e842-4d15-af32-b7a7f81ba0ae",
+    "roll_number": "B26264",
+    "name": "Arpit Singh",
+    "email": "b26264@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "7d705f87-b38f-4430-a3c1-1d1f1b7a3bd5",
+    "roll_number": "B26266",
+    "name": "Avni Balhara",
+    "email": "b26266@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "76f865c9-72bd-4869-b656-4380a19629f8",
+    "roll_number": "B26267",
+    "name": "Banala Pranavi",
+    "email": "b26267@email.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "82e25dce-d2c9-44eb-bdaa-57162208a89f",
+    "roll_number": "B26268",
+    "name": "Bhavya Bansal",
+    "email": "b26268@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "9f7187eb-9aa2-4bc5-8d2e-5fee2b612e76",
+    "roll_number": "B26269",
+    "name": "Bhavya Chauhan",
+    "email": "bhavya3279034@gmail.com",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "c94e6cef-217b-4e88-a585-1954f00fd4ea",
+    "roll_number": "B26271",
+    "name": "DEEPA SONI",
+    "email": "b26271@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "6817fd1d-18e2-4bf8-afe2-e00a1d0d12b1",
+    "roll_number": "B26274",
+    "name": "Garv Dharmapuri",
+    "email": "b26274@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "f8e0c86d-2a7d-42b1-930a-2b3f5d9519c1",
+    "roll_number": "B26276",
+    "name": "Hardik Gupta",
+    "email": "b26276@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "b3a277e6-e321-4af5-af59-ea1a8219bf78",
+    "roll_number": "B26280",
+    "name": "Jitesh Garg",
+    "email": "b26280@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "481c8a4f-1571-4841-8163-9b939bfd3114",
+    "roll_number": "B26283",
+    "name": "Khushal Jangir",
+    "email": "b26283@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "e503d79a-5a74-45a5-b214-09f3fb38c19d",
+    "roll_number": "B26284",
+    "name": "Kushal",
+    "email": "b26284@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "00404cf2-b21c-4b57-818a-1b2c633bc57c",
+    "roll_number": "B26286",
+    "name": "Lohitaksha Rohila",
+    "email": "b26286@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "8c906bc6-4df9-4fbd-998b-d6d39c93e7e8",
+    "roll_number": "B26288",
+    "name": "Narayani Patil",
+    "email": "b26288@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "acef3e9f-6aa4-464c-ba4f-1602dc650a90",
+    "roll_number": "B26289",
+    "name": "naveen choudhary",
+    "email": "b26289@iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "6bacca24-ebb0-409f-8c63-54ddd2ea4832",
+    "roll_number": "B26290",
+    "name": "Pakhi",
+    "email": "b26290@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "ead651b0-ceaf-40c5-b584-70aa50ed4487",
+    "roll_number": "B26291",
+    "name": "Palksha Sahuwala",
+    "email": "b26291@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c5fe1769-e610-4d7a-8246-fcbbe989cbbd",
+    "roll_number": "B26294",
+    "name": "PRATYUSH ANAND",
+    "email": "b26294@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "d56cabaf-c813-4842-9046-3f5fe6897049",
+    "roll_number": "B26295",
+    "name": "Prince Raj singh",
+    "email": "b26295@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "a1693aff-4a41-4920-8390-703c788d5e77",
+    "roll_number": "B26297",
+    "name": "Pyla Jayavardhini",
+    "email": "b26297@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "85ed0069-b136-4ec1-81e2-f6c1074778c1",
+    "roll_number": "B26298",
+    "name": "Rajveer Choudhary",
+    "email": "b26298@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "8f749a92-43b0-4b12-a74e-189b3c7df4ab",
+    "roll_number": "B26300",
+    "name": "Rishank A R",
+    "email": "b26300@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "9bcacafb-2c95-408d-b1bc-52e39012f1cf",
+    "roll_number": "B26301",
+    "name": "Nimishaa shelke",
+    "email": "b26301@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "74d8cb83-9d4d-4288-9fd6-9c4f991c047b",
+    "roll_number": "B26304",
+    "name": "Sohitashav kumar",
+    "email": "b26304@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "a921e2f8-2023-46c6-8c89-9f756ed1ea04",
+    "roll_number": "B26305",
+    "name": "Vani",
+    "email": "b26305@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "5ca3a141-8b4e-4a49-9b74-2fd0c40a7126",
+    "roll_number": "B26308",
+    "name": "Vikas",
+    "email": "b26308@students.iitmandi.ac.in.",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "b7bd32bb-7d43-4419-b237-efbeaf4e9289",
+    "roll_number": "B26309",
+    "name": "Vikash Kumar",
+    "email": "b26309@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "414d758a-b64e-47b0-9cd4-8c0cf0345fa9",
+    "roll_number": "B26312",
+    "name": "Yatharth jain",
+    "email": "b26312@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "5aed9cb6-a552-4aec-8aea-c71e599366ab",
+    "roll_number": "B26313",
+    "name": "Aabhya Agarwal",
+    "email": "b26313@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "25b0718c-d890-43ef-925f-0eaa36c07df7",
+    "roll_number": "B26319",
+    "name": "Aditya Raj Singh",
+    "email": "b26319@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "01f5bc93-6ece-48f8-b07f-b063f018576a",
+    "roll_number": "B26321",
+    "name": "Akansha",
+    "email": "b26321@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "45faced1-aa25-4a73-854a-285f956cfae9",
+    "roll_number": "B26330",
+    "name": "D.varun sandesh kumar",
+    "email": "varunsandeshkumar9490@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "9b39b27a-72ea-4b88-afec-82ad81e83c96",
+    "roll_number": "B26337",
+    "name": "Hardik jarwal",
+    "email": "b26337@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "0237f0bc-e79f-46dd-a7d7-6f98411bcbc1",
+    "roll_number": "B26339",
+    "name": "Harun",
+    "email": "b26339@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "b3cc22d2-e278-42d4-b099-331b5a563a64",
+    "roll_number": "B26341",
+    "name": "K Ram Sai",
+    "email": "b26341@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "6198db34-f029-4980-b3ea-cb027b3edf28",
+    "roll_number": "B26342",
+    "name": "KIRTI RAO",
+    "email": "b26342@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "aa5b9d2b-bb7f-48e6-a89e-bcfa8845d799",
+    "roll_number": "B26343",
+    "name": "Krishna vijaywargiya",
+    "email": "b26343@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "30a9e465-6b26-49d4-bb4e-4ee1486a00a0",
+    "roll_number": "B26345",
+    "name": "Kunj Satish Mandaviya",
+    "email": "b26345@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "ee2ff170-56c1-4b08-ac46-134b69b26a9e",
+    "roll_number": "B26347",
+    "name": "Manvi",
+    "email": "b26347@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "1ce47e00-3540-46fe-9c51-ea0bffe5a41c",
+    "roll_number": "B26350",
+    "name": "Mishti Sharma",
+    "email": "b26350@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "389b6624-7bd4-4231-84c0-a3500f110492",
+    "roll_number": "B26351",
+    "name": "Mitul Kardam",
+    "email": "b26351@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "4e6c83cb-fab1-4ef0-a396-7f6e359eefeb",
+    "roll_number": "B26353",
+    "name": "Neha",
+    "email": "b26353@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "272f0748-6ce4-463b-9ef2-f987a85b7bfb",
+    "roll_number": "B26354",
+    "name": "Nikhlesh Gupta",
+    "email": "b26354@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "dd93b7af-0931-4ae1-9674-4437fb9d5053",
+    "roll_number": "B26355",
+    "name": "Ojas Dhananjay Nakade",
+    "email": "b26355@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "2c5c3bf2-f51b-46f9-911e-f0b11a94d5c5",
+    "roll_number": "B26356",
+    "name": "Om Gawandey",
+    "email": "b26356@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "7bb08f8f-8fcb-4188-b74a-849f56bc8704",
+    "roll_number": "B26359",
+    "name": "Partha Sarathi Majumder",
+    "email": "b26359@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "6fabfd2a-1c6e-43ab-aba3-4078d63690f7",
+    "roll_number": "B26361",
+    "name": "Prabhjot Singh",
+    "email": "b26361@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "143241a0-2d4f-4198-aab7-d1923407fb65",
+    "roll_number": "B26363",
+    "name": "Rachit Singla",
+    "email": "b26363@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "20e91f96-b1d1-440b-a029-21b056c5109b",
+    "roll_number": "B26364",
+    "name": "Rastiv Raj",
+    "email": "rastivraj6@gmail.com",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "6fc9214f-a942-4f18-af3e-910cc9e1dce1",
+    "roll_number": "B26366",
+    "name": "RUHAN DALAL",
+    "email": "b26366@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "c9493630-8e2b-4904-abe4-951b9cdd7e46",
+    "roll_number": "B26367",
+    "name": "Sakshi Yadav",
+    "email": "sakshirao2008@gmail.com",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "4f0cfd31-b89c-4bef-90ee-99b8a6812bb1",
+    "roll_number": "B26368",
+    "name": "Shashwat Gupta",
+    "email": "b26368@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "08f07a1b-2e6a-4628-a65d-cbc3a0edeea6",
+    "roll_number": "B26370",
+    "name": "Sirivennela matti",
+    "email": "b26370@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "f9efbefe-20ac-4c34-9d25-dc6c2928fce4",
+    "roll_number": "B26373",
+    "name": "Swapneel Das",
+    "email": "b26373@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "a4e7c8d4-4537-4206-9362-5f631fad7ed7",
+    "roll_number": "B26382",
+    "name": "ISHAAN Yadav",
+    "email": "b26382@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "46a8c928-9dfe-41ad-a352-4064efa78429",
+    "roll_number": "B26383",
+    "name": "Yuvish Garg",
+    "email": "b26383@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "d24f164e-8bf8-48c0-bd74-f10293dd89ef",
+    "roll_number": "B26384",
+    "name": "Aahna Gupta",
+    "email": "b26384@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "79c5473b-7420-4d06-8970-62a6a95c96b0",
+    "roll_number": "B26385",
+    "name": "Akash Mukhoti",
+    "email": "b26385@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "522617b1-b9ce-417c-85e3-ea36109242e8",
+    "roll_number": "B26388",
+    "name": "Babul Kumar",
+    "email": "bk3159463@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c0f84ea5-d7e1-4f45-b19e-1b4f505533bb",
+    "roll_number": "B26391",
+    "name": "Bhargav Kapaleeswaran",
+    "email": "b26391@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "8b6bd000-db49-4c9c-9a12-d92ba2e01c4d",
+    "roll_number": "B26395",
+    "name": "Harsh Ajit Nikam",
+    "email": "b26395@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "f9eec9e7-bc70-4c59-a2e5-ba6c26615b19",
+    "roll_number": "B26404",
+    "name": "Rehan hasan",
+    "email": "b26404@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "a92e1310-a5a3-4efa-9381-b46e2484ca8c",
+    "roll_number": "B26405",
+    "name": "Shaahin K",
+    "email": "b26405@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "b2e9509f-28c4-46a0-808d-5e6dada077f6",
+    "roll_number": "B26406",
+    "name": "Shivam Verma",
+    "email": "b26406@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "d13ee311-45fa-409a-b061-93dff4bb1f22",
+    "roll_number": "B26407",
+    "name": "Shreeya Gupta",
+    "email": "b26407@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "f6011f60-1d07-4ec7-bb66-fb076c77d1af",
+    "roll_number": "B26409",
+    "name": "Tapish Kumar",
+    "email": "tapishmahawar218@gmail.com",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "792cbfd1-a216-41ad-aebf-271a2fe497f8",
+    "roll_number": "B26410",
+    "name": "Utsav Yadav",
+    "email": "utsav.yadav042008@gmail.com",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "6f2433a5-cabb-4a16-a7f5-0c1646e0c30e",
+    "roll_number": "B26413",
+    "name": "Yatin Yadav",
+    "email": "b26413@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "4e9fc309-b989-44d4-b285-1f6f4a4f2d40",
+    "roll_number": "B26415",
+    "name": "Avneesh Singh",
+    "email": "b26415@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "1f0e2070-a1d7-43b6-b793-6f27c71db757",
+    "roll_number": "B26416",
+    "name": "Priya Madhuri",
+    "email": "b26416@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "8b1db4fe-57c9-4930-b69d-c1a485184c52",
+    "roll_number": "B26417",
+    "name": "Dev Tomar",
+    "email": "b26417@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "84682e74-f859-4d97-9dc3-9a0cc392d04b",
+    "roll_number": "B26418",
+    "name": "Divya Raj Jain",
+    "email": "b26418@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "c4d553ea-08b7-4ab7-946b-3f51ad59cc36",
+    "roll_number": "B26420",
+    "name": "Gaurav Choudhary",
+    "email": "b26420@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "880f1a2e-fed3-4229-a8e2-164463bbcb67",
+    "roll_number": "B26422",
+    "name": "Kapil jarwal",
+    "email": "kapiljarwal441@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "be6d1af3-98b5-462f-986f-d3fbaefc2800",
+    "roll_number": "B26423",
+    "name": "Khwaish gupta",
+    "email": "b26423@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "d8b29ad6-bae9-4ec6-bda7-d5de548c87ac",
+    "roll_number": "B26424",
+    "name": "Kudumula navadeep reddy",
+    "email": "b26424@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "389e4f01-92ee-4678-9bf1-7752baef7b67",
+    "roll_number": "B26425",
+    "name": "Lavanya gupta",
+    "email": "b26425@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "405e46d1-b406-4c46-b637-6df2ceb01add",
+    "roll_number": "B26428",
+    "name": "Naimish Nath Kaithwal",
+    "email": "b26428@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "8584ba2c-b4a9-4235-abe5-11e138202aba",
+    "roll_number": "B26429",
+    "name": "Naitik jadon",
+    "email": "b26429@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "afb3dc77-8e8d-4ba8-8c79-27e54a681cdd",
+    "roll_number": "B26430",
+    "name": "Prabhat Raturi",
+    "email": "b26430@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "ca5cc115-52d0-4358-a330-08e4ad6d9ff1",
+    "roll_number": "B26431",
+    "name": "Prince",
+    "email": "b26431@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "6eedd744-1047-45d0-bbb9-2b6276a017e7",
+    "roll_number": "B26432",
+    "name": "Rakshit Jain",
+    "email": "b26432@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "be902454-65ac-4cc7-80be-281ff96bd4d7",
+    "roll_number": "B26434",
+    "name": "Saanvi Avinash Tambde",
+    "email": "b26434@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c49037e5-40d4-4c89-87c0-14c028007b77",
+    "roll_number": "B26435",
+    "name": "Sarthak Baghel",
+    "email": "b26435@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "f1afe41e-4491-4c92-add5-0635eb66f75a",
+    "roll_number": "B26437",
+    "name": "Suryansh Sharma",
+    "email": "b264372@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "e104dd67-ca55-4110-b5c6-02cf3f3781b0",
+    "roll_number": "B26438",
+    "name": "Swayam Gupta",
+    "email": "b26438@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "0cc4c86b-96d2-444e-81d9-be3bf55ca0f5",
+    "roll_number": "B26439",
+    "name": "T Siddarth",
+    "email": "b26439@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "bf6296aa-0286-4aaa-aa4f-25b3c83da67e",
+    "roll_number": "B26441",
+    "name": "Utsav Mahajan",
+    "email": "b26441@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "47769181-32df-46f7-8155-85b826d482a4",
+    "roll_number": "B26442",
+    "name": "Shraddha Vishwanathe",
+    "email": "shraddhavishwanathe@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "28ff6486-0d90-4131-87ec-06f22fbbfc8b",
+    "roll_number": "B26443",
+    "name": "Vishwaraj",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "b0ed253d-3173-4c23-ab4d-926bf0323562",
+    "roll_number": "B26444",
+    "name": "Aadi Kaushik",
+    "email": "aadi008kaushik@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "ca784154-1e9d-417e-9041-a3c209f60a86",
+    "roll_number": "B26446",
+    "name": "Amitesh Kumar",
+    "email": "b26446@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "8e9506f3-06cc-47aa-aa71-ae7f9bb7070f",
+    "roll_number": "B26450",
+    "name": "Himanshu",
+    "email": "b26450@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "8e1ea01f-7a4d-499a-b141-8e6f1b11dcb1",
+    "roll_number": "B26452",
+    "name": "Ishika Jain",
+    "email": "b26452@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "b0affdd0-28fe-42b3-9c2f-00484ee4e5aa",
+    "roll_number": "B26455",
+    "name": "Lucky",
+    "email": "luckyaggarwall16@gmail.com",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "224a8a89-1dc5-4bde-9a73-fd52db33a68c",
+    "roll_number": "B26457",
+    "name": "Nihira",
+    "email": "b26457@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "f78873c2-5e9f-4845-b051-dcb3a4655e7f",
+    "roll_number": "B26458",
+    "name": "Paarth Vashistha",
+    "email": "b26458@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "20f8a100-466c-438f-b382-efc4253112af",
+    "roll_number": "B26459",
+    "name": "Parv Khatri",
+    "email": "b26459@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "b01e6220-19af-4048-ba17-d6ab680d9782",
+    "roll_number": "B26460",
+    "name": "Prince Mahicha",
+    "email": "b26460@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "63aac923-44d4-4546-90db-3fe57ed928c7",
+    "roll_number": "B26461",
+    "name": "Priyam Sukhija",
+    "email": "b26461@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "4d5e4caa-3e27-4396-b382-0f3c01334cea",
+    "roll_number": "B26465",
+    "name": "Sangram Singh",
+    "email": "b26465@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "4f97f19f-3bdc-40a5-b2ff-75bf1234bce6",
+    "roll_number": "B26468",
+    "name": "Shreeraj Rakesh Nandre",
+    "email": "b26468@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "3b941e6a-33a6-4fd0-bc68-35ea99cf37b0",
+    "roll_number": "B26472",
+    "name": "Varun Kumar",
+    "email": "varunkumar200108@gmail.com",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "814960d3-9289-4590-a4bc-cfb6a20912ae",
+    "roll_number": "B26473",
+    "name": "Yashika Santhanand",
+    "email": "b26473@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "357bad8e-8c22-4939-a87f-1cdfced162f9",
+    "roll_number": "B26474",
+    "name": "Aadarsh Kumar",
+    "email": "b26474@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "80b79efd-fa9f-48bf-9686-d391a1f1a13b",
+    "roll_number": "B26476",
+    "name": "Abhimanyu Singh Rathorr",
+    "email": "b26476@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "2606a7e4-1fc9-4912-b071-41e7af9de82f",
+    "roll_number": "B26481",
+    "name": "Ganta Dinesh Kumar",
+    "email": "b26481@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "595591e4-0a41-48f4-b605-07cfe979750d",
+    "roll_number": "B26485",
+    "name": "ISHIRI DEBBARMA",
+    "email": "b26485@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "653c9c91-1339-4c2a-ba55-d3c603334230",
+    "roll_number": "B26486",
+    "name": "JATIN",
+    "email": "b26486@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "5b3286a5-f4fc-4153-90a8-25dfc12753fa",
+    "roll_number": "B26489",
+    "name": "Krishna Murari Choudhary",
+    "email": "b26489@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "18d65f9e-c7c3-4361-b60b-ee199a5b4392",
+    "roll_number": "B26490",
+    "name": "Kriti Choudhary",
+    "email": "b26490@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "ce606723-cf43-40b2-989c-ade634685d5c",
+    "roll_number": "B26492",
+    "name": "MALISETTY MOHITH",
+    "email": "b26492@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "2b94590e-5101-48d6-a828-2aa3885c6e84",
+    "roll_number": "B26494",
+    "name": "MOHIT RAMAKANT BHADANGE",
+    "email": "b26494@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "0b81e6e0-a09f-425e-b1b3-85ddbfad270b",
+    "roll_number": "B26497",
+    "name": "RAJAT JORWAL",
+    "email": "rajatjorwal48@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "44bfe3c7-8c29-4a73-9966-dc5a5824298b",
+    "roll_number": "B26501",
+    "name": "Sagar Raj",
+    "email": "b26501@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "defe32c0-ab38-45d2-9557-57d084d63684",
+    "roll_number": "B26503",
+    "name": "Sai Raman Padhi",
+    "email": "b26503@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "45f5a028-d54a-4396-aa50-a681aa518c23",
+    "roll_number": "B26504",
+    "name": "Sameer Raj",
+    "email": "b26504@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "89d8e80e-80c4-4558-b3e2-a652dd807821",
+    "roll_number": "B26505",
+    "name": "Sanyam Jain",
+    "email": "b26505@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "b4d68345-845e-4562-bb33-3ae6e736280d",
+    "roll_number": "B26506",
+    "name": "Shahil Kumar",
+    "email": "b26506@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "26eff60f-a856-4e68-b2c3-5ec1dc189c7c",
+    "roll_number": "B26508",
+    "name": "Krishna Soni",
+    "email": "b26508@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "fea159ec-445a-4a47-b69a-a89a3df75b3a",
+    "roll_number": "B26511",
+    "name": "Ishan Unagar",
+    "email": "b26511@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "305e898a-818b-4148-b68f-b29038682c93",
+    "roll_number": "B26515",
+    "name": "Abhiraj Thakur",
+    "email": "b26515@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "fc8e72c6-ad60-4d4d-92b5-5a3a805c4484",
+    "roll_number": "B26518",
+    "name": "Ansh Pratap Singh Bhadoriya",
+    "email": "anshpratap301123@gmail.com",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "2dcaa7ee-7bc0-4e39-ae46-781a39046dec",
+    "roll_number": "B26519",
+    "name": "Anshul yadav",
+    "email": "b26519@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "8e1a5ea5-1f63-4fb1-9ca2-15e442c7899a",
+    "roll_number": "B26520",
+    "name": "Arjun Lohchab",
+    "email": "b26520@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "20f1bbe6-ab24-4d82-92b5-9b96f67e374b",
+    "roll_number": "B26522",
+    "name": "AVDHESH MEENA",
+    "email": "b26522@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "a0271fef-339c-4d2a-8e0c-6dc28d261a3e",
+    "roll_number": "B26524",
+    "name": "Chirag Hotchandani",
+    "email": "hotchandanichirag7@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "c9cdc0e2-c95c-4ff9-a0b7-0d2d50eb1ee7",
+    "roll_number": "B26525",
+    "name": "Devang Sharma",
+    "email": "b26525@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "a879c5c1-e0f7-47f4-bf84-a34f1379a50b",
+    "roll_number": "B26527",
+    "name": "Gedela lohith kumar",
+    "email": "b26527@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "2f0e6a43-80bd-4048-8456-50723dc3a9ca",
+    "roll_number": "B26530",
+    "name": "Ishika garg",
+    "email": "b26530@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "5d14fa6d-6f40-4eab-8033-de5f1553b7e5",
+    "roll_number": "B26533",
+    "name": "Kavyansh Jain",
+    "email": "b26533@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "2572a518-be22-4bda-a5fb-a71ed00d8b27",
+    "roll_number": "B26535",
+    "name": "KESHAV GUPTA",
+    "email": "b26535@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "2ad1b278-9bec-42f7-8c5d-e8d0f6c93f05",
+    "roll_number": "B26538",
+    "name": "Manvinder singh",
+    "email": "b26538@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "1e45e4ce-4d4b-48d5-925a-292349d6b36c",
+    "roll_number": "B26544",
+    "name": "MUKUL Dahiya",
+    "email": "b26544@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "dab1b937-172d-4da4-9a52-762b99bd613c",
+    "roll_number": "B26547",
+    "name": "NILA P",
+    "email": "b26547@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "1caaa3c2-3414-4a6a-8917-d44838d0bcfe",
+    "roll_number": "B26548",
+    "name": "Nishant Sharma",
+    "email": "b26548@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "3154ce36-8598-4dbf-b13f-28fa793046b2",
+    "roll_number": "B26549",
+    "name": "Parth Deoli",
+    "email": "b26549@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c284f8a1-d4a4-4702-afa8-73461702c4f8",
+    "roll_number": "B26550",
+    "name": "Pragati khanna",
+    "email": "b26550@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "1baaac4a-b866-489d-95fa-ceeb5d309d7e",
+    "roll_number": "B26552",
+    "name": "Pushpraj Singh Kushwah",
+    "email": "b26552@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "129432b2-7c78-4d99-94ae-654f65ac68aa",
+    "roll_number": "B26553",
+    "name": "Raj Nikunj Chokhawala",
+    "email": "b23553@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "70389817-0303-44c0-8380-abd8bbb4f8f9",
+    "roll_number": "B26556",
+    "name": "Rishika Maan",
+    "email": "rishikamaan2009@gmail.com",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "204b7f15-1595-489e-b13f-984a72b3e302",
+    "roll_number": "B26558",
+    "name": "Rohan",
+    "email": "b26557@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "0e18f2a0-9ec9-4dd0-8224-0629fe832de4",
+    "roll_number": "B26561",
+    "name": "Samiksha",
+    "email": "dumd0622@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "b496f8bd-71b2-4b3d-8c86-d3652f5c4e7b",
+    "roll_number": "B26563",
+    "name": "Sarthak Mishra",
+    "email": "sarthakeducational05@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "0b520ef5-4a66-4580-a114-4ced12f3cd5c",
+    "roll_number": "B26585",
+    "name": "Jotaniya Dharmik Bhaveshbhai",
+    "email": "b26585@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "a905756a-6caf-4ecd-ba84-80773fa97c3a",
+    "roll_number": "B26588",
+    "name": "Mohini Saha",
+    "email": "b26588@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "03e38ddf-55a2-4006-9261-19dd6558bffb",
+    "roll_number": "B26594",
+    "name": "Prachi Yadav",
+    "email": "b26594@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "aaa92ef8-c489-4c6b-8387-3108331c417c",
+    "roll_number": "B26596",
+    "name": "Rathod Balaji",
+    "email": "b26596@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "50343844-bbab-41ab-b789-5b7e83d63bd3",
+    "roll_number": "B26597",
+    "name": "Sukhpreet Singh",
+    "email": "B26597@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "75799178-c652-4323-9a64-0e8c08010270",
+    "roll_number": "B26598",
+    "name": "Thanish Varma Manthrna",
+    "email": "b26598@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "295ab232-1d81-45aa-85ab-9a7e27eec71c",
+    "roll_number": "B26600",
+    "name": "Vasu Joshi",
+    "email": "b26600@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "aeef5dbd-9b50-4fdb-b0ff-d7933e8f0302",
+    "roll_number": "B26609",
+    "name": "Kulkarni Tanmay Mohan",
+    "email": "b26609@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "638d54d7-1365-474e-9491-c3fffbd91931",
+    "roll_number": "B26613",
+    "name": "Nishanth Mekala",
+    "email": "b26613@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "a2c2a16b-44ce-4ffa-94fd-1d8f37de715c",
+    "roll_number": "B26614",
+    "name": "PADAVALA AISWARYA",
+    "email": "b26614@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "e214dd78-cdf9-4e5a-b153-6b5805b22095",
+    "roll_number": "B26615",
+    "name": "Dhyey Patel",
+    "email": "b26615@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "9dfbb765-5df1-4147-a178-0ed3cc6a08fd",
+    "roll_number": "B26619",
+    "name": "Sahiti Rowthu",
+    "email": "sahitirowthu90002@gmail.com",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "f6afa669-60a3-45e2-adf1-7e2d0e6af399",
+    "roll_number": "B26620",
+    "name": "Saksham Rao",
+    "email": "b26620@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "63b58895-4516-4669-8bc8-e5afedfc223f",
+    "roll_number": "B26621",
+    "name": "Sarvambh Machhan",
+    "email": "b26621.students@iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "f833de30-5b90-4655-bd4c-99e559c5efdf",
+    "roll_number": "B26623",
+    "name": "SRISHTI",
+    "email": "b26623@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "ab366a68-620f-4e6c-a04d-c2688fba9433",
+    "roll_number": "B26625",
+    "name": "Tarun kumar Gedela",
+    "email": "tarunkumar120708@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "775559a7-eadf-4f6e-aec9-b5d4e8d71317",
+    "roll_number": "B26631",
+    "name": "Yamini Rawat",
+    "email": "b26631@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "519682d0-4214-415d-a8a8-5b34564cddc1",
+    "roll_number": "B2683738826",
+    "name": "Jdjdn",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "78053140-6372-4438-8be6-7e9c03842d16",
+    "roll_number": "B26CE116",
+    "name": "Abhishek Mahantesh Channagond",
+    "email": "b26116@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "db5b8409-4b5c-4aca-9bda-83f5a1031d48",
+    "roll_number": "B26ME538",
+    "name": "Manvinder Singh",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "5c1a5533-9996-4054-88ea-072fc733b2f8",
+    "roll_number": "B36450",
+    "name": "Himanshu",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "bbf13e59-f05f-48b8-bcbc-ea7d06d90764",
+    "roll_number": "B56261",
+    "name": "Samiksha Tambe",
+    "email": "dumd0622@gmail.com",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "6fa30db4-e40f-4793-876a-430e6aebfc22",
+    "roll_number": "BB26443",
+    "name": "Vishwaraj",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "6e8ec8eb-9e82-4f47-9ec2-facf31e2aaa6",
+    "roll_number": "D23293",
+    "name": "Ansul",
+    "email": "d23293@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "deleted"
+  },
+  {
+    "id": "693ab89a-f7d1-41e6-9fd6-fb4b79560e4d",
+    "roll_number": "D23294",
+    "name": "A",
+    "email": "ansul@gmail.com",
+    "group_label": null,
+    "status": "deleted"
+  },
+  {
+    "id": "65bba5a0-2bb3-42a0-a395-44a70a441e70",
+    "roll_number": "DUTT",
+    "name": "Sanskar Dutt",
+    "email": "b26084@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "deleted"
+  },
+  {
+    "id": "a3fc046a-baee-4902-80a0-03a722792ba0",
+    "roll_number": "IM26001",
+    "name": "Yuvraj Saini",
+    "email": "im26001@students.iitmandi.ac.in",
+    "group_label": "D",
+    "status": "active"
+  },
+  {
+    "id": "70b82dad-8669-4521-8975-463521235a06",
+    "roll_number": "IM26002",
+    "name": "Yash Rajoriya",
+    "email": "im26002@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "0dde48fa-845c-43c2-bdb3-05aa35968766",
+    "roll_number": "IM26005",
+    "name": "Parkhi Singh Ahluwalia",
+    "email": "im26005@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "5779b53e-0ce0-414c-8072-61f344751469",
+    "roll_number": "IM26006",
+    "name": "Velvaluri Monish Gupta",
+    "email": "im26006@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "3d08af09-159f-40de-a906-b54b854ca3e4",
+    "roll_number": "IM26007",
+    "name": "Livcharan S",
+    "email": "im26007@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "978e60bd-30f2-41ff-9c93-5ad4c409b8d3",
+    "roll_number": "IM26008",
+    "name": "Yash Agarwal",
+    "email": "im26008@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "b26b4c18-423c-48ee-aa1b-9d43b0121b2d",
+    "roll_number": "IM26010",
+    "name": "Lankala Ananya Reddy",
+    "email": "im26010@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "79bd8564-fe31-4a60-8fb5-28ad98c03999",
+    "roll_number": "IM26011",
+    "name": "Ridhima Bhardwaj",
+    "email": "im26011@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "fbe6f63c-0776-484f-ad14-728650344196",
+    "roll_number": "IM26012",
+    "name": "Konna Gowtham",
+    "email": "im26012@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "c5f4a843-60cb-441d-9e4c-26af609d3cd1",
+    "roll_number": "IM26013",
+    "name": "Chaitanya kapoor",
+    "email": "im26013@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "3c2fe0dd-901a-4246-8d99-b59f843f5a90",
+    "roll_number": "IM26014",
+    "name": "MAKINENI HARIKIRAN",
+    "email": "im26014@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "8e616b24-b0c6-486a-a841-f7e3bdad36b7",
+    "roll_number": "IM26015",
+    "name": "Asmitha M",
+    "email": "im26015@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "5613d28a-7de4-4218-8f76-24f3bb18ddea",
+    "roll_number": "IM26016",
+    "name": "PRAJEETH RAJ DHARAVATH",
+    "email": "im26016@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "e773bec1-d0bb-41ed-889b-7dbdbfc6c2fd",
+    "roll_number": "IM26017",
+    "name": "Apoorva Goel",
+    "email": "im26017@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "66ba7a74-beda-4539-80b2-4a6bb1841523",
+    "roll_number": "IM26019",
+    "name": "Shivali Poddar",
+    "email": "im26019@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "4e22d55b-dfaa-40a8-96ec-9eae42b400af",
+    "roll_number": "IM26020",
+    "name": "Harshit Badgoti",
+    "email": "im26020@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "04ba33b2-c72a-4823-ad81-96f6221638a1",
+    "roll_number": "IM26021",
+    "name": "Karthik Dhyan Girish",
+    "email": "im26021@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "4a6cb5f8-3be8-445d-bfef-3d5d1311960d",
+    "roll_number": "IM26022",
+    "name": "Harshit Choudhary",
+    "email": "im26022@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "29a061da-6115-48b4-a476-e399e09a8fbd",
+    "roll_number": "IM26023",
+    "name": "Ajay raj R",
+    "email": "ajayrajiitmandi@gmail.com",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "d0a15cf3-f945-4a2c-8475-b0290ffbadd1",
+    "roll_number": "IM26024",
+    "name": "Guddu Kumar Gupta",
+    "email": "im26024@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "8744951c-9f05-42b3-a30e-b31ea9761de8",
+    "roll_number": "IM26026",
+    "name": "Jeny Prafulbhai Hinsu",
+    "email": "im26026@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "a24c3c0f-6316-424c-9dbb-8c3b1c158c2c",
+    "roll_number": "IM26029",
+    "name": "Anubhav Kattna",
+    "email": "im26029@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "c3401379-b913-4e42-8fae-702407260d60",
+    "roll_number": "IM26030",
+    "name": "Yogha Duraisamy Sankar",
+    "email": "im26030@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "98a4973b-40dc-4b64-9f08-dc919ec83745",
+    "roll_number": "IM26031",
+    "name": "Anshul Kalia",
+    "email": "im26031@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "644f65fd-2c9a-410a-89a5-eed2b7a06ff9",
+    "roll_number": "IM26032",
+    "name": "NAVANEEETHAKRISHNAN S",
+    "email": "im26032@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "4b42bc28-e05f-44f9-a47b-a41fd1395a42",
+    "roll_number": "IM26033",
+    "name": "Nainshi Singh",
+    "email": "im26033@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "df9194b4-d4e8-4ed0-a590-82f33fe7e469",
+    "roll_number": "IM26035",
+    "name": "Yash Mishra",
+    "email": "im26035@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "e0d2a866-9fc0-4d9a-ba1c-2bffe22627be",
+    "roll_number": "IM26036",
+    "name": "ATHARV GUPTA",
+    "email": "im26036@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "f7999314-7f86-4f46-9021-87269b763569",
+    "roll_number": "IM26037",
+    "name": "Yash Dhurkari",
+    "email": "im26037@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "9b67d0e6-b3e8-4ec0-a70c-b30e320d074b",
+    "roll_number": "IM26038",
+    "name": "Aditya kumar Verma",
+    "email": "im26038@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "24e7e140-a790-4e75-8dcf-d74433b9b69f",
+    "roll_number": "IM26039",
+    "name": "Amit",
+    "email": "im26039@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "3fc8bde0-793e-4039-886f-a3f36b5e065f",
+    "roll_number": "IM26040",
+    "name": "Nitesh kumar",
+    "email": "im26040@students.iitmandi.ac.in",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "0c7067e5-88a2-4d7e-8ca0-da06621cfe95",
+    "roll_number": "IM26041",
+    "name": "Divyam",
+    "email": "im26041@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "40525fe6-45e8-4528-8005-47edac925443",
+    "roll_number": "IM26042",
+    "name": "Sivakami",
+    "email": "sivakamivl@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "57696da2-e50d-40ef-beee-717f5217e983",
+    "roll_number": "IM26043",
+    "name": "Nallabothula Srujan",
+    "email": "im26043@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "17d04934-2981-4857-a27f-9651b39b0db7",
+    "roll_number": "IM26044",
+    "name": "Garima Patel",
+    "email": "im26044@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "e6beab01-9ed1-4340-8322-8e91d5f67d83",
+    "roll_number": "IM26045",
+    "name": "Mathanraj M",
+    "email": "im26045@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "e88e269d-7653-44ed-9623-92a7eb02bc77",
+    "roll_number": "IM26046",
+    "name": "Abhay Bisht",
+    "email": "bishtabhay786@gmail.com",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "ca5e18e6-d603-494b-94c9-5e4bc44840fa",
+    "roll_number": "IM26047",
+    "name": "BARATHPRANAV",
+    "email": "im26047@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "e09c707f-f9e8-4474-b52d-381c207f4416",
+    "roll_number": "IM26049",
+    "name": "Rushil Panchal",
+    "email": "rushil2567@gmail.com",
+    "group_label": "C",
+    "status": "active"
+  },
+  {
+    "id": "1077bb7d-f7d4-4612-82b8-ba154ab03bac",
+    "roll_number": "IM26052",
+    "name": "Himanshu Pannu",
+    "email": "im26052@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "edbe95e5-8ccc-4a96-804d-a996b954671d",
+    "roll_number": "IM26053",
+    "name": "Arunav Kumar",
+    "email": "im26053@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "297ef867-2bbb-4f8b-b87f-d93c927743aa",
+    "roll_number": "IM26055",
+    "name": "GOWRI G",
+    "email": "im26055@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "b083e023-182e-4fa6-bf2f-8d6294f3d612",
+    "roll_number": "IM26058",
+    "name": "Sakshi",
+    "email": "im26058@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "f0d81f8c-e538-421b-81dc-7e1d9aa0f5af",
+    "roll_number": "IM26059",
+    "name": "Abhijeet Verma",
+    "email": "abhijeetvermabhel@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "576172c6-0679-44ff-ada2-eead32773d50",
+    "roll_number": "IM26060",
+    "name": "Anushka Tripathy",
+    "email": "tripathyanushka1510@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "d2bac21d-b026-4896-9850-79301108ddce",
+    "roll_number": "IM26061",
+    "name": "Jatin Kumar",
+    "email": null,
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "0f4225aa-55b8-446f-8b92-b709052614c2",
+    "roll_number": "IM26063",
+    "name": "Aaditya Nayak",
+    "email": "im26063@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "ff466502-04b7-41e6-b4c8-c68753288fe1",
+    "roll_number": "IM26064",
+    "name": "Shreya Bhadauria",
+    "email": "im26064@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "6f670046-b173-4ae3-8cce-d31c5b32f0d9",
+    "roll_number": "IM26065",
+    "name": "Anurag Chhabra",
+    "email": "im26065@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "69e6fb14-0ed8-4128-b599-3a3d9e2eb60c",
+    "roll_number": "IM26066",
+    "name": "Prashant Prabakaran",
+    "email": "im26066@students.iitmandi.ac.in",
+    "group_label": "G",
+    "status": "active"
+  },
+  {
+    "id": "8c1d7bc7-c734-4896-bcf5-4f652d02cd52",
+    "roll_number": "IM26067",
+    "name": "Siddharth Rawat",
+    "email": "siddharthrawat3428@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "a098049c-4968-48d7-8301-93e94b2959e5",
+    "roll_number": "IM26068",
+    "name": "Shivani",
+    "email": "shibhi974@gmail.com",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "0ee391a4-5144-443f-a522-2f6d6ccac95e",
+    "roll_number": "IM26069",
+    "name": "Utkarsh Bhagwat",
+    "email": "im26082@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "f856b112-dd3e-40f7-8529-127f861ef80a",
+    "roll_number": "IM26070",
+    "name": "Sharanam Trushar Parikh",
+    "email": "sharanam.parikh07@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "8c27ac07-0446-4963-8530-b5a2499d851c",
+    "roll_number": "IM26071",
+    "name": "Madhan kumar",
+    "email": "im26071@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "active"
+  },
+  {
+    "id": "b5dfe2b7-ae07-4097-b2ce-27c8b69deb50",
+    "roll_number": "IM26072",
+    "name": "NANDINI YADAV",
+    "email": "im26072@students.iitmandi.ac.in",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "21c943be-8eb5-48ad-9fe7-7c424d0bab19",
+    "roll_number": "IM26073",
+    "name": "RITHVIK BARATH V",
+    "email": "im26073@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "f22c4f6e-0f45-45dc-b40e-b59e7f61d741",
+    "roll_number": "IM26075",
+    "name": "Sanidhya Agarwal",
+    "email": null,
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "ca61bd5b-ed5c-4ff5-827e-cd8a55db9b95",
+    "roll_number": "IM26076",
+    "name": "Arul Kashyap",
+    "email": "im26076@students.iitmandi.ac.in",
+    "group_label": "H",
+    "status": "active"
+  },
+  {
+    "id": "af57a3b0-7529-43c5-a962-48071b7d4cb9",
+    "roll_number": "IM26077",
+    "name": "GURJAS BHATIA",
+    "email": "im26077@students.iitmandi.ac.in",
+    "group_label": null,
+    "status": "active"
+  },
+  {
+    "id": "f090e1be-e948-4e37-b4c7-5629a4e49b25",
+    "roll_number": "IM26078",
+    "name": "Aarushi Ahlawat",
+    "email": "ahlawataarushi6@gmail.com",
+    "group_label": "E",
+    "status": "active"
+  },
+  {
+    "id": "79d96e4f-a1be-408a-865e-e2a5d833e326",
+    "roll_number": "IM26079",
+    "name": "Jayant Dubey",
+    "email": "im26079@students.iitmandi.ac.in",
+    "group_label": "F",
+    "status": "active"
+  },
+  {
+    "id": "afb13ab7-302e-4c29-ad86-ca88c8b5b9e1",
+    "roll_number": "IM26080",
+    "name": "Sourabh Rai",
+    "email": "im26080@students.iitmandi.ac.in",
+    "group_label": "B",
+    "status": "active"
+  },
+  {
+    "id": "ec3aa381-ae03-401d-9fbf-53d0c5c6e66b",
+    "roll_number": "JANGIR",
+    "name": "Khushal jangir",
+    "email": "jangirkhushal490@gmail.com",
+    "group_label": "F",
+    "status": "deleted"
+  },
+  {
+    "id": "8059de54-45af-4626-9d1e-109f27b68020",
+    "roll_number": "KUMAR",
+    "name": "Tapish",
+    "email": "tapishmahawar218@gmail.com",
+    "group_label": "F",
+    "status": "deleted"
+  },
+  {
+    "id": "d722d9bd-c8ea-45f7-88d4-1f66c94bfa79",
+    "roll_number": "RITIK",
+    "name": "Ritik",
+    "email": "ritik93109@gmail.com",
+    "group_label": "C",
+    "status": "deleted"
+  },
+  {
+    "id": "d1354267-2c31-46bb-b769-d82f1e1a60f7",
+    "roll_number": "SONI",
+    "name": "Deepa",
+    "email": "b26271@students.iitmandi.ac.in",
+    "group_label": "A",
+    "status": "deleted"
+  },
+  {
+    "id": "6e945b5f-a50d-4928-9f0d-f70fc25f42b5",
+    "roll_number": "VISHWANATHE",
+    "name": "Shraddha Vishwanathe",
+    "email": "shraddhavishwanathe@gmail.com",
+    "group_label": "A",
+    "status": "deleted"
+  }
+]

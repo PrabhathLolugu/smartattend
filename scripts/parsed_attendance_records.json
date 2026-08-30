@@ -1,0 +1,6615 @@
+[
+  {
+    "index": 1,
+    "timestamp": "8/19/2026 12:53:52",
+    "inputLines": [
+      "b26227@students.iitmandi.ac.in",
+      "Ritik",
+      "B26227",
+      "8/19/2026",
+      "b26227@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "45c98f50-96fd-4574-8862-4aad47e12be6",
+      "roll_number": "B26227",
+      "name": "RITIK",
+      "email": "b26227@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 2,
+    "timestamp": "8/19/2026 12:53:53",
+    "inputLines": [
+      "b26135@students.iitmandi.ac.in",
+      "Kunal",
+      "B26135",
+      "8/19/2026",
+      "b26135@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c1fa2738-8bd3-4120-9f0a-7d365b973cac",
+      "roll_number": "B26135",
+      "name": "KUNAL",
+      "email": "b26135@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 3,
+    "timestamp": "8/19/2026 12:53:53",
+    "inputLines": [
+      "b26258@students.iitmandi.ac.in",
+      "Akshay Kumar",
+      "B26258",
+      "8/19/2026",
+      "b26258@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "464928d9-93c4-4ec4-a646-118b9bcb34f6",
+      "roll_number": "B26258",
+      "name": "Akshay Kumar",
+      "email": "b26258@iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 4,
+    "timestamp": "8/19/2026 12:53:53",
+    "inputLines": [
+      "b26018@students.iitmandi.ac.in",
+      "Nishant Khichar",
+      "B26018",
+      "8/19/2026",
+      "b26018@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b520c482-8589-4198-a138-478264f5d8de",
+      "roll_number": "B26018",
+      "name": "Nishant Khichar",
+      "email": "nishantkhichar2008@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 5,
+    "timestamp": "8/19/2026 12:53:53",
+    "inputLines": [
+      "B26086@students.iitmandi.ac.in",
+      "Sumi Das",
+      "B26086",
+      "8/19/2026",
+      "b26086@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c01fa751-81ec-48f3-9b93-b680afe776c7",
+      "roll_number": "B26086",
+      "name": "Sumi Das",
+      "email": "sumiidas364@gmail.com",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 6,
+    "timestamp": "8/19/2026 12:53:54",
+    "inputLines": [
+      "Jatin",
+      "B26486",
+      "8/19/2026",
+      "b26486@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "653c9c91-1339-4c2a-ba55-d3c603334230",
+      "roll_number": "B26486",
+      "name": "JATIN",
+      "email": "b26486@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 7,
+    "timestamp": "8/19/2026 12:53:57",
+    "inputLines": [
+      "b26420@students.iitmandi.ac.in",
+      "Gaurav Choudhary",
+      "B26420",
+      "8/19/2026",
+      "b26420@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c4d553ea-08b7-4ab7-946b-3f51ad59cc36",
+      "roll_number": "B26420",
+      "name": "Gaurav Choudhary",
+      "email": "b26420@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 8,
+    "timestamp": "8/19/2026 12:53:57",
+    "inputLines": [
+      "b26176@students.iitmandi.ac.in",
+      "Arpan Dutta",
+      "B26176",
+      "8/19/2026",
+      "arpandutta809@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "20993c76-f0bc-4817-84dc-a748372feb26",
+      "roll_number": "B26176",
+      "name": "Arpan Dutta",
+      "email": "b26176@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 9,
+    "timestamp": "8/19/2026 12:53:58",
+    "inputLines": [
+      "b26600@students.iitmandi.ac.in",
+      "Vasu Joshi",
+      "B26600",
+      "8/19/2026",
+      "b26600@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "295ab232-1d81-45aa-85ab-9a7e27eec71c",
+      "roll_number": "B26600",
+      "name": "Vasu Joshi",
+      "email": "b26600@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 10,
+    "timestamp": "8/19/2026 12:53:59",
+    "inputLines": [
+      "im26072@students.iitmandi.ac.in",
+      "Nandini yadav",
+      "Im26072",
+      "8/19/2026",
+      "im26072@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b5dfe2b7-ae07-4097-b2ce-27c8b69deb50",
+      "roll_number": "IM26072",
+      "name": "NANDINI YADAV",
+      "email": "im26072@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 11,
+    "timestamp": "8/19/2026 12:54:00",
+    "inputLines": [
+      "b26430@students.iitmandi.ac.in",
+      "Prabhat Raturi",
+      "B26430",
+      "8/19/2026",
+      "b26430@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "afb3dc77-8e8d-4ba8-8c79-27e54a681cdd",
+      "roll_number": "B26430",
+      "name": "Prabhat Raturi",
+      "email": "b26430@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 12,
+    "timestamp": "8/19/2026 12:54:00",
+    "inputLines": [
+      "B26404@students.iitmandi.ac.in",
+      "Rehan hasan",
+      "B26404",
+      "8/19/2026",
+      "rehanhasan084@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f9eec9e7-bc70-4c59-a2e5-ba6c26615b19",
+      "roll_number": "B26404",
+      "name": "Rehan hasan",
+      "email": "b26404@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 13,
+    "timestamp": "8/19/2026 12:54:00",
+    "inputLines": [
+      "b26631@students.iitmandi.ac.in",
+      "Yamini Rawat",
+      "b26631",
+      "8/19/2026",
+      "b26631@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "775559a7-eadf-4f6e-aec9-b5d4e8d71317",
+      "roll_number": "B26631",
+      "name": "Yamini Rawat",
+      "email": "b26631@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 14,
+    "timestamp": "8/19/2026 12:54:01",
+    "inputLines": [
+      "b26625@students.iitmandi.ac.in",
+      "Tarun kumar Gedela",
+      "B26625",
+      "8/19/2026",
+      "b26625@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "ab366a68-620f-4e6c-a04d-c2688fba9433",
+      "roll_number": "B26625",
+      "name": "Tarun kumar Gedela",
+      "email": "tarunkumar120708@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 15,
+    "timestamp": "8/19/2026 12:54:01",
+    "inputLines": [
+      "b26407@students.iitmandi.ac.in",
+      "Shreeya Gupta",
+      "B26407",
+      "8/19/2026",
+      "shreeyagupta46@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d13ee311-45fa-409a-b061-93dff4bb1f22",
+      "roll_number": "B26407",
+      "name": "Shreeya Gupta",
+      "email": "b26407@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 16,
+    "timestamp": "8/19/2026 12:54:01",
+    "inputLines": [
+      "b26140@students.iitmandi.ac.in",
+      "Manyata Gupta",
+      "B26140",
+      "8/19/2026",
+      "b26140@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "953949ff-3c0e-4b0e-842b-04529adc4915",
+      "roll_number": "B26140",
+      "name": "Manyata Gupta",
+      "email": "b26140@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 17,
+    "timestamp": "8/19/2026 12:54:02",
+    "inputLines": [
+      "b26217@students.iitmandi.ac.in",
+      "Neev Bansal",
+      "B26217",
+      "8/19/2026",
+      "b26217@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "d76c708b-6bdc-4762-814e-708115445b6a",
+      "roll_number": "B26217",
+      "name": "Neev Bansal",
+      "email": "b26217@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 18,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "im26026@students.iitmandi.ac.in",
+      "Jeny Prafulbhai Hinsu",
+      "im26026",
+      "8/19/2026",
+      "im26026@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8744951c-9f05-42b3-a30e-b31ea9761de8",
+      "roll_number": "IM26026",
+      "name": "Jeny Prafulbhai Hinsu",
+      "email": "im26026@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 19,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "b26271@students.iitmandi.ac.in",
+      "Deepa Soni",
+      "B26271",
+      "8/19/2026",
+      "b26271@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c94e6cef-217b-4e88-a585-1954f00fd4ea",
+      "roll_number": "B26271",
+      "name": "DEEPA SONI",
+      "email": "b26271@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 20,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "im26070@students.iitmandi.ac.in",
+      "Sharanam Trushar parikh",
+      "IM26070",
+      "8/19/2026",
+      "sharanam.parikh07@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f856b112-dd3e-40f7-8529-127f861ef80a",
+      "roll_number": "IM26070",
+      "name": "Sharanam Trushar Parikh",
+      "email": "sharanam.parikh07@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 21,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "b26026@students.iitmandi.ac.in",
+      "Tisna singla",
+      "B26026",
+      "8/19/2026",
+      "singlatisna@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "aad9170e-07c2-4fde-8672-1e37a69f7cd0",
+      "roll_number": "B26026",
+      "name": "Tisna singla",
+      "email": "b26026@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 22,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "b26520@students.iitmandi.ac.in",
+      "Arjun Lohchab",
+      "B26520",
+      "8/19/2026",
+      "b26520@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8e1a5ea5-1f63-4fb1-9ca2-15e442c7899a",
+      "roll_number": "B26520",
+      "name": "Arjun Lohchab",
+      "email": "b26520@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 23,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "im26024@students.iitmandi.ac.in",
+      "Guddu Kumar Gupta",
+      "IM26024",
+      "8/19/2026",
+      "im26024@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "d0a15cf3-f945-4a2c-8475-b0290ffbadd1",
+      "roll_number": "IM26024",
+      "name": "Guddu Kumar Gupta",
+      "email": "im26024@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 24,
+    "timestamp": "8/19/2026 12:54:03",
+    "inputLines": [
+      "im26029@students.iitmandi.ac.in",
+      "Anubhav Kattna",
+      "IM26029",
+      "8/19/2026",
+      "im26029@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a24c3c0f-6316-424c-9dbb-8c3b1c158c2c",
+      "roll_number": "IM26029",
+      "name": "Anubhav Kattna",
+      "email": "im26029@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 25,
+    "timestamp": "8/19/2026 12:54:04",
+    "inputLines": [
+      "b26112@students.iitmandi.ac.in",
+      "Varchaahva Dixit",
+      "B26112",
+      "8/19/2026",
+      "b26112@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "96061723-8d0a-4e16-bbf0-031573700474",
+      "roll_number": "B26112",
+      "name": "Varchashva Dixit",
+      "email": "b26112@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 26,
+    "timestamp": "8/19/2026 12:54:04",
+    "inputLines": [
+      "im26079@students.iitmandi.ac.in",
+      "Jayant Dubey",
+      "IM26079",
+      "8/19/2026",
+      "im26079@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "79d96e4f-a1be-408a-865e-e2a5d833e326",
+      "roll_number": "IM26079",
+      "name": "Jayant Dubey",
+      "email": "im26079@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 27,
+    "timestamp": "8/19/2026 12:54:04",
+    "inputLines": [
+      "im26060@students.iitmandi.ac.in",
+      "Anushka Tripathy",
+      "Im26060",
+      "8/19/2026",
+      "im26060@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "576172c6-0679-44ff-ada2-eead32773d50",
+      "roll_number": "IM26060",
+      "name": "Anushka Tripathy",
+      "email": "tripathyanushka1510@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 28,
+    "timestamp": "8/19/2026 12:54:04",
+    "inputLines": [
+      "b26501@students.iitmandi.ac.in",
+      "Sagar Raj",
+      "B26501",
+      "8/19/2026",
+      "learnwithsagar90@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "44bfe3c7-8c29-4a73-9966-dc5a5824298b",
+      "roll_number": "B26501",
+      "name": "Sagar Raj",
+      "email": "b26501@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 29,
+    "timestamp": "8/19/2026 12:54:05",
+    "inputLines": [
+      "b26030@students.iitmandi.ac.in",
+      "Aakarsh Kumar",
+      "B26030",
+      "8/19/2026",
+      "b26030@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "9e63c4d1-ef74-4296-b042-e71d62b72e28",
+      "roll_number": "B26030",
+      "name": "Aakarsh Kumar",
+      "email": "b26030@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 30,
+    "timestamp": "8/19/2026 12:54:05",
+    "inputLines": [
+      "b26021@students.iitmandi.ac.in",
+      "Prahlad sharma",
+      "B26021",
+      "8/19/2026",
+      "b26021@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c6e93f5b-3dc1-45c0-b712-6b22182f4e07",
+      "roll_number": "B26021",
+      "name": "Prahlad sharma",
+      "email": "b26021@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 31,
+    "timestamp": "8/19/2026 12:54:05",
+    "inputLines": [
+      "b26585@students.iitmandi.ac.in",
+      "Jotaniya Dharmik Bhaveshbhai",
+      "B26585",
+      "8/19/2026",
+      "dharmikbjotaniya@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "0b520ef5-4a66-4580-a114-4ced12f3cd5c",
+      "roll_number": "B26585",
+      "name": "Jotaniya Dharmik Bhaveshbhai",
+      "email": "b26585@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 32,
+    "timestamp": "8/19/2026 12:54:05",
+    "inputLines": [
+      "b26522@students.iitmandi.ac.in",
+      "Avdhesh meena",
+      "B26522",
+      "8/19/2026",
+      "b26522@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "20f1bbe6-ab24-4d82-92b5-9b96f67e374b",
+      "roll_number": "B26522",
+      "name": "AVDHESH MEENA",
+      "email": "b26522@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 33,
+    "timestamp": "8/19/2026 12:54:06",
+    "inputLines": [
+      "b26257@students.iitmandi.ac.in",
+      "Akash kumar",
+      "B26257",
+      "8/19/2026",
+      "b26257@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "32a389c8-06c2-4a05-9afb-17c407bd4dcb",
+      "roll_number": "B26257",
+      "name": "Akash kumar",
+      "email": "b26257@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 34,
+    "timestamp": "8/19/2026 12:54:06",
+    "inputLines": [
+      "b26187@students.iitmandi.ac.in",
+      "Dharavath Sai Varshith",
+      "B26187",
+      "8/19/2026",
+      "varshithnayak16@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "db58e329-8344-448f-9857-3429ecb3c59a",
+      "roll_number": "B26187",
+      "name": "Dharavath Sai Varshith",
+      "email": "varshithnayak16@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 35,
+    "timestamp": "8/19/2026 12:54:06",
+    "inputLines": [
+      "b26229@students.iitmandi.ac.in",
+      "Roman M",
+      "B26229",
+      "8/19/2026",
+      "b26229@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5ed869e5-60f8-4bd0-b47c-6500a168e315",
+      "roll_number": "B26229",
+      "name": "Roman M",
+      "email": "b26229@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 36,
+    "timestamp": "8/19/2026 12:54:06",
+    "inputLines": [
+      "b26066@students.iitmandi.ac.in",
+      "Boddu praveen",
+      "B26066",
+      "8/19/2026",
+      "praveenboddu2026@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "3bb77383-c419-425e-b2f5-99d2c3218409",
+      "roll_number": "B26066",
+      "name": "Boddu praveen",
+      "email": "b26066@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 37,
+    "timestamp": "8/19/2026 12:54:07",
+    "inputLines": [
+      "b26032@students.iitmandi.ac.in",
+      "Arjun jangir",
+      "b26032",
+      "8/19/2026",
+      "arjunjangir290808@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f0e91edc-cf5a-4c9d-bee9-a9e213028881",
+      "roll_number": "B26032",
+      "name": "Arjun Jangir",
+      "email": "b26032@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 38,
+    "timestamp": "8/19/2026 12:54:07",
+    "inputLines": [
+      "b26117@students.iitmandi.ac.in",
+      "Aditya Sharma",
+      "B26117",
+      "8/19/2026",
+      "b26117@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "201345bb-0e54-4a4c-b4ab-f6c266d18606",
+      "roll_number": "B26117",
+      "name": "Aditya sharma",
+      "email": "b26117@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 39,
+    "timestamp": "8/19/2026 12:54:07",
+    "inputLines": [
+      "Kirti Rao",
+      "B26342",
+      "8/19/2026",
+      "b26342@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "6198db34-f029-4980-b3ea-cb027b3edf28",
+      "roll_number": "B26342",
+      "name": "KIRTI RAO",
+      "email": "b26342@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 40,
+    "timestamp": "8/19/2026 12:54:08",
+    "inputLines": [
+      "b26011@students.iitmandi.ac.in",
+      "Divyansh Makkar",
+      "B26011",
+      "8/19/2026",
+      "b26011@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4c3e7c30-5a23-403b-a919-e2ece4113098",
+      "roll_number": "B26011",
+      "name": "Divyansh Makkar",
+      "email": "b26011@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 41,
+    "timestamp": "8/19/2026 12:54:08",
+    "inputLines": [
+      "b26330@students.iitmandi.ac.in",
+      "D.varun sandesh kumar",
+      "B26330",
+      "8/19/2026",
+      "varunsandeshkumar9490@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "45faced1-aa25-4a73-854a-285f956cfae9",
+      "roll_number": "B26330",
+      "name": "D.varun sandesh kumar",
+      "email": "varunsandeshkumar9490@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 42,
+    "timestamp": "8/19/2026 12:54:08",
+    "inputLines": [
+      "b26544@students.iitmandi.ac.in",
+      "Mukul Dahiya",
+      "B26544",
+      "8/19/2026",
+      "mukuldahiya7708@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "1e45e4ce-4d4b-48d5-925a-292349d6b36c",
+      "roll_number": "B26544",
+      "name": "MUKUL Dahiya",
+      "email": "b26544@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 43,
+    "timestamp": "8/19/2026 12:54:08",
+    "inputLines": [
+      "b26143@students.iitmandi.ac.in",
+      "Nitin Gurjar",
+      "B26143",
+      "8/19/2026",
+      "b26143@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8940ab63-dcc6-48b7-82b9-3aa9e001fcc8",
+      "roll_number": "B26143",
+      "name": "Nitin Gurjar",
+      "email": "b26143@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 44,
+    "timestamp": "8/19/2026 12:54:08",
+    "inputLines": [
+      "b26428@students.iitmandi.ac.in",
+      "Naimish Nath Kaithwal",
+      "B26428",
+      "8/19/2026",
+      "naimish077nathkaithwal@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "405e46d1-b406-4c46-b637-6df2ceb01add",
+      "roll_number": "B26428",
+      "name": "Naimish Nath Kaithwal",
+      "email": "b26428@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 45,
+    "timestamp": "8/19/2026 12:54:08",
+    "inputLines": [
+      "im26067@students.iitmandi.ac.in",
+      "Siddharth Rawat",
+      "IM26067",
+      "8/19/2026",
+      "im26067@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8c1d7bc7-c734-4896-bcf5-4f652d02cd52",
+      "roll_number": "IM26067",
+      "name": "Siddharth Rawat",
+      "email": "siddharthrawat3428@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 46,
+    "timestamp": "8/19/2026 12:54:09",
+    "inputLines": [
+      "b26221@students.iitmandi.ac.in",
+      "Pranjal Omar",
+      "B26221",
+      "8/19/2026",
+      "b26221@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e07614db-14cf-4780-9528-21222cfb225f",
+      "roll_number": "B26221",
+      "name": "Pranjal Omar",
+      "email": "b26221@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 47,
+    "timestamp": "8/19/2026 12:54:09",
+    "inputLines": [
+      "b26053@students.iitmandi.ac.in",
+      "Shivansh Pandey",
+      "B26053",
+      "8/19/2026",
+      "shivanshpandey271012@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ed103d32-bf9f-4085-83d2-5591315af39c",
+      "roll_number": "B26053",
+      "name": "Shivansh Pandey",
+      "email": "b26053@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 48,
+    "timestamp": "8/19/2026 12:54:10",
+    "inputLines": [
+      "im26005@students.iitmandi.ac.in",
+      "Parkhi Singh Ahluwalia",
+      "IM26005",
+      "8/19/2026",
+      "im26005@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "0dde48fa-845c-43c2-bdb3-05aa35968766",
+      "roll_number": "IM26005",
+      "name": "Parkhi Singh Ahluwalia",
+      "email": "im26005@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 49,
+    "timestamp": "8/19/2026 12:54:10",
+    "inputLines": [
+      "b26070@students.iitmandi.ac.in",
+      "Sujal Gupta",
+      "B26070",
+      "8/19/2026",
+      "sujalgupta2008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f5d7e576-65f0-4177-bd59-82d174ea68c6",
+      "roll_number": "B26070",
+      "name": "Sujal Gupta",
+      "email": "b26070@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 50,
+    "timestamp": "8/19/2026 12:54:10",
+    "inputLines": [
+      "b26156@student.iitmandi.ac.in",
+      "Sumit Naurawat",
+      "B26156",
+      "8/19/2026",
+      "sumitnaurawat@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "1d625711-1ea8-495b-81f4-3338a3163fd7",
+      "roll_number": "B26156",
+      "name": "Sumit Naurawat",
+      "email": "sumitnaurawat@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 51,
+    "timestamp": "8/19/2026 12:54:10",
+    "inputLines": [
+      "b26351@students.iitmandi.ac.in",
+      "Mitul Kardam",
+      "B26352",
+      "8/19/2026",
+      "b26351@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "389b6624-7bd4-4231-84c0-a3500f110492",
+      "roll_number": "B26351",
+      "name": "Mitul Kardam",
+      "email": "b26351@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "email"
+  },
+  {
+    "index": 52,
+    "timestamp": "8/19/2026 12:54:10",
+    "inputLines": [
+      "b26350@students.iitmandi.ac.in",
+      "Mishti Sharma",
+      "B26350",
+      "8/19/2026",
+      "b26350@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "1ce47e00-3540-46fe-9c51-ea0bffe5a41c",
+      "roll_number": "B26350",
+      "name": "Mishti Sharma",
+      "email": "b26350@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 53,
+    "timestamp": "8/19/2026 12:54:11",
+    "inputLines": [
+      "b26481@students.iitmandi.ac.in",
+      "Ganta dinesh kumar",
+      "B26481",
+      "8/19/2026",
+      "b26481@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2606a7e4-1fc9-4912-b071-41e7af9de82f",
+      "roll_number": "B26481",
+      "name": "Ganta Dinesh Kumar",
+      "email": "b26481@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 54,
+    "timestamp": "8/19/2026 12:54:11",
+    "inputLines": [
+      "b26139@students.iitmandi.ac.in",
+      "Manya Gupta",
+      "B26139",
+      "8/19/2026",
+      "manya6226@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d87946ff-e5c0-4061-841a-9413409255b1",
+      "roll_number": "B26139",
+      "name": "Manya Gupta",
+      "email": "b26139@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 55,
+    "timestamp": "8/19/2026 12:54:11",
+    "inputLines": [
+      "b26095@students.iitmandi.ac.in",
+      "HAMSINI GAJAM",
+      "B26095",
+      "8/19/2026",
+      "hamsinigajam18@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8b298b11-a977-46af-b73a-b5e12ab159a0",
+      "roll_number": "B26095",
+      "name": "HAMSINI GAJAM",
+      "email": "b26095@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 56,
+    "timestamp": "8/19/2026 12:54:11",
+    "inputLines": [
+      "im26038@students.iitmandi.ac.in",
+      "Aditya kumar Verma",
+      "IM26038",
+      "8/19/2026",
+      "im26038@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "9b67d0e6-b3e8-4ec0-a70c-b30e320d074b",
+      "roll_number": "IM26038",
+      "name": "Aditya kumar Verma",
+      "email": "im26038@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 57,
+    "timestamp": "8/19/2026 12:54:11",
+    "inputLines": [
+      "b26153@students.iitmandi.ac.in",
+      "Shailesh",
+      "B26153",
+      "8/19/2026",
+      "b26153@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "49d27295-1f37-42d8-97ce-bb1be7490cde",
+      "roll_number": "B26153",
+      "name": "Shailesh",
+      "email": "b26153@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 58,
+    "timestamp": "8/19/2026 12:54:12",
+    "inputLines": [
+      "b26119@students.iitmandi.ac.in",
+      "Ananya Patel",
+      "B26119",
+      "8/19/2026",
+      "b26119@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "59e0e3f4-606e-4f28-b243-ff6d2b7810a7",
+      "roll_number": "B26119",
+      "name": "Ananya Patel",
+      "email": "b26119@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 59,
+    "timestamp": "8/19/2026 12:54:12",
+    "inputLines": [
+      "b26441@students.iitmandi.ac.in",
+      "Utsav Mahajan",
+      "B26441",
+      "8/19/2026",
+      "utsavmahajan07@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "bf6296aa-0286-4aaa-aa4f-25b3c83da67e",
+      "roll_number": "B26441",
+      "name": "Utsav Mahajan",
+      "email": "b26441@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 60,
+    "timestamp": "8/19/2026 12:54:12",
+    "inputLines": [
+      "im26021@students.iitmandi.ac.in",
+      "Karthik Dhyan Girish",
+      "IM26021",
+      "8/19/2026",
+      "karthikdhyangirish@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "04ba33b2-c72a-4823-ad81-96f6221638a1",
+      "roll_number": "IM26021",
+      "name": "Karthik Dhyan Girish",
+      "email": "im26021@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 61,
+    "timestamp": "8/19/2026 12:54:12",
+    "inputLines": [
+      "b26126@students.iitmandi.ac.in",
+      "Darshiya Sharma",
+      "B26126",
+      "8/19/2026",
+      "b26126@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3ff5a8d2-33bc-4243-aebf-695b27bfda55",
+      "roll_number": "B26126",
+      "name": "Darshiya Sharma",
+      "email": "darshiya.sharma@gmail.com",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 62,
+    "timestamp": "8/19/2026 12:54:13",
+    "inputLines": [
+      "Im26010@students.iitmandi.ac.in",
+      "Lankala Ananya Reddy",
+      "IM26010",
+      "8/19/2026",
+      "im26010@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b26b4c18-423c-48ee-aa1b-9d43b0121b2d",
+      "roll_number": "IM26010",
+      "name": "Lankala Ananya Reddy",
+      "email": "im26010@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 63,
+    "timestamp": "8/19/2026 12:54:13",
+    "inputLines": [
+      "b26506@students.iitmandi.ac.in",
+      "Shahil Kumar",
+      "B26506",
+      "8/19/2026",
+      "b26506@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b4d68345-845e-4562-bb33-3ae6e736280d",
+      "roll_number": "B26506",
+      "name": "Shahil Kumar",
+      "email": "b26506@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 64,
+    "timestamp": "8/19/2026 12:54:13",
+    "inputLines": [
+      "im26023@students.iitmandi.ac.in",
+      "Ajay Raj R",
+      "IM26023",
+      "8/19/2026",
+      "im26023@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "29a061da-6115-48b4-a476-e399e09a8fbd",
+      "roll_number": "IM26023",
+      "name": "Ajay raj R",
+      "email": "ajayrajiitmandi@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 65,
+    "timestamp": "8/19/2026 12:54:13",
+    "inputLines": [
+      "b26524@students.iitmandi.ac.in",
+      "Chirag Hotchandani",
+      "B26524",
+      "8/19/2026",
+      "hotchandanichirag7@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "a0271fef-339c-4d2a-8e0c-6dc28d261a3e",
+      "roll_number": "B26524",
+      "name": "Chirag Hotchandani",
+      "email": "hotchandanichirag7@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 66,
+    "timestamp": "8/19/2026 12:54:13",
+    "inputLines": [
+      "B26413@students.iitmandi.ac.in",
+      "Yatin Yadav",
+      "B26413",
+      "8/19/2026",
+      "raoyy27@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "6f2433a5-cabb-4a16-a7f5-0c1646e0c30e",
+      "roll_number": "B26413",
+      "name": "Yatin Yadav",
+      "email": "b26413@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 67,
+    "timestamp": "8/19/2026 12:54:14",
+    "inputLines": [
+      "Nila P",
+      "B26547",
+      "8/19/2026",
+      "b26547@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "dab1b937-172d-4da4-9a52-762b99bd613c",
+      "roll_number": "B26547",
+      "name": "NILA P",
+      "email": "b26547@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 68,
+    "timestamp": "8/19/2026 12:54:14",
+    "inputLines": [
+      "b26561@students.iitmandi.ac.in",
+      "Samiksha Tambe",
+      "B26561",
+      "8/19/2026",
+      "b26561@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "0e18f2a0-9ec9-4dd0-8224-0629fe832de4",
+      "roll_number": "B26561",
+      "name": "Samiksha",
+      "email": "dumd0622@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 69,
+    "timestamp": "8/19/2026 12:54:14",
+    "inputLines": [
+      "b26614@students.iitmandi.ac",
+      "Padavala Aiswarya",
+      "B26614",
+      "8/19/2026",
+      "aiswaryapadavala@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "a2c2a16b-44ce-4ffa-94fd-1d8f37de715c",
+      "roll_number": "B26614",
+      "name": "PADAVALA AISWARYA",
+      "email": "b26614@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 70,
+    "timestamp": "8/19/2026 12:54:14",
+    "inputLines": [
+      "b26508@students.iitmandi.ac.in",
+      "Krishna Soni",
+      "B26508",
+      "8/19/2026",
+      "b26508@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "26eff60f-a856-4e68-b2c3-5ec1dc189c7c",
+      "roll_number": "B26508",
+      "name": "Krishna Soni",
+      "email": "b26508@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 71,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "b26405@students.iitmandi.ac.in",
+      "Shaahin K",
+      "b26405",
+      "8/19/2026",
+      "b26405@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a92e1310-a5a3-4efa-9381-b46e2484ca8c",
+      "roll_number": "B26405",
+      "name": "Shaahin K",
+      "email": "b26405@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 72,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "Vishal Poonia",
+      "B26162",
+      "8/19/2026",
+      "b26162@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b9ec9f3d-7332-4d43-82f9-78c712b1c4f3",
+      "roll_number": "B26162",
+      "name": "Vishal Poonia",
+      "email": "b26162@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 73,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "b26067@students.iitmandi.ac.in",
+      "Omkar Rajkumar boyane",
+      "B26067",
+      "8/19/2026",
+      "boyaneomkar45@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d5271771-056d-4ce1-a4bc-ed2bfb953e20",
+      "roll_number": "B26067",
+      "name": "Omkar Rajkumar Boyane",
+      "email": "b26067@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 74,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "im26017@students.iitmandi.ac.in",
+      "Apoorva Goel",
+      "IM26017",
+      "8/19/2026",
+      "im26017@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e773bec1-d0bb-41ed-889b-7dbdbfc6c2fd",
+      "roll_number": "IM26017",
+      "name": "Apoorva Goel",
+      "email": "im26017@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 75,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "b26163@students.iitmandi.ac.in",
+      "Vishesh Kumar Meena",
+      "B26163",
+      "visheshpravesh@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ff70d760-5316-4494-a6d2-bb287b4c459f",
+      "roll_number": "B26163",
+      "name": "Vishesh Kumar Meena",
+      "email": "b26163@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 76,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "b26071@students.iitmandi.ac.in",
+      "Harshvardhan Khilery",
+      "B26071",
+      "8/19/2026",
+      "harshvardhankhilery@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "a860de3b-0ad5-4d9a-8c1c-6dfb5f9f67e8",
+      "roll_number": "B26071",
+      "name": "Harshvardhan Khilery",
+      "email": "b26071@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 77,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "b26111@students.iitmandi.ac.in",
+      "Vaibhav Chhattani",
+      "b26111",
+      "8/19/2026",
+      "b26111@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "ace294c5-a76f-4d1f-a30b-da1bf736af01",
+      "roll_number": "B26111",
+      "name": "Vaibhav Chhattani",
+      "email": "bharatchhattani81@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 78,
+    "timestamp": "8/19/2026 12:54:15",
+    "inputLines": [
+      "b26384@students.iitmandi.ac.in",
+      "Aahna Gupta",
+      "B26384",
+      "8/19/2026",
+      "aahnagupta15@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d24f164e-8bf8-48c0-bd74-f10293dd89ef",
+      "roll_number": "B26384",
+      "name": "Aahna Gupta",
+      "email": "b26384@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 79,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "b26552@students.iitmandi.ac.in",
+      "Pushpraj Singh Kushwah",
+      "B26552",
+      "8/19/2026",
+      "b26552@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "1baaac4a-b866-489d-95fa-ceeb5d309d7e",
+      "roll_number": "B26552",
+      "name": "Pushpraj Singh Kushwah",
+      "email": "b26552@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 80,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "b26431@students.iitmandi.ac.in",
+      "Prince",
+      "B26431",
+      "8/19/2026",
+      "princekumarhi029@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ca5cc115-52d0-4358-a330-08e4ad6d9ff1",
+      "roll_number": "B26431",
+      "name": "Prince",
+      "email": "b26431@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 81,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "b26010@students.iitmandi.ac.in",
+      "Deepak Kumar",
+      "B26010",
+      "8/19/2026",
+      "b26010@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3e58c6b0-fafe-492b-8428-a3bd6731e071",
+      "roll_number": "B26010",
+      "name": "Deepak Kumar",
+      "email": "b26010@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 82,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "b26252@students.iitmandi.ac.in",
+      "Yogita",
+      "B26252",
+      "8/19/2026",
+      "yogiratta@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8bc3c1ee-fa31-467c-8481-aebecc602c9b",
+      "roll_number": "B26252",
+      "name": "Yogita",
+      "email": "b26252@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 83,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "b26417@students.iitmandi.ac.in",
+      "Dev Tomar",
+      "B26417",
+      "8/19/2026",
+      "dev72007d@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8b1db4fe-57c9-4930-b69d-c1a485184c52",
+      "roll_number": "B26417",
+      "name": "Dev Tomar",
+      "email": "b26417@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 84,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "b26052@students.iitmandi.ac.in",
+      "Shaurya Singh Bhawani",
+      "B26052",
+      "8/19/2026",
+      "singhshaurya159@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "fb2fb1bb-dc84-4311-a076-26f1b018a014",
+      "roll_number": "B26052",
+      "name": "Shaurya Singh Bhawani",
+      "email": "b26052@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 85,
+    "timestamp": "8/19/2026 12:54:16",
+    "inputLines": [
+      "B26161@students.iitmandi.ac.in",
+      "Hardik bhikhabhai vaniya",
+      "B26161",
+      "8/19/2026",
+      "hardikvaniya21@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "07b076ad-50c3-41a0-9821-1075b8b2704e",
+      "roll_number": "B26161",
+      "name": "Hardik bhikhabhai vaniya",
+      "email": "b26161@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 86,
+    "timestamp": "8/19/2026 12:54:17",
+    "inputLines": [
+      "b26385@students.iitmandi.ac.in",
+      "Akash Mukhoti",
+      "B26385",
+      "8/19/2026",
+      "b26385@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "79c5473b-7420-4d06-8970-62a6a95c96b0",
+      "roll_number": "B26385",
+      "name": "Akash Mukhoti",
+      "email": "b26385@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 87,
+    "timestamp": "8/19/2026 12:54:17",
+    "inputLines": [
+      "b26497@students.iitmandi.ac.in",
+      "Rajat jorwal",
+      "B26497",
+      "8/19/2026",
+      "rajatjorwal48@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "0b81e6e0-a09f-425e-b1b3-85ddbfad270b",
+      "roll_number": "B26497",
+      "name": "RAJAT JORWAL",
+      "email": "rajatjorwal48@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 88,
+    "timestamp": "8/19/2026 12:54:17",
+    "inputLines": [
+      "b26168@students.iitmandi.ac.in",
+      "Akshat Vats",
+      "B26168",
+      "8/19/2026",
+      "b26168@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "dbd628e2-ed7b-471b-8f9b-98a1d6eb32c8",
+      "roll_number": "B26168",
+      "name": "Akshat Vats",
+      "email": "b26168@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 89,
+    "timestamp": "8/19/2026 12:54:17",
+    "inputLines": [
+      "B26525@students.iitmandi.ac.in",
+      "Devang Sharma",
+      "B26525",
+      "8/19/2026",
+      "devangsharma2008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "c9cdc0e2-c95c-4ff9-a0b7-0d2d50eb1ee7",
+      "roll_number": "B26525",
+      "name": "Devang Sharma",
+      "email": "b26525@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 90,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "b26367@students.iitmandi.ac.in",
+      "Sakshi Yadav",
+      "B26367",
+      "8/19/2026",
+      "sakshirao2008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "c9493630-8e2b-4904-abe4-951b9cdd7e46",
+      "roll_number": "B26367",
+      "name": "Sakshi Yadav",
+      "email": "sakshirao2008@gmail.com",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 91,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "b26146@students.iitmandi.ac.in",
+      "Peeyush Singh",
+      "B26146",
+      "8/19/2026",
+      "b26146@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2f945115-1a02-4926-a2db-6fb98adf9d01",
+      "roll_number": "B26146",
+      "name": "Peeyush Singh",
+      "email": "b26146@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 92,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "b26248@students.iitmandi.ac.in",
+      "Ujjwal Goyal",
+      "B26248",
+      "8/19/2026",
+      "b26248@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f8462d95-824b-4cd5-a0e5-8bcc8881b27a",
+      "roll_number": "B26248",
+      "name": "Ujjwal Goyal",
+      "email": "b26248@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 93,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "im26076@students.iitmandi.ac.in",
+      "ARUL KASHYAP",
+      "IM26076",
+      "8/19/2026",
+      "20arul2008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ca61bd5b-ed5c-4ff5-827e-cd8a55db9b95",
+      "roll_number": "IM26076",
+      "name": "Arul Kashyap",
+      "email": "im26076@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 94,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "SRISHTI",
+      "B26623",
+      "8/19/2026",
+      "B26623@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f833de30-5b90-4655-bd4c-99e559c5efdf",
+      "roll_number": "B26623",
+      "name": "SRISHTI",
+      "email": "b26623@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 95,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "b26294@students.iitmandi.ac.in",
+      "Pratyush Anand",
+      "B26294",
+      "8/19/2026",
+      "b26294@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c5fe1769-e610-4d7a-8246-fcbbe989cbbd",
+      "roll_number": "B26294",
+      "name": "PRATYUSH ANAND",
+      "email": "b26294@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 96,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "im26059@students.iitmandi.ac.in",
+      "Abhijeet Verma",
+      "IM26059",
+      "8/19/2026",
+      "im26059@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f0d81f8c-e538-421b-81dc-7e1d9aa0f5af",
+      "roll_number": "IM26059",
+      "name": "Abhijeet Verma",
+      "email": "abhijeetvermabhel@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 97,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "b26304@students.iitmandi.ac.in",
+      "Sohitashav kumar",
+      "B26304",
+      "8/19/2026",
+      "sohitkr8797@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "74d8cb83-9d4d-4288-9fd6-9c4f991c047b",
+      "roll_number": "B26304",
+      "name": "Sohitashav kumar",
+      "email": "b26304@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 98,
+    "timestamp": "8/19/2026 12:54:18",
+    "inputLines": [
+      "b26121@students.iitmandi.ac.in",
+      "Anuj Kumar",
+      "B26121",
+      "8/19/2026",
+      "anujasalwas123@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "b6984fea-b3e7-4145-bc6b-4d22685aa8dc",
+      "roll_number": "B26121",
+      "name": "Anuj kumar",
+      "email": "anujasalwas123@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 99,
+    "timestamp": "8/19/2026 12:54:19",
+    "inputLines": [
+      "b26613@students.iitmandi.ac.in",
+      "Nishanth Mekala",
+      "B26613",
+      "8/19/2026",
+      "nishanthmekala.admin@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "638d54d7-1365-474e-9491-c3fffbd91931",
+      "roll_number": "B26613",
+      "name": "Nishanth Mekala",
+      "email": "b26613@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 100,
+    "timestamp": "8/19/2026 12:54:19",
+    "inputLines": [
+      "im26020@students.iitmandi.ac.in",
+      "Harshit Badgoti",
+      "IM26020",
+      "8/19/2026",
+      "im26020@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4e22d55b-dfaa-40a8-96ec-9eae42b400af",
+      "roll_number": "IM26020",
+      "name": "Harshit Badgoti",
+      "email": "im26020@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 101,
+    "timestamp": "8/19/2026 12:54:19",
+    "inputLines": [
+      "b26246@students.iitmandi.ac.in",
+      "Tanvi sharma",
+      "B26246",
+      "8/19/2026",
+      "tanvisharma1178@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "4e7adbaa-ada0-49c8-954f-1084cec33ba8",
+      "roll_number": "B26246",
+      "name": "Tanvi sharma",
+      "email": "b26246@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 102,
+    "timestamp": "8/19/2026 12:54:19",
+    "inputLines": [
+      "im26036@students.iitmandi.ac.in",
+      "ATHARV GUPTA",
+      "IM26036",
+      "8/19/2026",
+      "im26036@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e0d2a866-9fc0-4d9a-ba1c-2bffe22627be",
+      "roll_number": "IM26036",
+      "name": "ATHARV GUPTA",
+      "email": "im26036@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 103,
+    "timestamp": "8/19/2026 12:54:20",
+    "inputLines": [
+      "b26538@students.iitmandi.ac.in",
+      "Manvinder Singh",
+      "B26538",
+      "8/19/2026",
+      "b26538@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2ad1b278-9bec-42f7-8c5d-e8d0f6c93f05",
+      "roll_number": "B26538",
+      "name": "Manvinder singh",
+      "email": "b26538@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 104,
+    "timestamp": "8/19/2026 12:54:20",
+    "inputLines": [
+      "b26244@students.iitmandi.ac.in",
+      "Tanmay Garg",
+      "B26244",
+      "8/19/2026",
+      "b26244@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "97205146-6fb2-4727-bc30-3cd87a9f59b6",
+      "roll_number": "B26244",
+      "name": "Tanmay garg",
+      "email": "b26244@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 105,
+    "timestamp": "8/19/2026 12:54:20",
+    "inputLines": [
+      "b26213@students.iitmandi.ac.in",
+      "Nalla Sai srikar",
+      "B26213",
+      "8/19/2026",
+      "nallawarsaisriker@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "0f0b9b0e-4694-43f7-be38-b0f08ebb0ef3",
+      "roll_number": "B26213",
+      "name": "Nalla Sai srikar",
+      "email": "b26213@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 106,
+    "timestamp": "8/19/2026 12:54:20",
+    "inputLines": [
+      "b26485@students.iitmandi.ac.in",
+      "ISHIRI DEBBARMA",
+      "B26485",
+      "8/19/2026",
+      "b26485@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "595591e4-0a41-48f4-b605-07cfe979750d",
+      "roll_number": "B26485",
+      "name": "ISHIRI DEBBARMA",
+      "email": "b26485@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 107,
+    "timestamp": "8/19/2026 12:54:20",
+    "inputLines": [
+      "b26383@students.iitmandi.ac.in",
+      "Yuvish Garg",
+      "B26383",
+      "8/19/2026",
+      "b26383@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "46a8c928-9dfe-41ad-a352-4064efa78429",
+      "roll_number": "B26383",
+      "name": "Yuvish Garg",
+      "email": "b26383@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 108,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "b26108@students.iitmandi.ac.in",
+      "Ritu",
+      "B26108",
+      "8/19/2026",
+      "b26108@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a94a38f1-1417-4d60-a0c9-4df376f8975b",
+      "roll_number": "B26108",
+      "name": "Ritu",
+      "email": "b26108@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 109,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "b26619@students.iitmandi.ac.in",
+      "Sahiti Rowthu",
+      "B26619",
+      "8/19/2026",
+      "b26619@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "9dfbb765-5df1-4147-a178-0ed3cc6a08fd",
+      "roll_number": "B26619",
+      "name": "Sahiti Rowthu",
+      "email": "sahitirowthu90002@gmail.com",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 110,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "b26416@students.iitmandi.ac.in",
+      "B Priya Madhuri",
+      "B26416",
+      "8/19/2026",
+      "priyam202007@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "1f0e2070-a1d7-43b6-b793-6f27c71db757",
+      "roll_number": "B26416",
+      "name": "Priya Madhuri",
+      "email": "b26416@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 111,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "im26058@students.iitmandi.ac.in",
+      "Sakshi",
+      "IM26058",
+      "8/19/2026",
+      "sakshiyadav333in@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "b083e023-182e-4fa6-bf2f-8d6294f3d612",
+      "roll_number": "IM26058",
+      "name": "Sakshi",
+      "email": "im26058@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 112,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "im26071",
+      "Madhan kumar J",
+      "Im26071",
+      "8/19/2026",
+      "im26071@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8c27ac07-0446-4963-8530-b5a2499d851c",
+      "roll_number": "IM26071",
+      "name": "Madhan kumar",
+      "email": "im26071@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 113,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "b26263@students.iitmandi.ac.in",
+      "Aradhy Dwivedi",
+      "B26263",
+      "8/19/2026",
+      "b26263@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "31a6b0e7-42d4-4fd0-aeef-57ea1bd7aeaa",
+      "roll_number": "B26263",
+      "name": "Aradhy Dwivedi",
+      "email": "b26263@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 114,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "TAPISH KUMAR",
+      "B26409",
+      "8/19/2026",
+      "b26409@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f6011f60-1d07-4ec7-bb66-fb076c77d1af",
+      "roll_number": "B26409",
+      "name": "Tapish Kumar",
+      "email": "tapishmahawar218@gmail.com",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 115,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "b26297@students.iitmandi.ac.in",
+      "Pyla Jayavardhini",
+      "B26297",
+      "8/19/2026",
+      "jayavardhinipyla2k9@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "a1693aff-4a41-4920-8390-703c788d5e77",
+      "roll_number": "B26297",
+      "name": "Pyla Jayavardhini",
+      "email": "b26297@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 116,
+    "timestamp": "8/19/2026 12:54:21",
+    "inputLines": [
+      "b26609@students.iitmandi.ac.in",
+      "Kulkarni Tanmay Mohan",
+      "B26609",
+      "8/19/2026",
+      "b26609@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "aeef5dbd-9b50-4fdb-b0ff-d7933e8f0302",
+      "roll_number": "B26609",
+      "name": "Kulkarni Tanmay Mohan",
+      "email": "b26609@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 117,
+    "timestamp": "8/19/2026 12:54:22",
+    "inputLines": [
+      "im26069@students.iitmandi.ac.in",
+      "Utkarsh Bhagwat",
+      "IM26069",
+      "8/19/2026",
+      "im26069@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "0ee391a4-5144-443f-a522-2f6d6ccac95e",
+      "roll_number": "IM26069",
+      "name": "Utkarsh Bhagwat",
+      "email": "im26082@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 118,
+    "timestamp": "8/19/2026 12:54:22",
+    "inputLines": [
+      "b26060@students.iitmandi.ac.in",
+      "Abhiraj Narasing Kale",
+      "B26060",
+      "8/19/2026",
+      "b26060@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "7b4f776b-7aa9-4014-b6aa-e313e3447465",
+      "roll_number": "B26060",
+      "name": "Abhiraj Narasing Kale",
+      "email": "b26060@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 119,
+    "timestamp": "8/19/2026 12:54:22",
+    "inputLines": [
+      "B26452@students.iitmandi.ac.in",
+      "Ishika Jain",
+      "B26452",
+      "8/19/2026",
+      "jainishika008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8e1ea01f-7a4d-499a-b141-8e6f1b11dcb1",
+      "roll_number": "B26452",
+      "name": "Ishika Jain",
+      "email": "b26452@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 120,
+    "timestamp": "8/19/2026 12:54:23",
+    "inputLines": [
+      "b26276@students.iitmandi.ac.in",
+      "Hardik Gupta",
+      "b26276",
+      "8/19/2026",
+      "b26276@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f8e0c86d-2a7d-42b1-930a-2b3f5d9519c1",
+      "roll_number": "B26276",
+      "name": "Hardik Gupta",
+      "email": "b26276@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 121,
+    "timestamp": "8/19/2026 12:54:23",
+    "inputLines": [
+      "B26056@students.iitmandi.ac.in",
+      "Vishesh",
+      "B26056",
+      "8/19/2026",
+      "vasuektabti@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "6647a295-a3fc-4a1e-a33f-15ab655f229f",
+      "roll_number": "B26056",
+      "name": "Vishesh",
+      "email": "b26056@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 122,
+    "timestamp": "8/19/2026 12:54:23",
+    "inputLines": [
+      "im26073@students.iitmandi.ac.in",
+      "Rithvik Barath v",
+      "IM26073",
+      "8/19/2026",
+      "im26073@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "21c943be-8eb5-48ad-9fe7-7c424d0bab19",
+      "roll_number": "IM26073",
+      "name": "RITHVIK BARATH V",
+      "email": "im26073@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 123,
+    "timestamp": "8/19/2026 12:54:23",
+    "inputLines": [
+      "b26059@students.iitmandi.ac.in",
+      "ABHINAV KUMAR",
+      "B26059",
+      "8/19/2026",
+      "b26059@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8b300e76-fd07-4023-9388-60318f1ddc76",
+      "roll_number": "B26059",
+      "name": "Abhinav Kumar",
+      "email": "b26059@iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 124,
+    "timestamp": "8/19/2026 12:54:24",
+    "inputLines": [
+      "b26065@students.iitmandi.ac.in",
+      "Bhavesh saini",
+      "B26065",
+      "7/1/2007",
+      "b26065@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "138ecfa3-d2b8-4574-b3bd-90cd1d263cbf",
+      "roll_number": "B26065",
+      "name": "BHAVESH SAINI",
+      "email": "b26065@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 125,
+    "timestamp": "8/19/2026 12:54:24",
+    "inputLines": [
+      "b26291@students.iitmandi.ac.in",
+      "Palksha Sahuwala",
+      "B26291",
+      "8/19/2026",
+      "b26291@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "ead651b0-ceaf-40c5-b584-70aa50ed4487",
+      "roll_number": "B26291",
+      "name": "Palksha Sahuwala",
+      "email": "b26291@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 126,
+    "timestamp": "8/19/2026 12:54:24",
+    "inputLines": [
+      "im26053@students.iitmandi.ac.in",
+      "Arunav Kumar",
+      "IM26053",
+      "8/19/2026",
+      "arunavkumar04@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "edbe95e5-8ccc-4a96-804d-a996b954671d",
+      "roll_number": "IM26053",
+      "name": "Arunav Kumar",
+      "email": "im26053@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 127,
+    "timestamp": "8/19/2026 12:54:24",
+    "inputLines": [
+      "b26535@students.iitmandi.ac.in",
+      "Keshav Gupta",
+      "B26535",
+      "8/19/2026",
+      "b26535@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2572a518-be22-4bda-a5fb-a71ed00d8b27",
+      "roll_number": "B26535",
+      "name": "KESHAV GUPTA",
+      "email": "b26535@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 128,
+    "timestamp": "8/19/2026 12:54:24",
+    "inputLines": [
+      "b26116@students.iitmandi.ac.in",
+      "Abhishek Mahantesh Channagond",
+      "B26116",
+      "8/19/2026",
+      "abhishekchannagond114@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "4ed36258-9073-4989-845e-915318cc5c0b",
+      "roll_number": "B26116",
+      "name": "Abhishek Mahantesh Channagond",
+      "email": "b26116@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 129,
+    "timestamp": "8/19/2026 12:54:25",
+    "inputLines": [
+      "b26260@students.iitmandi.ac.in",
+      "Anand Shukla",
+      "B26260",
+      "8/19/2026",
+      "b26260@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "afe587e0-3ac4-4a60-9e8a-b919a213d1e9",
+      "roll_number": "B26260",
+      "name": "Anand Shukla",
+      "email": "b26260@iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 130,
+    "timestamp": "8/19/2026 12:54:25",
+    "inputLines": [
+      "b26219@students.iitmandi.ac.in",
+      "Ojasv Jain",
+      "B26219",
+      "8/19/2026",
+      "b26219@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c0a660c0-4bab-401a-af0b-1d6e79133fd2",
+      "roll_number": "B26219",
+      "name": "Ojasv Jain",
+      "email": "b26219@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 131,
+    "timestamp": "8/19/2026 12:54:25",
+    "inputLines": [
+      "b26629@students.iitmandi.ac.in",
+      "Kodepaka Sreyash",
+      "B26014",
+      "8/19/2026",
+      "b26014@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "675c486b-b9ec-427a-bf7e-2015472927a3",
+      "roll_number": "B26014",
+      "name": "Kodepaka Sreyash",
+      "email": "b26014@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 132,
+    "timestamp": "8/19/2026 12:54:26",
+    "inputLines": [
+      "b26136@students.iitmandi.ac.in",
+      "Lakkakula Dhanishka",
+      "B26136",
+      "8/19/2026",
+      "dhanishkalakkakula2@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d2bcc787-88a2-457a-8fd0-c4832860e833",
+      "roll_number": "B26136",
+      "name": "Dhanishka",
+      "email": "b26136@stydents.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 133,
+    "timestamp": "8/19/2026 12:54:26",
+    "inputLines": [
+      "b26122@students.iitmandi.ac.in",
+      "Ayush Mishra",
+      "B26122",
+      "8/19/2026",
+      "b26122@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "55cd07e2-e1ff-47f3-bce4-b22e5cb4cf84",
+      "roll_number": "B26122",
+      "name": "Ayush Mishra",
+      "email": "b26122@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 134,
+    "timestamp": "8/19/2026 12:54:26",
+    "inputLines": [
+      "b26033@students.iitmandi.ac.in",
+      "BORELLI DILEEP KUMAR",
+      "B26033",
+      "8/19/2026",
+      "dileepkumarborelli@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "85aadd7f-d947-476c-ba9c-59877bd5a78f",
+      "roll_number": "B26033",
+      "name": "BORELLI DILEEP KUMAR",
+      "email": "b26033@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 135,
+    "timestamp": "8/19/2026 12:54:26",
+    "inputLines": [
+      "b26048@students.iitmandi.ac.in",
+      "Rahul Kumar",
+      "B26048",
+      "8/19/2026",
+      "b26048@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8e726922-9629-4f0c-9a07-c7d97bd7d6e2",
+      "roll_number": "B26048",
+      "name": "Rahul Kumar",
+      "email": "b26048@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 136,
+    "timestamp": "8/19/2026 12:54:26",
+    "inputLines": [
+      "Swapnil Dohitare",
+      "B26242",
+      "8/19/2026",
+      "b26242@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f7450bd2-c66e-407d-9300-4230f061a4c3",
+      "roll_number": "B26242",
+      "name": "Swapnil Dohitare",
+      "email": "b26242@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 137,
+    "timestamp": "8/19/2026 12:54:27",
+    "inputLines": [
+      "im26015@students.iitmandi.ac.in",
+      "Asmitha M",
+      "IM26015",
+      "8/19/2026",
+      "im26015@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8e616b24-b0c6-486a-a841-f7e3bdad36b7",
+      "roll_number": "IM26015",
+      "name": "Asmitha M",
+      "email": "im26015@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 138,
+    "timestamp": "8/19/2026 12:54:28",
+    "inputLines": [
+      "b26343@students.iitmandi.ac.in",
+      "Krishna vijaywarigya",
+      "B26343",
+      "8/19/2026",
+      "b26343@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "aa5b9d2b-bb7f-48e6-a89e-bcfa8845d799",
+      "roll_number": "B26343",
+      "name": "Krishna vijaywargiya",
+      "email": "b26343@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 139,
+    "timestamp": "8/19/2026 12:54:28",
+    "inputLines": [
+      "b26533@students.iitmandi.ac.in",
+      "Kavyansh Jain",
+      "B26533",
+      "8/19/2026",
+      "b26533@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5d14fa6d-6f40-4eab-8033-de5f1553b7e5",
+      "roll_number": "B26533",
+      "name": "Kavyansh Jain",
+      "email": "b26533@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 140,
+    "timestamp": "8/19/2026 12:54:28",
+    "inputLines": [
+      "b26264@students.iitmandi.ac.in",
+      "Arpit Singh",
+      "B26264",
+      "8/19/2026",
+      "b26264@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "04c7aba0-e842-4d15-af32-b7a7f81ba0ae",
+      "roll_number": "B26264",
+      "name": "Arpit Singh",
+      "email": "b26264@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 141,
+    "timestamp": "8/19/2026 12:54:29",
+    "inputLines": [
+      "b26064@students.iitmandi.ac.in",
+      "Ayanangsh Guha Raja",
+      "B26064",
+      "8/19/2026",
+      "b26064@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4b935056-e59a-4971-ab49-9698231644ae",
+      "roll_number": "B26064",
+      "name": "Ayanangsh Guha Raja",
+      "email": "b26064@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 142,
+    "timestamp": "8/19/2026 12:54:29",
+    "inputLines": [
+      "b26363@students.iitmandi.ac.in",
+      "Rachit Singla",
+      "B26363",
+      "8/19/2026",
+      "b26363@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "143241a0-2d4f-4198-aab7-d1923407fb65",
+      "roll_number": "B26363",
+      "name": "Rachit Singla",
+      "email": "b26363@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 143,
+    "timestamp": "8/19/2026 12:54:29",
+    "inputLines": [
+      "Prachi Yadav",
+      "B26594",
+      "8/19/2026",
+      "b26594@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "03e38ddf-55a2-4006-9261-19dd6558bffb",
+      "roll_number": "B26594",
+      "name": "Prachi Yadav",
+      "email": "b26594@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 144,
+    "timestamp": "8/19/2026 12:54:29",
+    "inputLines": [
+      "Shardul Gupta",
+      "B26233",
+      "8/19/2026",
+      "b26233@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a98f5854-0833-42e1-8eb7-17a124e5c3b2",
+      "roll_number": "B26233",
+      "name": "Shardul Gupta",
+      "email": "b26233@student.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 145,
+    "timestamp": "8/19/2026 12:54:29",
+    "inputLines": [
+      "b26239@students.iitmandi.ac.in",
+      "Sneha Kumari",
+      "B26239",
+      "8/19/2026",
+      "misssnehasangwan@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "dc12123f-08a7-4093-9054-dc95144258a7",
+      "roll_number": "B26239",
+      "name": "Sneha Kumari",
+      "email": "b26239@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 146,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "b26615@students.iitmandi.ac.in",
+      "Patel Dhyey Gaurangbhai",
+      "B26615",
+      "8/19/2026",
+      "b26615@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e214dd78-cdf9-4e5a-b153-6b5805b22095",
+      "roll_number": "B26615",
+      "name": "Dhyey Patel",
+      "email": "b26615@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 147,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "b26104@student.iitmandi.ac.in",
+      "PETLA MANOJ",
+      "B26104",
+      "8/19/2026",
+      "manojpetla31@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "26dd2872-e02d-469a-9c46-8001aa46de18",
+      "roll_number": "B26104",
+      "name": "PETLA MANOJ",
+      "email": "b26104@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 148,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "im26030@students.iitmandi.ac.in",
+      "Yogha Duraisamy Sankar",
+      "im26030",
+      "8/19/2026",
+      "dsyogha22@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "c3401379-b913-4e42-8fae-702407260d60",
+      "roll_number": "IM26030",
+      "name": "Yogha Duraisamy Sankar",
+      "email": "im26030@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 149,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "b26205@students.iitmandi.ac.in",
+      "Kapil Hingonia",
+      "B26205",
+      "8/19/2026",
+      "kapilregarji55@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "308ffb5b-4a5f-47e3-bfd7-3bd1550dd449",
+      "roll_number": "B26205",
+      "name": "Kapil Hingonia",
+      "email": "b26205@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 150,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "b26268@students.iitmandi.ac.in",
+      "Bhavya Bansal",
+      "B26268",
+      "8/19/2026",
+      "bhavyabansal24052008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "82e25dce-d2c9-44eb-bdaa-57162208a89f",
+      "roll_number": "B26268",
+      "name": "Bhavya Bansal",
+      "email": "b26268@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 151,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "Naitik jadon",
+      "B26429",
+      "8/19/2026",
+      "b26429@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8584ba2c-b4a9-4235-abe5-11e138202aba",
+      "roll_number": "B26429",
+      "name": "Naitik jadon",
+      "email": "b26429@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 152,
+    "timestamp": "8/19/2026 12:54:30",
+    "inputLines": [
+      "b26437@students.iimandi.ac.in",
+      "Suryansh sharma",
+      "b26437",
+      "8/19/2026",
+      "b26437@students.iimandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f1afe41e-4491-4c92-add5-0635eb66f75a",
+      "roll_number": "B26437",
+      "name": "Suryansh Sharma",
+      "email": "b264372@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 153,
+    "timestamp": "8/19/2026 12:54:31",
+    "inputLines": [
+      "b26234@students.iitmandi.ac.in",
+      "Shaurya Chauhan",
+      "B26234",
+      "8/19/2026",
+      "b26234@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "269df89c-d52e-41cb-8c8c-3acfff25e38c",
+      "roll_number": "B26234",
+      "name": "Shaurya Chauhan",
+      "email": "b26234@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 154,
+    "timestamp": "8/19/2026 12:54:31",
+    "inputLines": [
+      "Paarth Vashistha",
+      "B26458",
+      "8/19/2026",
+      "b26458@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f78873c2-5e9f-4845-b051-dcb3a4655e7f",
+      "roll_number": "B26458",
+      "name": "Paarth Vashistha",
+      "email": "b26458@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 155,
+    "timestamp": "8/19/2026 12:54:31",
+    "inputLines": [
+      "b26214@students.iitmandi.ac.in",
+      "Naman",
+      "B26214",
+      "8/19/2026",
+      "b26214@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f52d3f19-9a5d-48f4-a319-374b79f2fb2d",
+      "roll_number": "B26214",
+      "name": "Naman",
+      "email": "b26214@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 156,
+    "timestamp": "8/19/2026 12:54:32",
+    "inputLines": [
+      "b26355@students.iitmandi.ac.in",
+      "Ojas Nakade",
+      "B26355",
+      "8/19/2026",
+      "b26355@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "dd93b7af-0931-4ae1-9674-4437fb9d5053",
+      "roll_number": "B26355",
+      "name": "Ojas Dhananjay Nakade",
+      "email": "b26355@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 157,
+    "timestamp": "8/19/2026 12:54:32",
+    "inputLines": [
+      "b26001@students.iitmandi.ac.in",
+      "Aarti",
+      "B26001",
+      "8/19/2026",
+      "aartipoonia9920@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f24a6940-f6f8-46bc-ba60-c9594d6b9c68",
+      "roll_number": "B26001",
+      "name": "Aarti",
+      "email": "b26001@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 158,
+    "timestamp": "8/19/2026 12:54:32",
+    "inputLines": [
+      "b26212@students.iitmandi.ac.in",
+      "Mudit Kumar",
+      "B26212",
+      "8/19/2026",
+      "b26212@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "276e236f-cf38-4e9d-ba40-56ea6e0dde8c",
+      "roll_number": "B26212",
+      "name": "Mudit Kumar",
+      "email": "b26212@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 159,
+    "timestamp": "8/19/2026 12:54:32",
+    "inputLines": [
+      "b26274@students.iitmandi.ac.in",
+      "Garv Dharmapuri",
+      "B26274",
+      "8/19/2026",
+      "b26274@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "6817fd1d-18e2-4bf8-afe2-e00a1d0d12b1",
+      "roll_number": "B26274",
+      "name": "Garv Dharmapuri",
+      "email": "b26274@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 160,
+    "timestamp": "8/19/2026 12:54:32",
+    "inputLines": [
+      "im26016@students.iitmandi.ac.in",
+      "PRAJEETH RAJ DHARAVATH",
+      "im26016",
+      "8/19/2026",
+      "im26016@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5613d28a-7de4-4218-8f76-24f3bb18ddea",
+      "roll_number": "IM26016",
+      "name": "PRAJEETH RAJ DHARAVATH",
+      "email": "im26016@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 161,
+    "timestamp": "8/19/2026 12:54:33",
+    "inputLines": [
+      "b26169@students.iitmandi.ac.in",
+      "Akshat yadav",
+      "B26169",
+      "8/19/2026",
+      "b26169@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "21ede211-ecc6-4329-8177-7f7365400f16",
+      "roll_number": "B26169",
+      "name": "Akshat yadav",
+      "email": "b26169@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 162,
+    "timestamp": "8/19/2026 12:54:33",
+    "inputLines": [
+      "im26061@students.iitmandi.ac.in",
+      "Jatin Kumar",
+      "IM26061",
+      "8/19/2026",
+      "jatin25130688@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d2bac21d-b026-4896-9850-79301108ddce",
+      "roll_number": "IM26061",
+      "name": "Jatin Kumar",
+      "email": null,
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 163,
+    "timestamp": "8/19/2026 12:54:33",
+    "inputLines": [
+      "b26198@students.iitmandi.ac.in",
+      "Inika Agrawal",
+      "B26198",
+      "8/19/2026",
+      "b26198@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "122da6e4-8d61-4e3c-bfbc-2b020e547c8b",
+      "roll_number": "B26198",
+      "name": "Inika Agrawal",
+      "email": "agrawal.inika30@gmail.com",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 164,
+    "timestamp": "8/19/2026 12:54:33",
+    "inputLines": [
+      "b26175@students.iitmandi.ac.in",
+      "Arnav Anand",
+      "B26175",
+      "8/19/2026",
+      "anandarnav21122006@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "a5b52c33-768b-48f5-a817-1dacb3e4feaf",
+      "roll_number": "B26175",
+      "name": "Arnav Anand",
+      "email": "b26175@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 165,
+    "timestamp": "8/19/2026 12:54:33",
+    "inputLines": [
+      "b26215@students.iitmandi.ac.in",
+      "Nandini Sharma",
+      "B26215",
+      "8/19/2026",
+      "b26215@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2f0dee3f-88ae-4433-9b3f-2bd41ab2600a",
+      "roll_number": "B26215",
+      "name": "Nandini Sharma",
+      "email": "b26215@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 166,
+    "timestamp": "8/19/2026 12:54:33",
+    "inputLines": [
+      "b26005@students.iitmandi.ac.in",
+      "Ajaybir Singh Brar",
+      "B26005",
+      "8/19/2026",
+      "b26005@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a64f9bc5-0cc9-45e6-a0c9-7872bf283d13",
+      "roll_number": "B26005",
+      "name": "Ajaybir Singh Brar",
+      "email": "b26005@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 167,
+    "timestamp": "8/19/2026 12:54:34",
+    "inputLines": [
+      "b26422@students.iitmandi.ac.in",
+      "Kapil jarwal",
+      "B26422",
+      "8/19/2026",
+      "kapiljarwal441@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "880f1a2e-fed3-4229-a8e2-164463bbcb67",
+      "roll_number": "B26422",
+      "name": "Kapil jarwal",
+      "email": "kapiljarwal441@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 168,
+    "timestamp": "8/19/2026 12:54:34",
+    "inputLines": [
+      "b26354@students.iitmandi.ac.in",
+      "Nikhlesh Gupta",
+      "B26354",
+      "8/19/2026",
+      "b26354@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "272f0748-6ce4-463b-9ef2-f987a85b7bfb",
+      "roll_number": "B26354",
+      "name": "Nikhlesh Gupta",
+      "email": "b26354@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 169,
+    "timestamp": "8/19/2026 12:54:34",
+    "inputLines": [
+      "b26356@students.iitmandi.ac.in",
+      "Om practical",
+      "B26356",
+      "8/19/2026",
+      "b26356@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2c5c3bf2-f51b-46f9-911e-f0b11a94d5c5",
+      "roll_number": "B26356",
+      "name": "Om Gawandey",
+      "email": "b26356@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 170,
+    "timestamp": "8/19/2026 12:54:35",
+    "inputLines": [
+      "b26596@students.iitmandi.ac.in",
+      "Rathod Balaji",
+      "B26596",
+      "8/19/2026",
+      "balajirathodbala12@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "aaa92ef8-c489-4c6b-8387-3108331c417c",
+      "roll_number": "B26596",
+      "name": "Rathod Balaji",
+      "email": "b26596@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 171,
+    "timestamp": "8/19/2026 12:54:35",
+    "inputLines": [
+      "b26494@students.iitmandi.ac.in",
+      "MOHIT RAMAKANT BHADANGE",
+      "B26494",
+      "8/19/2026",
+      "b26494@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2b94590e-5101-48d6-a828-2aa3885c6e84",
+      "roll_number": "B26494",
+      "name": "MOHIT RAMAKANT BHADANGE",
+      "email": "b26494@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 172,
+    "timestamp": "8/19/2026 12:54:35",
+    "inputLines": [
+      "b26511@students.iitmandi.ac.in",
+      "UNAGAR ISHAN MAHENDRABHAI",
+      "B26511",
+      "8/19/2026",
+      "ishanunagar09@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "fea159ec-445a-4a47-b69a-a89a3df75b3a",
+      "roll_number": "B26511",
+      "name": "Ishan Unagar",
+      "email": "b26511@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 173,
+    "timestamp": "8/19/2026 12:54:36",
+    "inputLines": [
+      "im26052@students.iitmandi.ac.in",
+      "Himanshu Pannu",
+      "IM26052",
+      "8/19/2026",
+      "himanshupannu14@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "1077bb7d-f7d4-4612-82b8-ba154ab03bac",
+      "roll_number": "IM26052",
+      "name": "Himanshu Pannu",
+      "email": "im26052@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 174,
+    "timestamp": "8/19/2026 12:54:36",
+    "inputLines": [
+      "b26160@students.iitmandi.ac.in",
+      "Uttam Rawal",
+      "B26160",
+      "8/19/2026",
+      "uttamrawal008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "1bebf066-3a14-460f-bdc7-bc2faef21344",
+      "roll_number": "B26160",
+      "name": "Uttam Rawal",
+      "email": "b26160@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 175,
+    "timestamp": "8/19/2026 12:54:36",
+    "inputLines": [
+      "b26237@students.iitmandi.ac.in",
+      "Shruti Agrawal",
+      "b26237",
+      "8/19/2026",
+      "shruti.agr.08042007@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "b785e000-b224-4a04-ab9c-56e298bd5f64",
+      "roll_number": "B26237",
+      "name": "Shruti Agrawal",
+      "email": "b26237@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 176,
+    "timestamp": "8/19/2026 12:54:37",
+    "inputLines": [
+      "b26450@students.iitmandi.ac.in",
+      "Himanshu",
+      "B26450",
+      "8/19/2026",
+      "b26450@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "8e9506f3-06cc-47aa-aa71-ae7f9bb7070f",
+      "roll_number": "B26450",
+      "name": "Himanshu",
+      "email": "b26450@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 177,
+    "timestamp": "8/19/2026 12:54:37",
+    "inputLines": [
+      "im26031@students.iitmandi.ac.in",
+      "Anshul Kalia",
+      "IM26031",
+      "8/19/2026",
+      "im26031@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "98a4973b-40dc-4b64-9f08-dc919ec83745",
+      "roll_number": "IM26031",
+      "name": "Anshul Kalia",
+      "email": "im26031@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 178,
+    "timestamp": "8/19/2026 12:54:37",
+    "inputLines": [
+      "b26185@students.iitmandi.ac.in",
+      "Deshtwar Sarthak Sanjay",
+      "B26185",
+      "8/19/2026",
+      "sarthakdeshtwar@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "66fd6a27-14d5-4281-8c87-664591725c3f",
+      "roll_number": "B26185",
+      "name": "Deshtwar sarthak sanjay",
+      "email": "b26185@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 179,
+    "timestamp": "8/19/2026 12:54:38",
+    "inputLines": [
+      "b26013@students.iitmandi.ac.in",
+      "Harshita",
+      "B26013",
+      "8/19/2026",
+      "b26013@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "beddb9e9-cec0-422c-8d9d-a09746996dda",
+      "roll_number": "B26013",
+      "name": "Harshita",
+      "email": "b26013@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 180,
+    "timestamp": "8/19/2026 12:54:38",
+    "inputLines": [
+      "b26008@students.iitmandi.ac.in",
+      "CHAUDHARY PRASHIL HARMESH",
+      "B26008",
+      "8/19/2026",
+      "prashilchaudhary171@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ab104840-0577-4675-b898-759e86b2da04",
+      "roll_number": "B26008",
+      "name": "CHAUDHARY PRASHIL HARMESH",
+      "email": "b26008@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 181,
+    "timestamp": "8/19/2026 12:54:39",
+    "inputLines": [
+      "im26065@students.iitmandi.ac.in",
+      "Anurag Chhabra",
+      "IM26065",
+      "8/19/2026",
+      "anuragchhabra2207@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "6f670046-b173-4ae3-8cce-d31c5b32f0d9",
+      "roll_number": "IM26065",
+      "name": "Anurag Chhabra",
+      "email": "im26065@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 182,
+    "timestamp": "8/19/2026 12:54:39",
+    "inputLines": [
+      "Abhinav Kumar",
+      "B26254",
+      "8/19/2026",
+      "b26254@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "83b17f0b-0e34-4f8d-818d-33a1aa8a0baf",
+      "roll_number": "B26254",
+      "name": "Abhinav Kumar",
+      "email": "b26254@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 183,
+    "timestamp": "8/19/2026 12:54:39",
+    "inputLines": [
+      "B26382@students.iitmandi.ac.in",
+      "Ishaan Kirankumar Yadav",
+      "B26382",
+      "8/19/2026",
+      "b26382@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a4e7c8d4-4537-4206-9362-5f631fad7ed7",
+      "roll_number": "B26382",
+      "name": "ISHAAN Yadav",
+      "email": "b26382@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 184,
+    "timestamp": "8/19/2026 12:54:39",
+    "inputLines": [
+      "b26228@students.iitmandi.ac.in",
+      "Rohit Gupta",
+      "B26228",
+      "8/19/2026",
+      "b26228@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "654795d4-c615-4e8f-8cc4-935b8d4f9c18",
+      "roll_number": "B26228",
+      "name": "Rohit Gupta",
+      "email": "b26228@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 185,
+    "timestamp": "8/19/2026 12:54:39",
+    "inputLines": [
+      "b26088@students.iitmandi.ac.in",
+      "Tej Prakash Korada",
+      "B26088",
+      "8/19/2026",
+      "b26088@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "d3cc7159-0982-4d38-99e0-ca544c9059c0",
+      "roll_number": "B26088",
+      "name": "Tej Prakash Korada",
+      "email": "b26088@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 186,
+    "timestamp": "8/19/2026 12:54:40",
+    "inputLines": [
+      "b26286@students.iitmandi.ac.in",
+      "Lohitaksha Rohila",
+      "B26286",
+      "8/19/2026",
+      "b26286@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "00404cf2-b21c-4b57-818a-1b2c633bc57c",
+      "roll_number": "B26286",
+      "name": "Lohitaksha Rohila",
+      "email": "b26286@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 187,
+    "timestamp": "8/19/2026 12:54:40",
+    "inputLines": [
+      "b26231@students.iitmandi.ac.in",
+      "Saksham Dhiman",
+      "B26231",
+      "8/19/2026",
+      "b26231@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "39bd81a5-bad0-4ac6-bb7f-b1cfcae8d0ad",
+      "roll_number": "B26231",
+      "name": "Saksham Dhiman",
+      "email": "b26231@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 188,
+    "timestamp": "8/19/2026 12:54:40",
+    "inputLines": [
+      "b26597@students.iitmandi.ac.in",
+      "Sukhpreet Singh",
+      "B26597",
+      "8/19/2026",
+      "sukhajram@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "50343844-bbab-41ab-b789-5b7e83d63bd3",
+      "roll_number": "B26597",
+      "name": "Sukhpreet Singh",
+      "email": "B26597@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 189,
+    "timestamp": "8/19/2026 12:54:40",
+    "inputLines": [
+      "im26022@students.iitmandi.ac.in",
+      "Harshit Choudhary",
+      "IM26022",
+      "8/19/2026",
+      "harshit07h@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "4a6cb5f8-3be8-445d-bfef-3d5d1311960d",
+      "roll_number": "IM26022",
+      "name": "Harshit Choudhary",
+      "email": "im26022@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 190,
+    "timestamp": "8/19/2026 12:54:41",
+    "inputLines": [
+      "b26194@students.iitmandi.ac.in",
+      "Harsh",
+      "B26194",
+      "8/19/2026",
+      "b26194@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b101f048-ab1c-4edf-b010-0df192966999",
+      "roll_number": "B26194",
+      "name": "Harsh",
+      "email": "harshbhatti3769@gmail.com",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 191,
+    "timestamp": "8/19/2026 12:54:41",
+    "inputLines": [
+      "b26223@students.iitmandi.ac.in",
+      "Preet Midha",
+      "B26223",
+      "8/19/2026",
+      "itsmepreet4@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "22c37714-ef84-45f6-8e6d-1b42ac2b91f4",
+      "roll_number": "B26223",
+      "name": "Preet Midha",
+      "email": "b26223@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 192,
+    "timestamp": "8/19/2026 12:54:42",
+    "inputLines": [
+      "b26269@students.iitmandi.ac.in",
+      "Bhavya Chauhan",
+      "B26269",
+      "8/19/2026",
+      "b26269@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "9f7187eb-9aa2-4bc5-8d2e-5fee2b612e76",
+      "roll_number": "B26269",
+      "name": "Bhavya Chauhan",
+      "email": "bhavya3279034@gmail.com",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 193,
+    "timestamp": "8/19/2026 12:54:42",
+    "inputLines": [
+      "b26410@students.iitmandi.ac.in",
+      "Utsav Yadav",
+      "B26410",
+      "8/19/2026",
+      "b26410@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "792cbfd1-a216-41ad-aebf-271a2fe497f8",
+      "roll_number": "B26410",
+      "name": "Utsav Yadav",
+      "email": "utsav.yadav042008@gmail.com",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 194,
+    "timestamp": "8/19/2026 12:54:42",
+    "inputLines": [
+      "b26588@students.iitmandi.ac.in",
+      "Mohini Saha",
+      "B26588",
+      "8/19/2026",
+      "b26588@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a905756a-6caf-4ecd-ba84-80773fa97c3a",
+      "roll_number": "B26588",
+      "name": "Mohini Saha",
+      "email": "b26588@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 195,
+    "timestamp": "8/19/2026 12:54:42",
+    "inputLines": [
+      "b26038@students.iitmandi.ac.in",
+      "Krishna Soni",
+      "B26038",
+      "8/19/2026",
+      "b26038@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "61d69a67-2429-48f8-837f-72b0c2240e37",
+      "roll_number": "B26038",
+      "name": "Krishna Soni",
+      "email": "kingkriss2510@gmail.com",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 196,
+    "timestamp": "8/19/2026 12:54:42",
+    "inputLines": [
+      "b26423@students.iitmandi.ac.in",
+      "Khwaish gupta",
+      "B26423",
+      "8/19/2026",
+      "khwaishgupta020@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "be6d1af3-98b5-462f-986f-d3fbaefc2800",
+      "roll_number": "B26423",
+      "name": "Khwaish gupta",
+      "email": "b26423@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 197,
+    "timestamp": "8/19/2026 12:54:43",
+    "inputLines": [
+      "b26301@students.iitmandi.ac.in",
+      "Nimishaa shelke",
+      "B26301",
+      "8/19/2026",
+      "b26301@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "9bcacafb-2c95-408d-b1bc-52e39012f1cf",
+      "roll_number": "B26301",
+      "name": "Nimishaa shelke",
+      "email": "b26301@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 198,
+    "timestamp": "8/19/2026 12:54:43",
+    "inputLines": [
+      "b26165@students.iitmandi.ac.in",
+      "Abalesh Baghel",
+      "B26165",
+      "8/19/2026",
+      "abalesh.baghel@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8381e04c-5da0-49f5-a80c-7a32905e27ce",
+      "roll_number": "B26165",
+      "name": "Abalesh Baghel",
+      "email": "abalesh.lko21@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 199,
+    "timestamp": "8/19/2026 12:54:43",
+    "inputLines": [
+      "im26055@students.iitmandi.ac.in",
+      "GOWRI G",
+      "IM26055",
+      "8/19/2026",
+      "im26055@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "297ef867-2bbb-4f8b-b87f-d93c927743aa",
+      "roll_number": "IM26055",
+      "name": "GOWRI G",
+      "email": "im26055@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 200,
+    "timestamp": "8/19/2026 12:54:44",
+    "inputLines": [
+      "b26359@students.iitmandi.ac.in",
+      "Partha Sarathi Majumder",
+      "b26359",
+      "8/19/2026",
+      "parthasarathi9352@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "7bb08f8f-8fcb-4188-b74a-849f56bc8704",
+      "roll_number": "B26359",
+      "name": "Partha Sarathi Majumder",
+      "email": "b26359@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 201,
+    "timestamp": "8/19/2026 12:54:44",
+    "inputLines": [
+      "b26105@students.iitmandi.ac.in",
+      "Purti Jain",
+      "B26105",
+      "8/19/2026",
+      "b26105@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "498c5f62-1704-4b26-a604-aaf57e71ce5b",
+      "roll_number": "B26105",
+      "name": "PURTI JAIN",
+      "email": "b26105@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 202,
+    "timestamp": "8/19/2026 12:54:45",
+    "inputLines": [
+      "b26107@students.iitmandi.ac.in",
+      "Rishab Patil",
+      "B2617",
+      "8/19/2026",
+      "rishabpatil698@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "40cd467a-1904-4fba-b431-2539ac5b1ef1",
+      "roll_number": "B26107",
+      "name": "RISHAB PATIL",
+      "email": "b26107@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "email"
+  },
+  {
+    "index": 203,
+    "timestamp": "8/19/2026 12:54:45",
+    "inputLines": [
+      "B26211@students.iitmandi.ac.in",
+      "Angad jaglan",
+      "B26211",
+      "8/19/2026",
+      "angadjaglan0@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "dfae6461-c034-44bc-8085-0c7058440ba0",
+      "roll_number": "B26211",
+      "name": "Angad jaglan",
+      "email": "b26211@student.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 204,
+    "timestamp": "8/19/2026 12:54:45",
+    "inputLines": [
+      "b26128@students.iitmandi.ac.in",
+      "Divya",
+      "B26128",
+      "12/2/2007",
+      "dyadaviit@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "578ec637-78b3-4173-9c9f-ec2d64f66f17",
+      "roll_number": "B26128",
+      "name": "Divya",
+      "email": "b26128@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 205,
+    "timestamp": "8/19/2026 12:54:45",
+    "inputLines": [
+      "b26556@students.iitmandi.ac.in",
+      "Rishika Maan",
+      "B26556",
+      "8/19/2026",
+      "rishikamaan2009@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "70389817-0303-44c0-8380-abd8bbb4f8f9",
+      "roll_number": "B26556",
+      "name": "Rishika Maan",
+      "email": "rishikamaan2009@gmail.com",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 206,
+    "timestamp": "8/19/2026 12:54:46",
+    "inputLines": [
+      "B26222@students.iitmandi.ac.in",
+      "Pratishtha Panchal",
+      "B26222",
+      "8/19/2026",
+      "panchalpratishtha170@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8a94f997-4a5b-425e-9391-fd16c154ac43",
+      "roll_number": "B26222",
+      "name": "Pratishtha Panchal",
+      "email": "b26222@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 207,
+    "timestamp": "8/19/2026 12:54:46",
+    "inputLines": [
+      "b26621@students.iitmandi.ac.in",
+      "Sarvambh Machhan",
+      "B26621",
+      "8/19/2026",
+      "b26621@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "63b58895-4516-4669-8bc8-e5afedfc223f",
+      "roll_number": "B26621",
+      "name": "Sarvambh Machhan",
+      "email": "b26621.students@iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 208,
+    "timestamp": "8/19/2026 12:54:46",
+    "inputLines": [
+      "b26443@students.iitmandi.ac.in",
+      "Vishwaraj",
+      "B26443",
+      "8/19/2026",
+      "b26443@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "28ff6486-0d90-4131-87ec-06f22fbbfc8b",
+      "roll_number": "B26443",
+      "name": "Vishwaraj",
+      "email": null,
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 209,
+    "timestamp": "8/19/2026 12:54:46",
+    "inputLines": [
+      "b26247@students.iitmandi.ac.in",
+      "Tushar Barman",
+      "B26247",
+      "8/19/2026",
+      "b26247@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "84823c9d-3953-4e7d-a8f4-c65d8cca3793",
+      "roll_number": "B26247",
+      "name": "Tushar Barman",
+      "email": "b26247@iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 210,
+    "timestamp": "8/19/2026 12:54:46",
+    "inputLines": [
+      "B26249@students.iitmandi.ac.in",
+      "Vadthya Ashreth naik",
+      "B26249",
+      "8/19/2026",
+      "vadthyaashreth@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "c857c347-d476-4084-83aa-5b0a52af4860",
+      "roll_number": "B26249",
+      "name": "VADTHYA ASHRETH NAIK",
+      "email": "vadthyaashreth@gmail.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 211,
+    "timestamp": "8/19/2026 12:54:47",
+    "inputLines": [
+      "b26312@students.iitmandi.ac.in",
+      "Yatharth jain",
+      "B26312",
+      "8/19/2026",
+      "b26312@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "414d758a-b64e-47b0-9cd4-8c0cf0345fa9",
+      "roll_number": "B26312",
+      "name": "Yatharth jain",
+      "email": "b26312@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 212,
+    "timestamp": "8/19/2026 12:54:47",
+    "inputLines": [
+      "b26172@students.iitmandi.ac.in",
+      "Ankit Bansal",
+      "B26172",
+      "8/19/2026",
+      "b26172@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a5e362b6-4020-480e-a290-7bae748b9b91",
+      "roll_number": "B26172",
+      "name": "Ankit Bansal",
+      "email": "b26172@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 213,
+    "timestamp": "8/19/2026 12:54:48",
+    "inputLines": [
+      "b26114@students.iitmandi.ac.in",
+      "Vidya Bharti",
+      "B26114",
+      "8/19/2026",
+      "b26114@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "fb6625a0-3864-40e1-b071-9520212e762c",
+      "roll_number": "B26114",
+      "name": "Vidya Bharti",
+      "email": "b26114@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 214,
+    "timestamp": "8/19/2026 12:54:50",
+    "inputLines": [
+      "b26089@students.iitmandi.ac.in",
+      "Aman Sharma",
+      "B26089",
+      "8/19/2026",
+      "amansharma72751428@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "9f259333-47d1-4d10-90eb-87d0aba49a4e",
+      "roll_number": "B26089",
+      "name": "Aman Sharma",
+      "email": "amansharma0123455@gmail.com",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 215,
+    "timestamp": "8/19/2026 12:54:50",
+    "inputLines": [
+      "im26045@students.iitmandi.ac.in",
+      "Mathanraj M",
+      "IM26045",
+      "8/19/2026",
+      "im26045@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e6beab01-9ed1-4340-8322-8e91d5f67d83",
+      "roll_number": "IM26045",
+      "name": "Mathanraj M",
+      "email": "im26045@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 216,
+    "timestamp": "8/19/2026 12:54:50",
+    "inputLines": [
+      "b26505@students.iitmandi.ac.in",
+      "Sanyam Jain",
+      "B26505",
+      "8/19/2026",
+      "b26505@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "89d8e80e-80c4-4558-b3e2-a652dd807821",
+      "roll_number": "B26505",
+      "name": "Sanyam Jain",
+      "email": "b26505@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 217,
+    "timestamp": "8/19/2026 12:54:50",
+    "inputLines": [
+      "b26195@students.iitmandi.ac.in",
+      "Himanshu",
+      "B26195",
+      "8/19/2026",
+      "b26195@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "1a4ca261-4d7c-4d1a-b5d2-412d07c1c35c",
+      "roll_number": "B26195",
+      "name": "Himanshu",
+      "email": "b26195@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 218,
+    "timestamp": "8/19/2026 12:54:51",
+    "inputLines": [
+      "b26504@students.iitmandi.ac.in",
+      "Sameer Raj",
+      "B26504",
+      "8/19/2026",
+      "b26504@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "45f5a028-d54a-4396-aa50-a681aa518c23",
+      "roll_number": "B26504",
+      "name": "Sameer Raj",
+      "email": "b26504@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 219,
+    "timestamp": "8/19/2026 12:54:52",
+    "inputLines": [
+      "b26558@students.iitmandi.ac.in",
+      "Rohan",
+      "B26558",
+      "b26558@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "204b7f15-1595-489e-b13f-984a72b3e302",
+      "roll_number": "B26558",
+      "name": "Rohan",
+      "email": "b26557@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 220,
+    "timestamp": "8/19/2026 12:54:52",
+    "inputLines": [
+      "b26085@students.iitmandi.ac.in",
+      "Suhani Kumari",
+      "B26085",
+      "8/19/2026",
+      "b26085@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e8e04692-a2a3-4de5-b6b6-1dbcf2aa0d7b",
+      "roll_number": "B26085",
+      "name": "Suhani Kumari",
+      "email": "b26085@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 221,
+    "timestamp": "8/19/2026 12:54:53",
+    "inputLines": [
+      "b26373@students.iitmandi.ac.in",
+      "Swapneel Das",
+      "B26373",
+      "8/19/2026",
+      "b26373@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f9efbefe-20ac-4c34-9d25-dc6c2928fce4",
+      "roll_number": "B26373",
+      "name": "Swapneel Das",
+      "email": "b26373@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 222,
+    "timestamp": "8/19/2026 12:54:53",
+    "inputLines": [
+      "b26395@students.iitmandi.ac.in",
+      "Harsh Ajit Nikam",
+      "B26395",
+      "8/19/2026",
+      "harshnikam1802@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8b6bd000-db49-4c9c-9a12-d92ba2e01c4d",
+      "roll_number": "B26395",
+      "name": "Harsh Ajit Nikam",
+      "email": "b26395@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 223,
+    "timestamp": "8/19/2026 12:54:53",
+    "inputLines": [
+      "b26370@students.iitmandi.ac.in",
+      "Sirivennela matti",
+      "B26370",
+      "8/19/2026",
+      "sirimatti143@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "08f07a1b-2e6a-4628-a65d-cbc3a0edeea6",
+      "roll_number": "B26370",
+      "name": "Sirivennela matti",
+      "email": "b26370@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 224,
+    "timestamp": "8/19/2026 12:54:53",
+    "inputLines": [
+      "B26100@students.iitmandi.ac.in",
+      "Riddhi lalwani",
+      "B26100",
+      "8/19/2026",
+      "b26100@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "865b46aa-c1ac-455c-950a-a94cdfe68e75",
+      "roll_number": "B26100",
+      "name": "Riddhi Lalwani",
+      "email": "b26100@iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 225,
+    "timestamp": "8/19/2026 12:54:54",
+    "inputLines": [
+      "im26043@students.iitmandi.ac.in",
+      "Nallabothula Srujan",
+      "IM26043",
+      "8/19/2026",
+      "im26043@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "57696da2-e50d-40ef-beee-717f5217e983",
+      "roll_number": "IM26043",
+      "name": "Nallabothula Srujan",
+      "email": "im26043@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 226,
+    "timestamp": "8/19/2026 12:54:54",
+    "inputLines": [
+      "im26006@students.iitmandi.ac.in",
+      "Velvaluri Monish Gupta",
+      "IM26006",
+      "8/19/2026",
+      "im26006@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5779b53e-0ce0-414c-8072-61f344751469",
+      "roll_number": "IM26006",
+      "name": "Velvaluri Monish Gupta",
+      "email": "im26006@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 227,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "Shreyashri Bindai",
+      "B26155",
+      "b26155@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "cb681e84-772e-43dd-bf87-f17b968a6858",
+      "roll_number": "B26155",
+      "name": "SHREYASHRI BINDAI",
+      "email": "b26155@students.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 228,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "b26179@students.iitmandi.ac.in",
+      "Aryan Sandeep Naik",
+      "B26179",
+      "8/19/2026",
+      "b26179@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "cb933990-9024-4b3f-9f58-6eae33e16296",
+      "roll_number": "B26179",
+      "name": "Aryan Sandeep Naik",
+      "email": "b26179@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 229,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "b26261@students.iitmandi.ac.in",
+      "Anand Singh",
+      "B26261",
+      "8/19/2026",
+      "anandsingh05112007@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "daaa9984-941d-40ff-85d3-b080b1e3002a",
+      "roll_number": "B26261",
+      "name": "Anand Singh",
+      "email": "b26261@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 230,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "b26418@students.iitmandi.ac.in",
+      "Divya Raj Jain",
+      "B26418",
+      "8/19/2026",
+      "b26418@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "84682e74-f859-4d97-9dc3-9a0cc392d04b",
+      "roll_number": "B26418",
+      "name": "Divya Raj Jain",
+      "email": "b26418@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 231,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "Parth Deoli",
+      "B26549",
+      "8/19/2026",
+      "b26549@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3154ce36-8598-4dbf-b13f-28fa793046b2",
+      "roll_number": "B26549",
+      "name": "Parth Deoli",
+      "email": "b26549@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 232,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "b26068@students.iitmandi.ac.in",
+      "Daksh",
+      "B26068",
+      "8/19/2026",
+      "dakshyadav2789@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f69fa45b-250f-46c3-bc6a-322df0f5222d",
+      "roll_number": "B26068",
+      "name": "DAKSH",
+      "email": "b26068@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 233,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "im26019@students.iitmandi.ac.in",
+      "Shivali Poddar",
+      "im26019",
+      "8/19/2026",
+      "im26019@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "66ba7a74-beda-4539-80b2-4a6bb1841523",
+      "roll_number": "IM26019",
+      "name": "Shivali Poddar",
+      "email": "im26019@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 234,
+    "timestamp": "8/19/2026 12:54:55",
+    "inputLines": [
+      "b26361@students.iitmandi.ac.in",
+      "Prabhjot Singh",
+      "B26361",
+      "8/19/2026",
+      "b26361@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "6fabfd2a-1c6e-43ab-aba3-4078d63690f7",
+      "roll_number": "B26361",
+      "name": "Prabhjot Singh",
+      "email": "b26361@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 235,
+    "timestamp": "8/19/2026 12:54:56",
+    "inputLines": [
+      "b26366@students.iitmandi.ac.in",
+      "RUHAN DALAL",
+      "B26366",
+      "8/19/2026",
+      "ruhandalal9@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "6fc9214f-a942-4f18-af3e-910cc9e1dce1",
+      "roll_number": "B26366",
+      "name": "RUHAN DALAL",
+      "email": "b26366@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 236,
+    "timestamp": "8/19/2026 12:54:56",
+    "inputLines": [
+      "b26289@students.iitmandi.ac.in",
+      "Naveen",
+      "B26289",
+      "8/19/2026",
+      "ncmahala577@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "acef3e9f-6aa4-464c-ba4f-1602dc650a90",
+      "roll_number": "B26289",
+      "name": "naveen choudhary",
+      "email": "b26289@iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 237,
+    "timestamp": "8/19/2026 12:54:57",
+    "inputLines": [
+      "b26519@students.iitmandi.ac.in",
+      "Anshul yadav",
+      "B26519",
+      "8/19/2026",
+      "b26519@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2dcaa7ee-7bc0-4e39-ae46-781a39046dec",
+      "roll_number": "B26519",
+      "name": "Anshul yadav",
+      "email": "b26519@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 238,
+    "timestamp": "8/19/2026 12:54:57",
+    "inputLines": [
+      "b26298@students.iitmandi.ac.in",
+      "Rajveer Choudhary",
+      "B26298",
+      "8/19/2026",
+      "b26298@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "85ed0069-b136-4ec1-81e2-f6c1074778c1",
+      "roll_number": "B26298",
+      "name": "Rajveer Choudhary",
+      "email": "b26298@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 239,
+    "timestamp": "8/19/2026 12:54:57",
+    "inputLines": [
+      "b26439@students.iitmandi.ac.in",
+      "T Siddarth",
+      "B26439",
+      "8/19/2026",
+      "b26439@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "0cc4c86b-96d2-444e-81d9-be3bf55ca0f5",
+      "roll_number": "B26439",
+      "name": "T Siddarth",
+      "email": "b26439@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 240,
+    "timestamp": "8/19/2026 12:54:58",
+    "inputLines": [
+      "b26080@students.iitmandi.ac.in",
+      "Prashant Verma",
+      "B26080",
+      "8/19/2026",
+      "prashantnagvansi616@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "3c35ae43-f5a7-4c7e-a013-501906008893",
+      "roll_number": "B26080",
+      "name": "PRASHANT VERMA",
+      "email": "b26080@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 241,
+    "timestamp": "8/19/2026 12:54:59",
+    "inputLines": [
+      "b26147@students.iitmandi.ac.in",
+      "Pilla.Akhil",
+      "B26147",
+      "8/19/2026",
+      "akhilpilla9184@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "3e01050c-4280-4e0f-9242-440ff06a2d00",
+      "roll_number": "B26147",
+      "name": "Pilla.Akhil",
+      "email": "b26147@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 242,
+    "timestamp": "8/19/2026 12:54:59",
+    "inputLines": [
+      "b26345@students.iitmandi.ac.in",
+      "Kunj Mandaviya",
+      "B26345",
+      "8/19/2026",
+      "2190.kunj@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "30a9e465-6b26-49d4-bb4e-4ee1486a00a0",
+      "roll_number": "B26345",
+      "name": "Kunj Satish Mandaviya",
+      "email": "b26345@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 243,
+    "timestamp": "8/19/2026 12:55:00",
+    "inputLines": [
+      "b26094@students.iitmandi.ac.ic",
+      "Sujithpall darla",
+      "B26094",
+      "8/19/2026",
+      "sujithpauldarla@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "5aa3d117-6673-4c14-bcf4-3ad879552803",
+      "roll_number": "B26094",
+      "name": "Sujith paul Darla",
+      "email": "sujithpauldarla@gmail.com",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 244,
+    "timestamp": "8/19/2026 12:55:00",
+    "inputLines": [
+      "b26072@students.iitmandi.ac.in",
+      "Ishan Chaudhary",
+      "B26072",
+      "8/19/2026",
+      "b26072@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "26eebd06-2a30-42eb-a838-616803bf42fa",
+      "roll_number": "B26072",
+      "name": "ISHAN CHAUDHARY",
+      "email": "b26072@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 245,
+    "timestamp": "8/19/2026 12:55:01",
+    "inputLines": [
+      "b26020@students.iitmandi.ac.in",
+      "Prabhat Bansal",
+      "B26020",
+      "8/19/2026",
+      "b26020@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "39ae8014-3931-4017-a48a-1479fdc715ce",
+      "roll_number": "B26020",
+      "name": "Prabhat Bansal",
+      "email": "b26020@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 246,
+    "timestamp": "8/19/2026 12:55:01",
+    "inputLines": [
+      "B26046@students.iitmandi.ac.in",
+      "Kanishk Reddy",
+      "B26046",
+      "8/19/2026",
+      "kanishk.5529514@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "16358cd8-cb75-4651-a473-26296903e369",
+      "roll_number": "B26046",
+      "name": "Obili raja Kanishk Reddy",
+      "email": "b26046@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 247,
+    "timestamp": "8/19/2026 12:55:01",
+    "inputLines": [
+      "b26620@students.iitmandi.ac.in",
+      "Saksham Rao",
+      "B26620",
+      "8/19/2026",
+      "b26620@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f6afa669-60a3-45e2-adf1-7e2d0e6af399",
+      "roll_number": "B26620",
+      "name": "Saksham Rao",
+      "email": "b26620@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 248,
+    "timestamp": "8/19/2026 12:55:01",
+    "inputLines": [
+      "IM26002@student.iitmandi.ac.in",
+      "Yash Rajoriya",
+      "IM26002",
+      "8/19/2026",
+      "yashrajoriya79@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "70b82dad-8669-4521-8975-463521235a06",
+      "roll_number": "IM26002",
+      "name": "Yash Rajoriya",
+      "email": "im26002@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 249,
+    "timestamp": "8/19/2026 12:55:01",
+    "inputLines": [
+      "b26553@students.iitmandi.ac.in",
+      "Raj Nikunj Chokhawala",
+      "B26553",
+      "8/19/2026",
+      "b26553@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "129432b2-7c78-4d99-94ae-654f65ac68aa",
+      "roll_number": "B26553",
+      "name": "Raj Nikunj Chokhawala",
+      "email": "b23553@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 250,
+    "timestamp": "8/19/2026 12:55:01",
+    "inputLines": [
+      "b26434@students.iitmandi.ac.in",
+      "Saanvi Avinash Tambde",
+      "B26434",
+      "8/19/2026",
+      "b26434@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "be902454-65ac-4cc7-80be-281ff96bd4d7",
+      "roll_number": "B26434",
+      "name": "Saanvi Avinash Tambde",
+      "email": "b26434@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 251,
+    "timestamp": "8/19/2026 12:55:02",
+    "inputLines": [
+      "b26459@students.iitmandi.ac.in",
+      "Parv Khatri",
+      "B26459",
+      "8/19/2026",
+      "b26459@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "20f8a100-466c-438f-b382-efc4253112af",
+      "roll_number": "B26459",
+      "name": "Parv Khatri",
+      "email": "b26459@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 252,
+    "timestamp": "8/19/2026 12:55:02",
+    "inputLines": [
+      "b26527@students.iitmandi.ac.in",
+      "LOHITH KUMAR",
+      "B26527",
+      "8/19/2026",
+      "gedelalohith001@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "a879c5c1-e0f7-47f4-bf84-a34f1379a50b",
+      "roll_number": "B26527",
+      "name": "Gedela lohith kumar",
+      "email": "b26527@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 253,
+    "timestamp": "8/19/2026 12:55:02",
+    "inputLines": [
+      "b26503@students.iitmandi.ac.in",
+      "Sai Raman Padhi",
+      "B26503",
+      "8/19/2026",
+      "sanatpadhi1971@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "defe32c0-ab38-45d2-9557-57d084d63684",
+      "roll_number": "B26503",
+      "name": "Sai Raman Padhi",
+      "email": "b26503@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 254,
+    "timestamp": "8/19/2026 12:55:03",
+    "inputLines": [
+      "im26066@students.iitmandi.ac.in",
+      "Prashant Prabakaran",
+      "IM26066",
+      "8/19/2026",
+      "prashant.prabakaran48@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "69e6fb14-0ed8-4128-b599-3a3d9e2eb60c",
+      "roll_number": "IM26066",
+      "name": "Prashant Prabakaran",
+      "email": "im26066@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 255,
+    "timestamp": "8/19/2026 12:55:04",
+    "inputLines": [
+      "b26432@students.iitmandi.ac.in",
+      "Rakshit Jain",
+      "B26432",
+      "8/19/2026",
+      "rakshitjain026@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "6eedd744-1047-45d0-bbb9-2b6276a017e7",
+      "roll_number": "B26432",
+      "name": "Rakshit Jain",
+      "email": "b26432@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 256,
+    "timestamp": "8/19/2026 12:55:04",
+    "inputLines": [
+      "b26054@students.iitmandi.ac.in",
+      "Shresth Rai",
+      "B26054",
+      "8/19/2026",
+      "b26054@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5e998e3f-3e38-48d2-8865-44613e8bd30c",
+      "roll_number": "B26054",
+      "name": "Shresth Rai",
+      "email": "b26054@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 257,
+    "timestamp": "8/19/2026 12:55:04",
+    "inputLines": [
+      "b26319@students.iitmandi.ac.in",
+      "Aditya Raj Singh",
+      "b26319",
+      "8/19/2026",
+      "b26319@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "25b0718c-d890-43ef-925f-0eaa36c07df7",
+      "roll_number": "B26319",
+      "name": "Aditya Raj Singh",
+      "email": "b26319@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 258,
+    "timestamp": "8/19/2026 12:55:05",
+    "inputLines": [
+      "b26022@students.iitmandi.ac.in",
+      "Prince Raj",
+      "B26022",
+      "8/19/2026",
+      "b26022@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "16f8e90e-4114-494f-b93a-c953ea943edc",
+      "roll_number": "B26022",
+      "name": "Prince Raj",
+      "email": "b26022@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 259,
+    "timestamp": "8/19/2026 12:55:05",
+    "inputLines": [
+      "b26490@students.iitmandi.ac.in",
+      "Kriti Choudhary",
+      "B26490",
+      "8/19/2026",
+      "b26490@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "18d65f9e-c7c3-4361-b60b-ee199a5b4392",
+      "roll_number": "B26490",
+      "name": "Kriti Choudhary",
+      "email": "b26490@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 260,
+    "timestamp": "8/19/2026 12:55:05",
+    "inputLines": [
+      "b26388@students.iitmandi.ac.in",
+      "Babul kumar",
+      "B26388",
+      "8/19/2026",
+      "bk3159463@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "522617b1-b9ce-417c-85e3-ea36109242e8",
+      "roll_number": "B26388",
+      "name": "Babul Kumar",
+      "email": "bk3159463@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 261,
+    "timestamp": "8/19/2026 12:55:05",
+    "inputLines": [
+      "b26468@students.iitmandi.ac.in",
+      "Shreeraj Rakesh Nandre",
+      "B26468",
+      "8/19/2026",
+      "b26468@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4f97f19f-3bdc-40a5-b2ff-75bf1234bce6",
+      "roll_number": "B26468",
+      "name": "Shreeraj Rakesh Nandre",
+      "email": "b26468@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 262,
+    "timestamp": "8/19/2026 12:55:07",
+    "inputLines": [
+      "im26078@students.iitmandi.ac.in",
+      "Aarushi Ahlawat",
+      "im26078",
+      "8/19/2026",
+      "ahlawataarushi6@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f090e1be-e948-4e37-b4c7-5629a4e49b25",
+      "roll_number": "IM26078",
+      "name": "Aarushi Ahlawat",
+      "email": "ahlawataarushi6@gmail.com",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 263,
+    "timestamp": "8/19/2026 12:55:05",
+    "inputLines": [
+      "b26164@students.iitmandi.ac.in",
+      "Aarush Saini",
+      "B26164",
+      "8/19/2026",
+      "b26164@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "83a5876d-c28c-4059-affb-385b1443dee8",
+      "roll_number": "B26164",
+      "name": "Aarush Saini",
+      "email": "b26164@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 264,
+    "timestamp": "8/19/2026 12:55:07",
+    "inputLines": [
+      "b26101@students.iitmandi.ac.in",
+      "Manish Mehra",
+      "B26101",
+      "8/19/2026",
+      "manishmehra67171@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f4277adb-d6c0-475f-8170-6c65815e4477",
+      "roll_number": "B26101",
+      "name": "Manish Mehra",
+      "email": "b26101@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 265,
+    "timestamp": "8/19/2026 12:55:07",
+    "inputLines": [
+      "im26008@students.iitmandi.ac.in",
+      "Yash Agarwal",
+      "IM26008",
+      "8/19/2026",
+      "im26008@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "978e60bd-30f2-41ff-9c93-5ad4c409b8d3",
+      "roll_number": "IM26008",
+      "name": "Yash Agarwal",
+      "email": "im26008@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 266,
+    "timestamp": "8/19/2026 12:55:08",
+    "inputLines": [
+      "b26280@students.iitmandi.ac.in",
+      "Jitesh Garg",
+      "B26280",
+      "8/19/2026",
+      "gargjitesh660@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "b3a277e6-e321-4af5-af59-ea1a8219bf78",
+      "roll_number": "B26280",
+      "name": "Jitesh Garg",
+      "email": "b26280@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 267,
+    "timestamp": "8/19/2026 12:55:08",
+    "inputLines": [
+      "im26012@students.iitmandi.ac.in",
+      "Konna Gowtham",
+      "Im26012",
+      "8/19/2026",
+      "im26012@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "fbe6f63c-0776-484f-ad14-728650344196",
+      "roll_number": "IM26012",
+      "name": "Konna Gowtham",
+      "email": "im26012@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 268,
+    "timestamp": "8/19/2026 12:55:10",
+    "inputLines": [
+      "im26064@students.iitmandi.ac.in",
+      "Shreya Bhadauria",
+      "IM26064",
+      "8/19/2026",
+      "im26064@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "ff466502-04b7-41e6-b4c8-c68753288fe1",
+      "roll_number": "IM26064",
+      "name": "Shreya Bhadauria",
+      "email": "im26064@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 269,
+    "timestamp": "8/19/2026 12:55:11",
+    "inputLines": [
+      "b26225@students.iitmandi.ac.in",
+      "Raj lodhi",
+      "B26225",
+      "8/19/2026",
+      "b26225@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a140301d-d4a8-4210-a32a-84e634b1473f",
+      "roll_number": "B26225",
+      "name": "Raj lodhi",
+      "email": "b26225@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 270,
+    "timestamp": "8/19/2026 12:55:12",
+    "inputLines": [
+      "b26050@students.iitmqndi.ac.in",
+      "Satyam rahangdale",
+      "B26050",
+      "8/19/2026",
+      "b26050@students.iitmqndi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b6a75684-53c1-44c1-867f-8576fe3a2430",
+      "roll_number": "B26050",
+      "name": "Satyam rahangdale",
+      "email": "b26050@student.iitmandi.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 271,
+    "timestamp": "8/19/2026 12:55:14",
+    "inputLines": [
+      "b26309@students.iitmandi.ac.in",
+      "Vikash Kumar",
+      "B26309",
+      "8/19/2026",
+      "b26309@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b7bd32bb-7d43-4419-b237-efbeaf4e9289",
+      "roll_number": "B26309",
+      "name": "Vikash Kumar",
+      "email": "b26309@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 272,
+    "timestamp": "8/19/2026 12:55:15",
+    "inputLines": [
+      "b26171@students.iitmandi.ac.in",
+      "Anil Dhaker",
+      "B26171",
+      "8/19/2026",
+      "b26171@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "2661f843-b100-45cb-9c28-34afc81ad999",
+      "roll_number": "B26171",
+      "name": "Anil Dhaker",
+      "email": "b26171@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 273,
+    "timestamp": "8/19/2026 12:55:15",
+    "inputLines": [
+      "b26415@students.iitmandi.ac.in",
+      "Avneesh Singh",
+      "B26415",
+      "8/19/2026",
+      "b26415@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4e9fc309-b989-44d4-b285-1f6f4a4f2d40",
+      "roll_number": "B26415",
+      "name": "Avneesh Singh",
+      "email": "b26415@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 274,
+    "timestamp": "8/19/2026 12:55:16",
+    "inputLines": [
+      "b26019@students.iitmandi.ac.in",
+      "Nityam parihar",
+      "B26019",
+      "8/19/2026",
+      "nityamparihar259@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8a920b29-6add-4140-9805-574d5ef01a56",
+      "roll_number": "B26019",
+      "name": "Nityam Parihar",
+      "email": "nityamparihar259@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 275,
+    "timestamp": "8/19/2026 12:55:16",
+    "inputLines": [
+      "b26220@students.iitmandi.ac.in",
+      "Pinak Yadav",
+      "B26220",
+      "8/19/2026",
+      "b26220@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "7ab68337-2d12-473f-acd6-fb245180afdd",
+      "roll_number": "B26220",
+      "name": "Pinak Yadav",
+      "email": "b26220@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 276,
+    "timestamp": "8/19/2026 12:55:16",
+    "inputLines": [
+      "im26001@students.iitmandi.ac.in",
+      "Yuvraj Saini",
+      "IM26001",
+      "8/19/2026",
+      "im26001@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a3fc046a-baee-4902-80a0-03a722792ba0",
+      "roll_number": "IM26001",
+      "name": "Yuvraj Saini",
+      "email": "im26001@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 277,
+    "timestamp": "8/19/2026 12:55:17",
+    "inputLines": [
+      "B26339@students.iitmandi.ac.in",
+      "Harun",
+      "B26339",
+      "8/19/2026",
+      "b26339@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "0237f0bc-e79f-46dd-a7d7-6f98411bcbc1",
+      "roll_number": "B26339",
+      "name": "Harun",
+      "email": "b26339@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 278,
+    "timestamp": "8/19/2026 12:55:17",
+    "inputLines": [
+      "b26044@students.iitmandi.ac.in",
+      "Mummana Greshma Sri",
+      "B26044",
+      "8/19/2026",
+      "greshmasri718@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "b4f9f417-7db2-4ebf-86e0-3f068b56903f",
+      "roll_number": "B26044",
+      "name": "Mummana Greshma Sri",
+      "email": "b26044@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 279,
+    "timestamp": "8/19/2026 12:55:19",
+    "inputLines": [
+      "b26476@students.iitmandi.ac.in",
+      "Abhimanyu Singh Rathore",
+      "B26476",
+      "8/19/2026",
+      "b26476@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "80b79efd-fa9f-48bf-9686-d391a1f1a13b",
+      "roll_number": "B26476",
+      "name": "Abhimanyu Singh Rathorr",
+      "email": "b26476@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 280,
+    "timestamp": "8/19/2026 12:55:20",
+    "inputLines": [
+      "b26391@students.iitmandi.ac.in",
+      "Bhargav Kapaleeswaran",
+      "B26391",
+      "8/19/2026",
+      "b26391@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c0f84ea5-d7e1-4f45-b19e-1b4f505533bb",
+      "roll_number": "B26391",
+      "name": "Bhargav Kapaleeswaran",
+      "email": "b26391@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 281,
+    "timestamp": "8/19/2026 12:55:21",
+    "inputLines": [
+      "b26200@students.iitmandi.ac.in",
+      "Jasmeen kaur",
+      "B26200",
+      "8/19/2026",
+      "b26200@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "67c87cb4-41eb-44e8-87de-aae55b6ed985",
+      "roll_number": "B26200",
+      "name": "Jasmeen kaur",
+      "email": "b26200@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 282,
+    "timestamp": "8/19/2026 12:55:22",
+    "inputLines": [
+      "b26224@students.iitmandi.ac.in",
+      "Priyanshu Singh",
+      "B26224",
+      "8/19/2026",
+      "priyanshusingh0318@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "cd697bac-c33c-42a3-b0af-9f4e36e3a647",
+      "roll_number": "B26224",
+      "name": "Priyanshu Singh",
+      "email": "b26224@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 283,
+    "timestamp": "8/19/2026 12:55:22",
+    "inputLines": [
+      "b26492@students.iitmandi.ac.in",
+      "Malisetty Mohith",
+      "B26492",
+      "8/19/2026",
+      "malisettymohith4@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ce606723-cf43-40b2-989c-ade634685d5c",
+      "roll_number": "B26492",
+      "name": "MALISETTY MOHITH",
+      "email": "b26492@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 284,
+    "timestamp": "8/19/2026 12:55:23",
+    "inputLines": [
+      "b26598@students.iitmandi.ac.in",
+      "Thanish Varma Manthena",
+      "B26598",
+      "8/19/2026",
+      "b26598@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "75799178-c652-4323-9a64-0e8c08010270",
+      "roll_number": "B26598",
+      "name": "Thanish Varma Manthrna",
+      "email": "b26598@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 285,
+    "timestamp": "8/19/2026 12:55:28",
+    "inputLines": [
+      "b26099@students.iitmandi.ac.in",
+      "Kunjam Aravind Kumar Dora",
+      "B26099",
+      "8/19/2026",
+      "b26099@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c16daad4-8318-4ec8-89a5-7ab2c4539e6b",
+      "roll_number": "B26099",
+      "name": "Kunjam Aravind Kumar Dora",
+      "email": "b2609@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 286,
+    "timestamp": "8/19/2026 12:55:31",
+    "inputLines": [
+      "b26288@students.iitmandi.ac.in",
+      "Narayani Kishor Patil",
+      "B26288",
+      "8/19/2026",
+      "narayani.patil2007@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "8c906bc6-4df9-4fbd-998b-d6d39c93e7e8",
+      "roll_number": "B26288",
+      "name": "Narayani Patil",
+      "email": "b26288@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 287,
+    "timestamp": "8/19/2026 12:55:31",
+    "inputLines": [
+      "b26474@students.iitmandi.ac.in",
+      "Aadarsh Kumar",
+      "B26474",
+      "8/19/2026",
+      "b26474@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "357bad8e-8c22-4939-a87f-1cdfced162f9",
+      "roll_number": "B26474",
+      "name": "Aadarsh Kumar",
+      "email": "b26474@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 288,
+    "timestamp": "8/19/2026 12:55:32",
+    "inputLines": [
+      "b26353@students.iitmandi.ac.in",
+      "Neha",
+      "B26353",
+      "8/19/2026",
+      "nehachhimpa325@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "4e6c83cb-fab1-4ef0-a396-7f6e359eefeb",
+      "roll_number": "B26353",
+      "name": "Neha",
+      "email": "b26353@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 289,
+    "timestamp": "8/19/2026 12:55:33",
+    "inputLines": [
+      "b26118@students.iitmandi.ac.in",
+      "Akrati Shivhare",
+      "B26118",
+      "8/18/2026",
+      "akratishivhare2006@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "2c94ebb6-bced-471a-a6b3-022fd0634752",
+      "roll_number": "B26118",
+      "name": "Akrati Shivhare",
+      "email": "b26118@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 290,
+    "timestamp": "8/19/2026 12:55:33",
+    "inputLines": [
+      "b26368@students.iitmandi.ac.in",
+      "Shashwat Gupta",
+      "B26368",
+      "8/19/2026",
+      "b26368@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4f0cfd31-b89c-4bef-90ee-99b8a6812bb1",
+      "roll_number": "B26368",
+      "name": "Shashwat Gupta",
+      "email": "b26368@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 291,
+    "timestamp": "8/19/2026 12:55:34",
+    "inputLines": [
+      "b26158@students.iitmandi.ac.in",
+      "Tanishk",
+      "B26158",
+      "8/19/2026",
+      "tanishk.sharma9775@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "29db30a7-6149-430a-b4db-a4daf521b203",
+      "roll_number": "B26158",
+      "name": "Tanishk",
+      "email": "b26158@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 292,
+    "timestamp": "8/19/2026 12:55:35",
+    "inputLines": [
+      "b26465@students.iitmandi.ac.in",
+      "Sangram Singh",
+      "B26465",
+      "8/19/2026",
+      "ranasangram11@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "4d5e4caa-3e27-4396-b382-0f3c01334cea",
+      "roll_number": "B26465",
+      "name": "Sangram Singh",
+      "email": "b26465@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 293,
+    "timestamp": "8/19/2026 12:55:36",
+    "inputLines": [
+      "b26424@srudents.iitmandi.ac.in",
+      "Kudumula navadeep reddy",
+      "B26424",
+      "8/19/2026",
+      "navadeepreddykudumula2008@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "d8b29ad6-bae9-4ec6-bda7-d5de548c87ac",
+      "roll_number": "B26424",
+      "name": "Kudumula navadeep reddy",
+      "email": "b26424@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 294,
+    "timestamp": "8/19/2026 12:55:36",
+    "inputLines": [
+      "im26046@students.iitmandi.ac.in",
+      "Abhay Bisht",
+      "IM26046",
+      "8/19/2026",
+      "im26046@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e88e269d-7653-44ed-9623-92a7eb02bc77",
+      "roll_number": "IM26046",
+      "name": "Abhay Bisht",
+      "email": "bishtabhay786@gmail.com",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 295,
+    "timestamp": "8/19/2026 12:55:36",
+    "inputLines": [
+      "b26255@students.iitmandi.ac.in",
+      "Abir Shandilya",
+      "B26255",
+      "8/19/2026",
+      "abirshandilya@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ed3c2360-59ad-4c4f-944f-045ead723020",
+      "roll_number": "B26255",
+      "name": "Abir Shandilya",
+      "email": "b26255@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 296,
+    "timestamp": "8/19/2026 12:55:37",
+    "inputLines": [
+      "b26308@students.iitmandi.ac.in",
+      "Vikas",
+      "B26308",
+      "8/19/2026",
+      "b26308@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5ca3a141-8b4e-4a49-9b74-2fd0c40a7126",
+      "roll_number": "B26308",
+      "name": "Vikas",
+      "email": "b26308@students.iitmandi.ac.in.",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 297,
+    "timestamp": "8/19/2026 12:55:37",
+    "inputLines": [
+      "b26461@students.iitmandi.ac.in",
+      "Priyam Sukhija",
+      "B26461",
+      "8/19/2026",
+      "b26461@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "63aac923-44d4-4546-90db-3fe57ed928c7",
+      "roll_number": "B26461",
+      "name": "Priyam Sukhija",
+      "email": "b26461@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 298,
+    "timestamp": "8/19/2026 12:55:38",
+    "inputLines": [
+      "b26081@students.iitmandi.ac.in",
+      "Prem kumar",
+      "b26081",
+      "8/19/2026",
+      "b26081@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "1617f2a8-5e6a-4e34-a932-9a4869b752b2",
+      "roll_number": "B26081",
+      "name": "Prem kumar",
+      "email": "premkumar935477@gmail.com",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 299,
+    "timestamp": "8/19/2026 12:55:38",
+    "inputLines": [
+      "b26364@students.iitmandi.ac.in",
+      "Rastiv Raj",
+      "B26364",
+      "8/19/2026",
+      "rastivraj6@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "20e91f96-b1d1-440b-a029-21b056c5109b",
+      "roll_number": "B26364",
+      "name": "Rastiv Raj",
+      "email": "rastivraj6@gmail.com",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 300,
+    "timestamp": "8/19/2026 12:55:38",
+    "inputLines": [
+      "im26080@students.iitmandi.ac.in",
+      "Sourabh Rai",
+      "IM26080",
+      "8/19/2026",
+      "im26080@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "afb13ab7-302e-4c29-ad86-ca88c8b5b9e1",
+      "roll_number": "IM26080",
+      "name": "Sourabh Rai",
+      "email": "im26080@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 301,
+    "timestamp": "8/19/2026 12:55:39",
+    "inputLines": [
+      "b26489@students.iitmandi.ac.in",
+      "Krishna Murari Choudhary",
+      "B26489",
+      "8/19/2026",
+      "b26489@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5b3286a5-f4fc-4153-90a8-25dfc12753fa",
+      "roll_number": "B26489",
+      "name": "Krishna Murari Choudhary",
+      "email": "b26489@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 302,
+    "timestamp": "8/19/2026 12:55:41",
+    "inputLines": [
+      "im26042@students.iitmandi.ac.in",
+      "SIVAKAMI V L",
+      "IM26042",
+      "8/19/2026",
+      "sivakamivl@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "40525fe6-45e8-4528-8005-47edac925443",
+      "roll_number": "IM26042",
+      "name": "Sivakami",
+      "email": "sivakamivl@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 303,
+    "timestamp": "8/19/2026 12:55:41",
+    "inputLines": [
+      "im26063@students.iitmandi.ac.in",
+      "Aaditya Nayak",
+      "im26063",
+      "8/19/2026",
+      "aadityanayak001@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "0f4225aa-55b8-446f-8b92-b709052614c2",
+      "roll_number": "IM26063",
+      "name": "Aaditya Nayak",
+      "email": "im26063@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 304,
+    "timestamp": "8/19/2026 12:55:41",
+    "inputLines": [
+      "b26173@students.iitmandi.ac.in",
+      "Anu Dobwal",
+      "B26173",
+      "8/19/2026",
+      "b26173@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "60855ab2-6b8f-4961-9c01-6f874af98200",
+      "roll_number": "B26173",
+      "name": "Anu Dobwal",
+      "email": "anudobwalkwd@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 305,
+    "timestamp": "8/19/2026 12:55:42",
+    "inputLines": [
+      "b26166@students.iitmandi.ac.in",
+      "Abhigyan Hazarika",
+      "B26166",
+      "8/19/2026",
+      "b26166@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4eabf748-514a-4409-8c47-6de7572bd894",
+      "roll_number": "B26166",
+      "name": "Abhigyan Hazarika",
+      "email": "b26166@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 306,
+    "timestamp": "8/19/2026 12:55:43",
+    "inputLines": [
+      "b26446@students.iitmandi.ac.in",
+      "Amitesh Kumar",
+      "B26446",
+      "8/19/2026",
+      "amiteshamiteshkumar244@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ca784154-1e9d-417e-9041-a3c209f60a86",
+      "roll_number": "B26446",
+      "name": "Amitesh Kumar",
+      "email": "b26446@students.iitmandi.ac.in",
+      "group": "H"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 307,
+    "timestamp": "8/19/2026 12:55:44",
+    "inputLines": [
+      "b26548@students.iitmandi.ac.in",
+      "Nishant Sharma",
+      "B26548",
+      "8/19/2026",
+      "nishantbh2007@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "1caaa3c2-3414-4a6a-8917-d44838d0bcfe",
+      "roll_number": "B26548",
+      "name": "Nishant Sharma",
+      "email": "b26548@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 308,
+    "timestamp": "8/19/2026 12:55:44",
+    "inputLines": [
+      "[B26347students.iitmandi.ac.in](http://B26347students.iitmandi.ac.in)",
+      "Manvi",
+      "B26347",
+      "8/19/2026",
+      "katochmanvi058@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "ee2ff170-56c1-4b08-ac46-134b69b26a9e",
+      "roll_number": "B26347",
+      "name": "Manvi",
+      "email": "b26347@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 309,
+    "timestamp": "8/19/2026 12:55:57",
+    "inputLines": [
+      "im26068@studentsiitmandi.ac.in",
+      "Shivani",
+      "IM26068",
+      "8/19/2026",
+      "im26068@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a098049c-4968-48d7-8301-93e94b2959e5",
+      "roll_number": "IM26068",
+      "name": "Shivani",
+      "email": "shibhi974@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 310,
+    "timestamp": "8/19/2026 12:56:01",
+    "inputLines": [
+      "b26472@students.iitmandi.ac.in",
+      "Varun Kumar",
+      "B26472",
+      "8/19/2026",
+      "varunkumar200108@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "3b941e6a-33a6-4fd0-bc68-35ea99cf37b0",
+      "roll_number": "B26472",
+      "name": "Varun Kumar",
+      "email": "varunkumar200108@gmail.com",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 311,
+    "timestamp": "8/19/2026 12:56:05",
+    "inputLines": [
+      "b26284@students.iitmandi.ac.in",
+      "Kushal",
+      "B26284",
+      "8/19/2026",
+      "b26284@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e503d79a-5a74-45a5-b214-09f3fb38c19d",
+      "roll_number": "B26284",
+      "name": "Kushal",
+      "email": "b26284@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 312,
+    "timestamp": "8/19/2026 12:56:08",
+    "inputLines": [
+      "b26266@students.iitmandi.ac.in",
+      "Avni Balhara",
+      "B26266",
+      "8/19/2026",
+      "b26266@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "7d705f87-b38f-4430-a3c1-1d1f1b7a3bd5",
+      "roll_number": "B26266",
+      "name": "Avni Balhara",
+      "email": "b26266@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 313,
+    "timestamp": "8/19/2026 12:56:14",
+    "inputLines": [
+      "b26515@students.iitmandi.ac.in",
+      "Abhiraj Thakur",
+      "B26515",
+      "8/19/2026",
+      "b26515@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "305e898a-818b-4148-b68f-b29038682c93",
+      "roll_number": "B26515",
+      "name": "Abhiraj Thakur",
+      "email": "b26515@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 314,
+    "timestamp": "8/19/2026 12:56:15",
+    "inputLines": [
+      "B26028@students.iitmandi.ac.in",
+      "Vaibhav Doneriya",
+      "B26028",
+      "8/19/2026",
+      "b26028@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b473e4cb-fd54-4e79-8307-5a4603cd1e05",
+      "roll_number": "B26028",
+      "name": "VAIBHAV DONERIYA",
+      "email": "b26028@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 315,
+    "timestamp": "8/19/2026 12:56:16",
+    "inputLines": [
+      "b26425@students.iitmandi.ac.in",
+      "Lavanya",
+      "B26425",
+      "8/19/2026",
+      "lavanyaagupta29@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "389e4f01-92ee-4678-9bf1-7752baef7b67",
+      "roll_number": "B26425",
+      "name": "Lavanya gupta",
+      "email": "b26425@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 316,
+    "timestamp": "8/19/2026 12:56:17",
+    "inputLines": [
+      "b26029@students.iitmandi.ac.in",
+      "Yashica Singla",
+      "B26029",
+      "8/19/2026",
+      "b26029@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4daf5977-dd66-4f79-ac17-06afad40f030",
+      "roll_number": "B26029",
+      "name": "Yashica Singla",
+      "email": "b26029@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 317,
+    "timestamp": "8/19/2026 12:56:17",
+    "inputLines": [
+      "b26133@students.iitmandi.ac.in",
+      "Kaviyarsan",
+      "B26133",
+      "8/19/2026",
+      "kaviyarasankpgms@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "83149ea4-12aa-419c-a498-767f99f3831d",
+      "roll_number": "B26133",
+      "name": "Kaviyarasan.K",
+      "email": "b26133@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 318,
+    "timestamp": "8/19/2026 12:56:18",
+    "inputLines": [
+      "b26137@students.iitmandi.ac.in",
+      "Lakshay garg",
+      "B26137",
+      "8/19/2026",
+      "b26137@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "fe33a9e9-16d7-4a30-bde2-9a0970fdcd6c",
+      "roll_number": "B26137",
+      "name": "Lakshay Garg",
+      "email": "b26137@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 319,
+    "timestamp": "8/19/2026 12:56:24",
+    "inputLines": [
+      "b26305@students.iitmandi.ac.in",
+      "Vani",
+      "B26305",
+      "8/19/2026",
+      "b26305@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "a921e2f8-2023-46c6-8c89-9f756ed1ea04",
+      "roll_number": "B26305",
+      "name": "Vani",
+      "email": "b26305@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 320,
+    "timestamp": "8/19/2026 12:56:27",
+    "inputLines": [
+      "b26078@students.iitmandi.ac.in",
+      "Nivedith.K.S",
+      "B26078",
+      "8/19/2026",
+      "b26078@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3cc5366f-e5f9-4662-9e19-bde5a1629a9d",
+      "roll_number": "B26078",
+      "name": "Nivedith.K.S",
+      "email": "b26078@students.iitmandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 321,
+    "timestamp": "8/19/2026 12:56:34",
+    "inputLines": [
+      "im26037@students.iitmandi.ac.in",
+      "Yash Dhurkari",
+      "IM26037",
+      "8/19/2026",
+      "ydhurkari@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "f7999314-7f86-4f46-9021-87269b763569",
+      "roll_number": "IM26037",
+      "name": "Yash Dhurkari",
+      "email": "im26037@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 322,
+    "timestamp": "8/19/2026 12:56:41",
+    "inputLines": [
+      "b26134@students.iitmandi.ac.in",
+      "Kislay Mishra",
+      "B26134",
+      "8/19/2026",
+      "b26134@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "b4af7e3f-8757-40fa-bec5-39dbc0888754",
+      "roll_number": "B26134",
+      "name": "Kislay Mishra",
+      "email": "b26134@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 323,
+    "timestamp": "8/19/2026 12:56:45",
+    "inputLines": [
+      "b26130@students.iitmandi.ac.in",
+      "Himanshu neemroth",
+      "B26130",
+      "8/19/2026",
+      "b26130@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "200c0b65-7553-42cb-b6c1-cdde17be57da",
+      "roll_number": "B26130",
+      "name": "HIMANSHU NEEMROTH",
+      "email": "b26130@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 324,
+    "timestamp": "8/19/2026 12:56:46",
+    "inputLines": [
+      "b26083@students.iitmandi.ac.in",
+      "Rudra sharma",
+      "B26083",
+      "8/19/2026",
+      "b26083@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "1de945ac-8d4c-4068-8257-97d06fb68da5",
+      "roll_number": "B26083",
+      "name": "Rudra sharma",
+      "email": "b26083@students.iimandi.ac.in",
+      "group": "D"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 325,
+    "timestamp": "8/19/2026 12:56:53",
+    "inputLines": [
+      "im26049@students.iitmandi.ac.in",
+      "Rushil Panchal",
+      "IM26049",
+      "8/19/2026",
+      "im26049@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e09c707f-f9e8-4474-b52d-381c207f4416",
+      "roll_number": "IM26049",
+      "name": "Rushil Panchal",
+      "email": "rushil2567@gmail.com",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 326,
+    "timestamp": "8/19/2026 12:56:57",
+    "inputLines": [
+      "B26267@student.iitmandi.ac.in",
+      "Banala Pranavi",
+      "B26267",
+      "8/19/2026",
+      "pranavibanala@icloud.com"
+    ],
+    "matchedStudent": {
+      "id": "76f865c9-72bd-4869-b656-4380a19629f8",
+      "roll_number": "B26267",
+      "name": "Banala Pranavi",
+      "email": "b26267@email.com",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 327,
+    "timestamp": "8/19/2026 12:56:57",
+    "inputLines": [
+      "b26096students. ac. in",
+      "H parusuram",
+      "B26096",
+      "8/19/2026",
+      "parusuram2026@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "97f6d726-1671-4aa2-8c23-85fbea2c23e8",
+      "roll_number": "B26096",
+      "name": "Harijana parusuram",
+      "email": "b26096@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 328,
+    "timestamp": "8/19/2026 12:57:01",
+    "inputLines": [
+      "im26033@students.iitmandi.ac.in",
+      "Nainshi Singh",
+      "Im26033",
+      "8/19/2026",
+      "im26033@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "4b42bc28-e05f-44f9-a47b-a41fd1395a42",
+      "roll_number": "IM26033",
+      "name": "Nainshi Singh",
+      "email": "im26033@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 329,
+    "timestamp": "8/19/2026 12:57:16",
+    "inputLines": [
+      "b26438@students.iitmandi.ac.in",
+      "Swayam Gupta",
+      "B26438",
+      "8/19/2026",
+      "b26438@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "e104dd67-ca55-4110-b5c6-02cf3f3781b0",
+      "roll_number": "B26438",
+      "name": "Swayam Gupta",
+      "email": "b26438@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 330,
+    "timestamp": "8/19/2026 12:57:31",
+    "inputLines": [
+      "im26032@students.iitmandi.ac.in",
+      "NAVANEETHAKRISHNAN S",
+      "IM26032",
+      "8/19/2026",
+      "im26032@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "644f65fd-2c9a-410a-89a5-eed2b7a06ff9",
+      "roll_number": "IM26032",
+      "name": "NAVANEEETHAKRISHNAN S",
+      "email": "im26032@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 331,
+    "timestamp": "8/19/2026 12:57:32",
+    "inputLines": [
+      "B26442@student.iitmandi.ac.in",
+      "Shraddha Vishwanathe",
+      "B26442",
+      "8/19/2026",
+      "shraddhavishwanathe@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "47769181-32df-46f7-8155-85b826d482a4",
+      "roll_number": "B26442",
+      "name": "Shraddha Vishwanathe",
+      "email": "shraddhavishwanathe@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 332,
+    "timestamp": "8/19/2026 12:57:33",
+    "inputLines": [
+      "b26236@students.iitmandi.ac.in",
+      "Shrinayan saraf",
+      "B26236",
+      "8/19/2026",
+      "b26236@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "60da0494-d7ba-41f8-b937-34d4e146d220",
+      "roll_number": "B26236",
+      "name": "Shrinayan Saraf",
+      "email": "shrinayan57@gmail.com",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 333,
+    "timestamp": "8/19/2026 12:57:36",
+    "inputLines": [
+      "b26473@students.iitmandi.ac.in",
+      "Yashika Santhanand",
+      "B26473",
+      "8/19/2026",
+      "b26473@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "814960d3-9289-4590-a4bc-cfb6a20912ae",
+      "roll_number": "B26473",
+      "name": "Yashika Santhanand",
+      "email": "b26473@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 334,
+    "timestamp": "8/19/2026 12:57:38",
+    "inputLines": [
+      "b26295@students.iitmandi.ac.in",
+      "Prince Raj Singh",
+      "B26295",
+      "8/19/2026",
+      "b26295@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "d56cabaf-c813-4842-9046-3f5fe6897049",
+      "roll_number": "B26295",
+      "name": "Prince Raj singh",
+      "email": "b26295@students.iitmandi.ac.in",
+      "group": "A"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 335,
+    "timestamp": "8/19/2026 12:57:48",
+    "inputLines": [
+      "Atharv.shrivastava15@gmail.com",
+      "Atharv shrivastava",
+      "B26063",
+      "8/19/2026",
+      "b26063@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "ea385d6e-56f9-4225-bc57-d5d3f5c8d2e6",
+      "roll_number": "B26063",
+      "name": "Atharv Shrivastava",
+      "email": "atharv.shrivastava15@gmail.com",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 336,
+    "timestamp": "8/19/2026 12:57:50",
+    "inputLines": [
+      "im26007@students.iitmandi.ac.in",
+      "Livcharan S",
+      "IM26007",
+      "8/19/2026",
+      "im26007@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3d08af09-159f-40de-a906-b54b854ca3e4",
+      "roll_number": "IM26007",
+      "name": "Livcharan S",
+      "email": "im26007@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 337,
+    "timestamp": "8/19/2026 12:57:50",
+    "inputLines": [
+      "b26230@students.iitmandi.ac.in",
+      "Roshani Singh",
+      "B26230",
+      "8/19/2026",
+      "b26230@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3f012ad3-5ad6-45f4-975b-727be1fa6d75",
+      "roll_number": "B26230",
+      "name": "Roshani Singh",
+      "email": "b26230@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 338,
+    "timestamp": "8/19/2026 12:58:06",
+    "inputLines": [
+      "Im26044@students.iitmandi.ac.in",
+      "Garima Patel",
+      "IM26044",
+      "8/19/2026",
+      "im26044@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "17d04934-2981-4857-a27f-9651b39b0db7",
+      "roll_number": "IM26044",
+      "name": "Garima Patel",
+      "email": "im26044@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 339,
+    "timestamp": "8/19/2026 12:58:33",
+    "inputLines": [
+      "b26313@students.iitmandi.ac.in",
+      "Aabhya Agarwal",
+      "B26313",
+      "8/19/2026",
+      "b26313@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "5aed9cb6-a552-4aec-8aea-c71e599366ab",
+      "roll_number": "B26313",
+      "name": "Aabhya Agarwal",
+      "email": "b26313@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 340,
+    "timestamp": "8/19/2026 12:59:34",
+    "inputLines": [
+      "Sarthak Baghel",
+      "B26435",
+      "8/19/2026",
+      "b26435@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c49037e5-40d4-4c89-87c0-14c028007b77",
+      "roll_number": "B26435",
+      "name": "Sarthak Baghel",
+      "email": "b26435@students.iitmandi.ac.in",
+      "group": "G"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 341,
+    "timestamp": "8/19/2026 13:00:03",
+    "inputLines": [
+      "b26290@students.iitmandi.ac",
+      "Pakhi",
+      "B26290",
+      "8/19/2026",
+      "b26290@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "6bacca24-ebb0-409f-8c63-54ddd2ea4832",
+      "roll_number": "B26290",
+      "name": "Pakhi",
+      "email": "b26290@students.iitmandi.ac.in",
+      "group": "F"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 342,
+    "timestamp": "8/19/2026 13:00:06",
+    "inputLines": [
+      "im26011@students.iitmandi.ac.in",
+      "Ridhima Bhardwaj",
+      "IM26011",
+      "8/19/2026",
+      "im26011@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "79bd8564-fe31-4a60-8fb5-28ad98c03999",
+      "roll_number": "IM26011",
+      "name": "Ridhima Bhardwaj",
+      "email": "im26011@students.iitmandi.ac.in",
+      "group": "E"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 343,
+    "timestamp": "8/19/2026 13:00:42",
+    "inputLines": [
+      "im26075@students.iitmandi.ac.in",
+      "Sanidhya Agarwal",
+      "IM26075",
+      "8/19/2026",
+      "im26075@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "f22c4f6e-0f45-45dc-b40e-b59e7f61d741",
+      "roll_number": "IM26075",
+      "name": "Sanidhya Agarwal",
+      "email": null,
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 344,
+    "timestamp": "8/19/2026 13:00:56",
+    "inputLines": [
+      "b26151@students.iitmandi.ac.in",
+      "Ritika Meena",
+      "B26151",
+      "12/21/2008",
+      "b26151@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "79b62855-03d9-4b92-a119-f055f64f8137",
+      "roll_number": "B26151",
+      "name": "Ritika Meena",
+      "email": "b26151@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 345,
+    "timestamp": "8/19/2026 13:01:35",
+    "inputLines": [
+      "b26550@students.iitmandi.ac.in",
+      "Pragati khanna",
+      "B26550",
+      "8/19/2026",
+      "b26550@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "c284f8a1-d4a4-4702-afa8-73461702c4f8",
+      "roll_number": "B26550",
+      "name": "Pragati khanna",
+      "email": "b26550@students.iitmandi.ac.in",
+      "group": "B"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 346,
+    "timestamp": "8/19/2026 13:04:37",
+    "inputLines": [
+      "im26077@students.iitmandi.ac.in",
+      "Gurjas Bhatia",
+      "IM26077",
+      "8/19/2026",
+      "gurjasbhatia2323@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "af57a3b0-7529-43c5-a962-48071b7d4cb9",
+      "roll_number": "IM26077",
+      "name": "GURJAS BHATIA",
+      "email": "im26077@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 347,
+    "timestamp": "8/19/2026 13:06:33",
+    "inputLines": [
+      "im26040@student.iitmandi.ac.in",
+      "Nitesh Kumar",
+      "IM26040",
+      "8/19/2026",
+      "im26040@students.iitmandi.ac.in"
+    ],
+    "matchedStudent": {
+      "id": "3fc8bde0-793e-4039-886f-a3f36b5e065f",
+      "roll_number": "IM26040",
+      "name": "Nitesh kumar",
+      "email": "im26040@students.iitmandi.ac.in",
+      "group": "C"
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 348,
+    "timestamp": "8/19/2026 13:13:29",
+    "inputLines": [
+      "im26035@students.iitmandi.ac.in",
+      "Yash Mishra",
+      "IM26035",
+      "8/19/2026",
+      "yashmishra9908@gmail.com.in"
+    ],
+    "matchedStudent": {
+      "id": "df9194b4-d4e8-4ed0-a590-82f33fe7e469",
+      "roll_number": "IM26035",
+      "name": "Yash Mishra",
+      "email": "im26035@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  },
+  {
+    "index": 349,
+    "timestamp": "8/19/2026 13:17:02",
+    "inputLines": [
+      "b26283@students.iitmandi.ac.in",
+      "Khushal jangir",
+      "B26283",
+      "8/19/2026",
+      "jangirkhushal490@gmail.com"
+    ],
+    "matchedStudent": {
+      "id": "481c8a4f-1571-4841-8163-9b939bfd3114",
+      "roll_number": "B26283",
+      "name": "Khushal Jangir",
+      "email": "b26283@students.iitmandi.ac.in",
+      "group": null
+    },
+    "matchMethod": "direct_roll"
+  }
+]
