@@ -198,7 +198,9 @@ CREATE TABLE IF NOT EXISTS public.audit_logs (
 );
 
 -- 12. Student Attendance Summary Function
+DROP FUNCTION IF EXISTS public.student_attendance_summary(TEXT);
 CREATE OR REPLACE FUNCTION public.student_attendance_summary(p_course_name TEXT)
+
 RETURNS TABLE (
   student_id UUID,
   roll_number TEXT,

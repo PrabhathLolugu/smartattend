@@ -1,7 +1,9 @@
 -- Migration: Separate Theory/Lecture and Yoga/Practical attendance % in student_attendance_summary
 -- File: 20260830000002_separate_theory_practical_reports.sql
 
+DROP FUNCTION IF EXISTS public.student_attendance_summary(TEXT);
 CREATE OR REPLACE FUNCTION public.student_attendance_summary(p_course_name TEXT)
+
 RETURNS TABLE (
   student_id UUID,
   roll_number TEXT,

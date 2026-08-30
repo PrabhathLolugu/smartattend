@@ -8,9 +8,8 @@
 alter table public.attendance_records
   add column if not exists device_fingerprint text;
 
--- Partial unique: one device fingerprint per session (NULLs are excluded so
--- manual / staff-entered records are unaffected).
-create unique index if not exists attendance_records_device_uniq
+-- Non-unique index for device fingerprint lookup
+create index if not exists attendance_records_device_uniq
   on public.attendance_records (session_id, device_fingerprint)
   where device_fingerprint is not null;
 
@@ -21,7 +20,8 @@ create index if not exists attendance_records_device_idx
 alter table public.gps_override_requests
   add column if not exists device_fingerprint text;
 
--- Partial unique: one pending override request per device per session.
-create unique index if not exists gps_override_requests_device_uniq
+-- Index for device fingerprint
+create index if not exists gps_override_requests_device_uniq
   on public.gps_override_requests (session_id, device_fingerprint)
   where device_fingerprint is not null;
+

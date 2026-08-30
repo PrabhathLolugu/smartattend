@@ -53,6 +53,7 @@ BEGIN
 END $$;
 
 -- 3. Replace student_attendance_summary with robust real-time & parallel session support
+DROP FUNCTION IF EXISTS public.student_attendance_summary(TEXT);
 CREATE OR REPLACE FUNCTION public.student_attendance_summary(p_course_name TEXT)
 RETURNS TABLE (
   student_id UUID,
