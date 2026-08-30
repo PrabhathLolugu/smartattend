@@ -24,12 +24,29 @@ Deno.serve(async (req: Request) => {
       return withCors({ error: "This attendance session has already ended." }, 410);
     }
 
-    const { data: student } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
+    let student = await (async () => {
+      const { data } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
+      return data;
+    })();
+
+    // If student doesn't exist (or was deleted), auto-register them so attendance is never blocked.
+    // They can fill in full details later via the enroll flow — for now just the roll number is enough.
     if (!student || student.status === "deleted") {
-      return withCors(
-        { error: "No student found with that roll number. Check spelling and try again.", code: "not_found" },
-        404,
-      );
+      const { data: created } = await db
+        .from("students")
+        .insert({ roll_number: roll, name: roll, role_type: "student" })
+        .select()
+        .single();
+      // If even auto-create fails (e.g. race with concurrent enroll), fetch again
+      if (!created) {
+        const { data: refetched } = await db.from("students").select("*").ilike("roll_number", roll).maybeSingle();
+        if (!refetched) {
+          return withCors({ error: "Could not register student. Please try again." }, 500);
+        }
+        student = refetched;
+      } else {
+        student = created;
+      }
     }
 
     // ── Duplicate check ───────────────────────────────────────────────────────
